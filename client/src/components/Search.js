@@ -28,7 +28,7 @@ export default class Search extends Component {
       <div>
         <input value={this.state.inputValue} onChange={this.updateInputValue}></input>
         <button onClick={this.handleSearch}>Search</button>
-        {this.state.results};
+        {this.state.results}
       </div>
     )
   }
