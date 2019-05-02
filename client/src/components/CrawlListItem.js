@@ -5,11 +5,17 @@ import React, { Component } from 'react';
 export default class CrawlListItem extends Component {
 
     state = {
-      background: "#D89B00"
+      background: "#D89B00",
     }
 
-    buttonClick = () => {
-      this.setState({background: "black"})
+    buttonClick = (props) => {
+      if(this.state.background === "#D89B00") {
+        props.selected = true
+        this.setState({background: "black"})
+      } else {
+        props.selected = false;
+        this.setState({background: "#D89B00"})
+      }
     }
 
     render(props) {
