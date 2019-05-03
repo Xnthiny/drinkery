@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import CrawlList from "./CrawlList"
 import CrawlListItem from "./CrawlListItem"
 import API from "../utils/API"
+import button from './Button/Button';
+import Button from '@material-ui/core/Button';
 
 export default class Search extends Component {
   state = {
@@ -32,12 +34,16 @@ export default class Search extends Component {
       }
     }
 
+    
     return (
       <div>
         <input value={this.state.inputValue} onChange={this.updateInputValue}></input>
         <button type="submit" onClick={this.handleSearch}>Search</button>
-        {displayResults()}
+        
+        {displayResults()} 
+        <div> {button()} </div>
       </div>
+     
     )
   }
 }
