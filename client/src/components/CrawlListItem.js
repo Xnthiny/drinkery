@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import API from "../utils/API"
 
 
 
@@ -6,11 +7,11 @@ export default class CrawlListItem extends Component {
 
     state = {
       background: "#D89B00",
-      venueNameColor: "black"
+      venueNameColor: "black",
+      photo: ""
     }
 
     buttonClick = (props) => {
-      console.log(this.props,)
       if(this.state.background === "#D89B00") {
         props.selected = true;
         this.setState({background: "black", venueNameColor: "#D89B00"})
@@ -21,6 +22,10 @@ export default class CrawlListItem extends Component {
     }
 
     render(props) {
+
+      API.searchForPhoto(this.props.id).then(photo => {
+        this.setState(photo.data.response.photos.items[0])
+      })
 
       let styles = {
           listItem: {
@@ -52,6 +57,10 @@ export default class CrawlListItem extends Component {
           venueAddress: {
             fontSize: "12px",
             color: "white",
+          },
+          photo: {
+            color: "white",
+            borderRadius: "50%"
           }
       }
 
@@ -65,6 +74,7 @@ export default class CrawlListItem extends Component {
 
       return (
         <div style={styles.listItem}>
+        <div style={styles.photo}>{this.state.photo}</div>
         <div style={styles.text}>
           <div style={styles.venueName}>
           {this.props.name.toUpperCase()}

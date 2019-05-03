@@ -12,8 +12,9 @@ export default class Search extends Component {
   handleSearch = () => {
     API.searchFoursquare(this.state.inputValue).then(res => {
       const listItems = res.data.response.venues.map(venue => {
+        console.log(venue.id)
         return (
-          <CrawlListItem selected={false} address={venue.location.formattedAddress} name={venue.name} key={venue.id}/>
+          <CrawlListItem selected={false} address={venue.location.formattedAddress} name={venue.name} id={venue.id} key={venue.id}/>
         )
       })
       this.setState({results: listItems})
