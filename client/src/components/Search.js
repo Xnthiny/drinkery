@@ -32,10 +32,39 @@ export default class Search extends Component {
       }
     }
 
+    let styles = {
+      cityInput: {
+        display: "inlineBlock",
+        boxSizing: "content-box",
+        padding: "10px 20px",
+        border: "1px solid #b7b7b7",
+        margin: "20px",
+        borderRadius: "3px",
+        color: "rgba(0,0,0,1)",
+        textOverflow: "clip",
+        background: "#D89B00",
+      },
+      searchButton: {
+        display: "inlineBlock",
+        boxSizing: "content-box",
+        padding: "10px 20px",
+        border: "1px solid #b7b7b7",
+        margin: "20px",
+        borderRadius: "3px",
+        color: "rgba(0,0,0,1)",
+        textOverflow: "clip",
+        background: "#D89B00",
+        cursor: "pointer"
+      },
+
+    }
+
     return (
+      <div>
       <div style={{textAlign: "center"}}>
-        <input value={this.state.inputValue} onChange={this.updateInputValue}></input>
-        <button type="submit" onClick={this.handleSearch}>Search</button>
+        <input style={styles.cityInput}value={this.state.inputValue} onChange={this.updateInputValue}></input>
+        <button style={styles.searchButton}type="submit" onClick={this.handleSearch}>Search</button>
+        </div>
         {displayResults()}
       </div>
     )
