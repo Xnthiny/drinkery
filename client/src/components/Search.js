@@ -12,7 +12,6 @@ export default class Search extends Component {
   handleSearch = () => {
     API.searchFoursquare(this.state.inputValue).then(res => {
       const listItems = res.data.response.venues.map(venue => {
-        console.log(venue.id)
         return (
           <CrawlListItem selected={false} address={venue.location.formattedAddress} name={venue.name} id={venue.id} key={venue.id}/>
         )
@@ -34,7 +33,7 @@ export default class Search extends Component {
     }
 
     return (
-      <div>
+      <div style={{textAlign: "center"}}>
         <input value={this.state.inputValue} onChange={this.updateInputValue}></input>
         <button type="submit" onClick={this.handleSearch}>Search</button>
         {displayResults()}

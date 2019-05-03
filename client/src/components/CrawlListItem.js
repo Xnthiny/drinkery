@@ -32,11 +32,12 @@ export default class CrawlListItem extends Component {
             width: "500px",
             position: "relative",
             background: this.state.background,
-            margin: "10px auto",
+            margin: "20px auto",
             padding: "15px",
             color: "white",
             fontSize: "20px",
-            borderRadius: "10px"
+            borderRadius: "10px",
+            boxShadow: "1px 10px 1px rgb(57, 57, 57)"
           },
           button: {
             color: "white",

@@ -9,9 +9,10 @@ export default class CrawlList extends Component {
       list: {
         background: "#585858",
         height: "auto",
-        width: "50%",
-        margin: "0 auto",
-        padding: "2px"
+        width: "550px",
+        margin: "20px auto",
+        padding: "2px",
+        borderRadius: "10px"
 
       }
     }
