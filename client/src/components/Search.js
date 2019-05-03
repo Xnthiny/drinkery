@@ -41,7 +41,7 @@ export default class Search extends Component {
         <button type="submit" onClick={this.handleSearch}>Search</button>
         
         {displayResults()} 
-        <div> {button()} </div>
+        <div> {SaveButton()} </div>
       </div>
      
     )

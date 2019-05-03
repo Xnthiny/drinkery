@@ -12,7 +12,6 @@ let styles = {
     } 
 }
 
-
 const SaveButton = (props) => (
     <Button variant="contained" style={styles.button} variant="contained" className="SaveSearch" color="primary">
         Save Search
