@@ -7,7 +7,18 @@ import Button from '@material-ui/core/Button';
 
 
 let styles = {
+  text:
+  {
+    title:
+    {
+      fontSize: "40px;"
+    }, 
+    body:
+    {
+      fontSize: "20px;"
+    }
 
+  },
   container: {
     background: "transparent",
     height: "100vh",
@@ -28,7 +39,6 @@ let styles = {
     zIndex: "99",
     alignContent: "right",
     borderRadius: "5px"
-
   },
   primary: {
     border: "none",
@@ -37,6 +47,7 @@ let styles = {
     width: "auto",
     position: "relative",
     margin: "10px auto",
+    boxShadow: '0 3px 5px 2px rgba(41, 41, 41, .3)',
     padding: "15px",
     fontSize: "15px",
     borderRadius: "5px"
@@ -47,9 +58,10 @@ let styles = {
     borderColor: "black",
     borderRadius: "10px",
     borderWeight: "2px",
+    boxShadow: '0 3px 5px 2px rgba(41, 41, 41, .3)',
     backgroundColor: "transparent",
     padding: "5%",
-    placeholder: "white",
+    placeholderTextColor: "#fff",
     borderLeftWidth: "20px"
   }
 }
@@ -96,11 +108,11 @@ export default class Search extends Component {
     return (
       <div style={styles.container} className="body-conatiner">
         <div style={styles.SearchContainer} className="search-conatiner">
-          <h3>
+          <h3 style={styles.text.body}>
             Search For Your Favorite Pubs!
           </h3>
-          <h5>
-            Enter any location... Our API does the rest! 
+          <h5 style={styles.text.body}>
+            Enter any location... Our API does the rest!
             <br />
             Our Tech is sure to make your bar crawl experience one of a kind
           </h5>

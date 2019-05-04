@@ -33,6 +33,7 @@ export default class CrawlList extends Component {
         width: "auto",
         padding: "15px 10px",
         fontSize: "15px",
+        boxShadow: '0 3px 5px 2px rgba(41, 41, 41, .3)',
         margin: "20px auto",
         borderRadius: "5px"
       },
