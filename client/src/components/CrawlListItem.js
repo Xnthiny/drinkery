@@ -23,7 +23,7 @@ export default class CrawlListItem extends Component {
     render(props) {
       let styles = {
           listItem: {
-            width: "500px",
+            width: "80%",
             position: "relative",
             background: this.state.background,
             margin: "10px auto",

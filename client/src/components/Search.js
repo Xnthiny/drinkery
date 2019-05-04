@@ -7,7 +7,16 @@ import Button from '@material-ui/core/Button';
 
 
 let styles = {
+  
   container: {
+    background: "#292929",
+    height: "100vh",
+    width: "100vh",
+    margin: "0 auto",
+    padding: "10px",
+    alignContent: "right"
+  },
+  SearchContainer: {
     background: "#D89B00",
     height: "500px",
     width: "30%",
@@ -60,15 +69,19 @@ export default class Search extends Component {
 
 
     return (
-      <div className="row">
-        <div className="col 12">
-          <div style={styles.container}>
-            <input value={this.state.inputValue} onChange={this.updateInputValue}></input>
-            <br />
-            <button type="submit" style={styles.primary} onClick={this.handleSearch} className="searchButton">DRINK!!!</button>
-            {displayResults()}
-          </div>
+      <div style={styles.container} className="body-conatiner">
+        <div style={styles.SearchContainer} className="search-conatiner">
+          <input value={this.state.inputValue} onChange={this.updateInputValue}></input>
+          <br />
+          <button type="submit" style={styles.primary} onClick={this.handleSearch} className="searchButton">DRINK!!!</button>
+
         </div>
+
+        <div className="searchResults">
+         
+          {displayResults()}
+        </div>
+
       </div>
     )
   }
