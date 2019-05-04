@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import API from "../utils/API"
 
 
 
 export default class CrawlListItem extends Component {
+
 
   state = {
     background: "#D89B00",
@@ -32,7 +34,6 @@ export default class CrawlListItem extends Component {
         fontSize: "20px",
         borderRadius: "10px",
         boxShadow: '0 3px 5px 2px rgba(41, 41, 41, .3)',
-
       },
       button: {
         color: "white",
@@ -63,7 +64,6 @@ export default class CrawlListItem extends Component {
         return <i className="fas fa-plus-circle"></i>
       }
     }
-
     return (
       <div style={styles.listItem} >
         <div style={styles.text}>
