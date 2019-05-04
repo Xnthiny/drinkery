@@ -2,6 +2,7 @@ import React from "react";
 import Search from "./components/Search";
 import bg from './images/bg4.png';
 import { isAbsolute } from "path";
+import GoogleMapsContainer from './components/Map/GoogleMapsContainer'
 
 let styles = {
   introImgDiv: {
@@ -33,8 +34,9 @@ function App() {
         {SearchExpDiv()}
       </div>
       <div className="row">
-       {GoogleMapsContainer}
+       
       </div>
+      <GoogleMapsContainer/>
     </div>
   );
 }
