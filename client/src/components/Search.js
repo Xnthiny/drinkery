@@ -7,22 +7,28 @@ import Button from '@material-ui/core/Button';
 
 
 let styles = {
-  
+
   container: {
-    background: "#292929",
+    background: "transparent",
     height: "100vh",
     width: "100vh",
     margin: "0 auto",
     padding: "10px",
-    alignContent: "right"
+    alignContent: "right",
+    position: "relative",
+    zIndex: "0",
+
   },
   SearchContainer: {
     background: "#D89B00",
-    height: "500px",
-    width: "30%",
+    height: "auto",
+    width: "50%",
     margin: "0 auto",
-    padding: "10px",
-    alignContent: "right"
+    padding: "45px",
+    zIndex: "99",
+    alignContent: "right",
+    borderRadius: "5px"
+
   },
   primary: {
     border: "none",
@@ -33,6 +39,18 @@ let styles = {
     margin: "10px auto",
     padding: "15px",
     fontSize: "15px",
+    borderRadius: "5px"
+  },
+  userIn: {
+    width: "100%",
+    margin: "15px auto",
+    borderColor: "black",
+    borderRadius: "10px",
+    borderWeight: "2px",
+    backgroundColor: "transparent",
+    padding: "5%",
+    placeholder: "white",
+    borderLeftWidth: "20px"
   }
 }
 
@@ -40,7 +58,17 @@ export default class Search extends Component {
   state = {
     results: [],
     inputValue: "",
+    personCount: "",
+    pubCount: ""
   }
+  handlePersonCount = () => {
+    console.log("Person Count");
+  }
+  handleBarCount = () => {
+
+    console.log("Person Count");
+  }
+
 
   handleSearch = () => {
     API.searchFoursquare(this.state.inputValue).then(res => {
@@ -65,23 +93,26 @@ export default class Search extends Component {
       }
     }
 
-
-
-
     return (
       <div style={styles.container} className="body-conatiner">
         <div style={styles.SearchContainer} className="search-conatiner">
-          <input value={this.state.inputValue} onChange={this.updateInputValue}></input>
+          <h3>
+            Search For Your Favorite Pubs!
+          </h3>
+          <h5>
+            Enter any location... Our API does the rest! 
+            <br />
+            Our Tech is sure to make your bar crawl experience one of a kind
+          </h5>
+          <input value={this.state.inputValue} onChange={this.updateInputValue} style={styles.userIn} placeholder="Choose Your City!"></input>
+          <input value={this.state.personCount} onChange={this.handlePersonCount} style={styles.userIn} placeholder="How Many People Are Joining?"></input>
+          <input value={this.state.pubCount} onChange={this.handleBarCount} style={styles.userIn} placeholder="How much can you drink?"></input>
           <br />
           <button type="submit" style={styles.primary} onClick={this.handleSearch} className="searchButton">DRINK!!!</button>
-
         </div>
-
         <div className="searchResults">
-         
           {displayResults()}
         </div>
-
       </div>
     )
   }

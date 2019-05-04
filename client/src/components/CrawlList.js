@@ -31,23 +31,29 @@ export default class CrawlList extends Component {
         backgroundColor: "black",
         color: "#D89B00",
         width: "auto",
-        position: "relative",
-        margin: "10px auto",
-        padding: "15px 12px",
+        padding: "15px 10px",
         fontSize: "15px",
+        margin: "20px auto",
+        borderRadius: "5px"
+      },
+      buttonDiv: {
+        margin: "0px auto",
+        width: "100%",
+        alignContent: "center",
+        textAlign: "center"
       }
     }
-
     return (
       <div className="row">
         <div className="col 12">
-
           <div style={styles.list}>
             <h3 style={styles.text}>
               Choose Your Pubs!
             </h3>
             <div>{this.props.results}</div>
-            <button type="submit" style={styles.primary} onClick={this.handleCrawlSave} className="SaveSearchButton">CONTINUE</button>
+            <div className="button-div" style={styles.buttonDiv}>
+              <button type="submit" style={styles.primary} onClick={this.handleCrawlSave} className="SaveSearchButton">CONTINUE</button>
+            </div>
           </div>
         </div>
       </div>
