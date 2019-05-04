@@ -2,7 +2,6 @@ import React from "react";
 import Search from "./components/Search";
 import bg from './images/bg4.png';
 import { isAbsolute } from "path";
-import GoogleMapsContainer from './components/GoogleMapsContainer';
 
 let styles = {
   introImgDiv: {
