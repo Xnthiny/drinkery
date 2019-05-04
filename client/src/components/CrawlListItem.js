@@ -21,7 +21,6 @@ export default class CrawlListItem extends Component {
     }
 
     render(props) {
-
       let styles = {
           listItem: {
             width: "500px",
@@ -64,7 +63,7 @@ export default class CrawlListItem extends Component {
       }
 
       return (
-        <div style={styles.listItem}>
+        <div style={styles.listItem} >
         <div style={styles.text}>
           <div style={styles.venueName}>
           {this.props.name.toUpperCase()}
