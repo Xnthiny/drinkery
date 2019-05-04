@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import SaveButton from './Button/Button';
 
-
 export default class CrawlList extends Component {
 
   handleCrawlSave = () => {
@@ -20,7 +19,7 @@ export default class CrawlList extends Component {
       list: {
         background: "#585858",
         height: "auto",
-        width: "100%",
+        width: "92%",
         margin: "0 auto",
         padding: "2px",
         marginTop: "4em"

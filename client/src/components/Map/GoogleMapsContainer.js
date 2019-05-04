@@ -3,6 +3,13 @@ import { GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 
 import CurrentLocation from '../SimpleMaps';
 
+let styles = {
+  mapContainer: {
+    width: "50%",
+    height: "atuo"
+  }
+}
+
 export class MapContainer extends Component {
   state = {
     showingInfoWindow: false,
@@ -28,6 +35,7 @@ export class MapContainer extends Component {
 
   render() {
     return (
+      <div style={styles.mapContainer}>
       <CurrentLocation centerAroundCurrentLocation google={this.props.google}>
         <Marker onClick={this.onMarkerClick} name={'current location'} />
         <InfoWindow
@@ -40,6 +48,7 @@ export class MapContainer extends Component {
           </div>
         </InfoWindow>
       </CurrentLocation>
+      </div>
     );
   }
 }

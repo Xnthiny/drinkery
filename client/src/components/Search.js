@@ -15,7 +15,8 @@ let styles = {
     }, 
     body:
     {
-      fontSize: "20px;"
+      fontSize: "20px;",
+      color: "#585858"
     }
 
   },
@@ -23,6 +24,7 @@ let styles = {
     background: "transparent",
     height: "100vh",
     width: "100vh",
+    float: "right",
     margin: "0 auto",
     padding: "10px",
     alignContent: "right",
@@ -31,10 +33,10 @@ let styles = {
 
   },
   SearchContainer: {
-    background: "#D89B00",
+    background: "#D89B00 ",
     height: "auto",
     width: "60%",
-    margin: "0 auto",
+    float: "center",
     padding: "45px",
     zIndex: "99",
     alignContent: "right",
@@ -53,7 +55,7 @@ let styles = {
     borderRadius: "5px"
   },
   userIn: {
-    width: "100%",
+    width: "90%",
     margin: "15px auto",
     borderColor: "black",
     borderRadius: "10px",
@@ -139,7 +141,7 @@ export default class Search extends Component {
             <br />
             Our Tech is sure to make your bar crawl experience one of a kind
           </h5>
-          <input value={this.state.inputValue} onChange={this.updateInputValue} style={styles.userIn} placeholder="Choose Your City!"></input>
+          <input value={this.state.inputValue} onChange={this.updateInputValue} style={styles.userIn} placeholder="Anywhere!"></input>
           <input value={this.state.personCount} onChange={this.handlePersonCount} style={styles.userIn} placeholder="How Many People Are Joining?"></input>
           <input value={this.state.pubCount} onChange={this.handleBarCount} style={styles.userIn} placeholder="How much can you drink?"></input>
           <br />

@@ -1,7 +1,10 @@
 import React from "react";
 import Search from "./components/Search";
-import bg from './images/bg4.png';
+import Navbar from './components/Navbar/Navbar';
+import bg from './images/bg2.jpg';
 import { isAbsolute } from "path";
+import MapContainer from './components/Map/GoogleMapsContainer';
+
 
 let styles = {
   introImgDiv: {
@@ -27,14 +30,15 @@ function App() {
   return (
     <div>
       <div className="row"> 
-      
+        <Navbar />
       </div>
       <div className="row">
         {SearchExpDiv()} 
       </div>
       <div className="row">
-       
+        <MapContainer />
       </div>
+
     </div>
   );
 }
