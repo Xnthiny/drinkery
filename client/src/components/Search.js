@@ -33,7 +33,7 @@ let styles = {
   SearchContainer: {
     background: "#D89B00",
     height: "auto",
-    width: "50%",
+    width: "60%",
     margin: "0 auto",
     padding: "45px",
     zIndex: "99",

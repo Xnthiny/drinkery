@@ -26,7 +26,9 @@ const SearchExpDiv = () => {
 function App() {
   return (
     <div>
-      <div className="row"> </div>
+      <div className="row"> 
+      
+      </div>
       <div className="row">
         {SearchExpDiv()} 
       </div>
