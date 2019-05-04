@@ -63,7 +63,30 @@ let styles = {
     padding: "5%",
     placeholderTextColor: "#fff",
     borderLeftWidth: "20px"
-  }
+  },
+  cityInput: {
+    display: "inlineBlock",
+    border: "none",
+    boxSizing: "content-box",
+    padding: "10px 20px",
+    margin: "20px",
+    borderRadius: "3px",
+    color: "rgba(0,0,0,1)",
+    textOverflow: "clip",
+    background: "#D89B00",
+  },
+  searchButton: {
+    display: "inlineBlock",
+    border: "none",
+    boxSizing: "content-box",
+    padding: "10px 20px",
+    margin: "20px",
+    borderRadius: "3px",
+    color: "rgba(0,0,0,1)",
+    textOverflow: "clip",
+    background: "#D89B00",
+    cursor: "pointer"
+  },
 }
 
 export default class Search extends Component {
@@ -105,37 +128,10 @@ export default class Search extends Component {
       }
     }
 
-    let styles = {
-      cityInput: {
-        display: "inlineBlock",
-        border: "none",
-        boxSizing: "content-box",
-        padding: "10px 20px",
-        margin: "20px",
-        borderRadius: "3px",
-        color: "rgba(0,0,0,1)",
-        textOverflow: "clip",
-        background: "#D89B00",
-      },
-      searchButton: {
-        display: "inlineBlock",
-        border: "none",
-        boxSizing: "content-box",
-        padding: "10px 20px",
-        margin: "20px",
-        borderRadius: "3px",
-        color: "rgba(0,0,0,1)",
-        textOverflow: "clip",
-        background: "#D89B00",
-        cursor: "pointer"
-      },
-
-    }
-
     return (
       <div style={styles.container} className="body-conatiner">
         <div style={styles.SearchContainer} className="search-conatiner">
-          <h3 style={styles.text.body}>
+          <h3 style={styles.text.title}>
             Search For Your Favorite Pubs!
           </h3>
           <h5 style={styles.text.body}>
