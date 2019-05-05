@@ -20,7 +20,7 @@ let styles = {
 const SearchExpDiv = () => {
   return (
     <div style={styles.introImgDiv} className="-intro-img-conatiner">
-    <Search />
+      <Search />
     </div>
   )
 }
@@ -29,11 +29,13 @@ const SearchExpDiv = () => {
 function App() {
   return (
     <div>
-      <div className="row"> 
-        <Navbar />
+      <div className="row">
+        <div className="col 12">
+          <Navbar />
+        </div>
       </div>
       <div className="row">
-        {SearchExpDiv()} 
+        {SearchExpDiv()}
       </div>
       <div className="row">
         <MapContainer />
