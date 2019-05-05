@@ -4,6 +4,9 @@ import Navbar from './components/Navbar/Navbar';
 import bg from './images/bg2.jpg';
 import { isAbsolute } from "path";
 import MapContainer from './components/Map/GoogleMapsContainer';
+import Toolbar from './components/Toolbar/Toolbar';
+import SideDrawer from './components/SideDrawer/SideDrawer';
+
 
 
 let styles = {
@@ -29,12 +32,12 @@ const SearchExpDiv = () => {
 function App() {
   return (
     <div>
-      <div className="row">
+      <div className="row" style={{ height: "100%" }}>
         <div className="col 12">
-          <Navbar />
+          <Toolbar />
         </div>
       </div>
-      <div className="row">
+      <div stlye={{ marginTop: "65px" }} className="row">
         {SearchExpDiv()}
       </div>
       <div className="row">

@@ -17,6 +17,7 @@ export default class CrawlList extends Component {
         margin: "20px auto"
       },
       list: {
+        alignItems: "center",
         background: "#585858",
         height: "auto",
         width: "92%",
@@ -37,6 +38,7 @@ export default class CrawlList extends Component {
         borderRadius: "5px"
       },
       buttonDiv: {
+        alignItems: "center",
         margin: "0px auto",
         width: "100%",
         alignContent: "center",

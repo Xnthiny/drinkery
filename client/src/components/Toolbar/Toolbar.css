@@ -1,0 +1,60 @@
+.toolbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left:0;
+    height: 60px;
+    background: transparent;
+    z-index: 99;
+}
+.logo {
+    margin-left: 0.5rem;
+}
+
+.toolbar-nav {
+    display: flex;
+    align-items: center;
+    height:100%;
+    padding: 0px 20px;
+}
+
+/* 
+D89B00
+585858
+black
+*/
+
+.spacer {
+    flex: 1;
+}
+
+.toolbar-links-list {
+    list-style: none;
+    margin: 0;
+    padding: 0px 20px;
+    display: flex;
+}
+
+.logo{
+    width: 30%;
+    height: auto;
+}
+
+li a {
+    font-weight: 600;
+    color: #D89B00;
+    font-size: 1.5em;
+    text-decoration: wavy;
+    padding: 0.5em;
+}
+li a:hover {
+    color: #585858;
+    font-size: 1.5em;
+    text-decoration: wavy;
+}
+li a:active {
+    color: black;
+    font-size: 1.5em;
+    text-decoration: wavy;
+}
+
