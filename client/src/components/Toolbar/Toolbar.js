@@ -5,14 +5,14 @@ import logo from '../../images/drinkery-logo.png';
 
 
 const Toolbar = () => {
-   
+
     return (
         <header className="toolbar">
             <nav className="toolbar-nav">
                 <div className="hamburger">
                     <HamburgerToggle />
                 </div>
-                <div className="toolbar-logo"><a href='/'></a> <img className="logo" src={logo}/></div>
+                <div className="toolbar-logo"><a href='/'><img className="logo" src={logo} /></a></div>
                 <div className="spacer"> </div>
                 <div>
                     <ul className="toolbar-links-list">

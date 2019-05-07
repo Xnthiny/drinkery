@@ -9,6 +9,8 @@
 }
 .logo {
     margin-left: 0.5rem;
+    width: 35%;
+    height: auto;    
 }
 
 .toolbar-nav {
@@ -33,11 +35,6 @@ black
     margin: 0;
     padding: 0px 20px;
     display: flex;
-}
-
-.logo{
-    width: 30%;
-    height: auto;
 }
 
 li a {

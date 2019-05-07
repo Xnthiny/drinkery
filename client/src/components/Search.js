@@ -4,7 +4,7 @@ import CrawlListItem from "./CrawlListItem"
 import API from "../utils/API"
 import SaveButton from './Button/Button';
 import Button from '@material-ui/core/Button';
-
+import ddInput from '../components/Dropdowns/Dropdown';
 
 let styles = {
   text:
@@ -144,6 +144,7 @@ export default class Search extends Component {
           <input value={this.state.inputValue} onChange={this.updateInputValue} style={styles.userIn} placeholder="Anywhere!"></input>
           <input value={this.state.personCount} onChange={this.handlePersonCount} style={styles.userIn} placeholder="How Many People Are Joining?"></input>
           <input value={this.state.pubCount} onChange={this.handleBarCount} style={styles.userIn} placeholder="How much can you drink?"></input>
+          <ddInput />
           <br />
           <button type="submit" style={styles.primary} onClick={this.handleSearch} className="searchButton">DRINK!!!</button>
         </div>

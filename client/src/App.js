@@ -1,7 +1,7 @@
 import React from "react";
 import Search from "./components/Search";
 import Navbar from './components/Navbar/Navbar';
-import bg from './images/bg2.jpg';
+import bg from './images/bg4.jpg';
 import { isAbsolute } from "path";
 import MapContainer from './components/Map/GoogleMapsContainer';
 import Toolbar from './components/Toolbar/Toolbar';
@@ -34,6 +34,7 @@ function App() {
     <div>
       <div className="row" style={{ height: "100%" }}>
         <div className="col 12">
+        {/* <SideDrawer /> */}
           <Toolbar />
         </div>
       </div>
