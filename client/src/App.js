@@ -7,8 +7,6 @@ import MapContainer from './components/Map/GoogleMapsContainer';
 import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 
-
-
 let styles = {
   introImgDiv: {
     position: isAbsolute,
@@ -44,7 +42,6 @@ function App() {
       <div className="row">
         <MapContainer />
       </div>
-
     </div>
   );
 }
