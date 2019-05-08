@@ -1,8 +1,11 @@
 import React from "react";
 import Search from "./components/Search";
-import bg from './images/bg4.png';
+import Navbar from './components/Navbar/Navbar';
+import bg from './images/bg4.jpg';
 import { isAbsolute } from "path";
-import GoogleMapsContainer from './components/Map/GoogleMapsContainer'
+import MapContainer from './components/Map/GoogleMapsContainer';
+import Toolbar from './components/Toolbar/Toolbar';
+import SideDrawer from './components/SideDrawer/SideDrawer';
 
 let styles = {
   introImgDiv: {
@@ -18,7 +21,7 @@ let styles = {
 const SearchExpDiv = () => {
   return (
     <div style={styles.introImgDiv} className="-intro-img-conatiner">
-    <Search />
+      <Search />
     </div>
   )
 }
@@ -27,16 +30,18 @@ const SearchExpDiv = () => {
 function App() {
   return (
     <div>
-      <div className="row"> 
-      
+      <div className="row" style={{ height: "100%" }}>
+        <div className="col 12">
+        {/* <SideDrawer /> */}
+          <Toolbar />
+        </div>
       </div>
-      <div className="row">
+      <div stlye={{ marginTop: "65px" }} className="row">
         {SearchExpDiv()}
       </div>
       <div className="row">
-       
+        <MapContainer />
       </div>
-      <GoogleMapsContainer/>
     </div>
   );
 }
