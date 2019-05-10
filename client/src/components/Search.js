@@ -72,7 +72,20 @@ export default class Search extends Component {
     console.log("Person Count");
   }
 
+  handleSearch = () => {
+    API.searchFoursquare(this.state.inputValue).then(res => {
+      const listItems = res.data.response.venues.map(venue => {
+        return (
+          <CrawlListItem selected={false} address={venue.location.formattedAddress} name={venue.name} key={venue.id} />
+        )
+      })
+      this.setState({ results: listItems })
+    })
+  }
 
+  updateInputValue = (e) => {
+    this.setState({ inputValue: e.target.value })
+  }
   render(props) {
 
     const displayResults = () => {
@@ -80,6 +93,8 @@ export default class Search extends Component {
         return <CrawlList results={this.state.results} />
       }
     }
+
+
 
     return (
       <div>
