@@ -5,9 +5,8 @@ import DropdownButton from 'react-bootstrap/DropdownButton'
 
 const ddInput = (props) => {
     let title ="";
-    let dropDownItem = "";
+    let dropDownItem = "1";
     let dropDownValue = 0;
-
 
     return (
         <Dropdown>
@@ -15,7 +14,9 @@ const ddInput = (props) => {
                 {title}
         </Dropdown.Toggle>
             <Dropdown.Menu>
-                <Dropdown.Item href="/" value={dropDownValue}>{dropDownItem}</Dropdown.Item>
+                <Dropdown.Item href="/" value={15}>{dropDownItem}</Dropdown.Item>
+                <Dropdown.Item href="/" value={25}>{dropDownItem}</Dropdown.Item>
+                <Dropdown.Item href="/" value={25}>{dropDownItem}</Dropdown.Item>
             </Dropdown.Menu>
         </Dropdown>
     );

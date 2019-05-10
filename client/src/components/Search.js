@@ -12,7 +12,7 @@ let styles = {
     title:
     {
       fontSize: "40px;"
-    }, 
+    },
     body:
     {
       fontSize: "20px;",
@@ -107,6 +107,8 @@ export default class Search extends Component {
   }
 
 
+
+
   handleSearch = () => {
     API.searchFoursquare(this.state.inputValue).then(res => {
       const listItems = res.data.response.venues.map(venue => {
@@ -129,6 +131,8 @@ export default class Search extends Component {
         return <CrawlList results={this.state.results} />
       }
     }
+
+
 
     return (
       <div style={styles.container} className="body-conatiner">
