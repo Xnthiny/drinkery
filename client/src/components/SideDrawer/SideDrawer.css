@@ -1,0 +1,42 @@
+.side-drawer-nav {
+    height: 100%;
+    background-color:black;
+    box-shadow: 2px 0px 5px rgb(0,0,0, 0.5);
+    position:fixed;
+    top:0;
+    left:0;
+    width: 70%;
+    max-width: 70%;
+    z-index: 100;   
+}
+
+.side-drawer-list {
+    height: 100%;
+    font-size: 40px;
+    font-weight: 800;
+    list-style: none;
+    display: flex;
+    flex-direction: column;   
+    justify-content: center; 
+}
+
+
+li a {
+    font-weight: 800;
+    color: #D89B00;
+    font-size: 1.5em;
+    text-decoration: wavy;
+    padding: 0.5em;
+}
+
+li a:hover {
+    color: #585858;
+    font-size: 1.5em;
+    text-decoration: wavy;
+}
+
+li a:active {
+    color: black;
+    font-size: 1.5em;
+    text-decoration: wavy;
+}

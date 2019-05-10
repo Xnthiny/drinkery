@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import CrawlList from "./CrawlList"
+import SearchForm from "./Forms/SearchForm/SearchForm"
 import CrawlListItem from "./CrawlListItem"
 import API from "../utils/API"
 import SaveButton from './Button/Button';
 import Button from '@material-ui/core/Button';
-
+import ddInput from '../components/Dropdowns/Dropdown';
 
 let styles = {
   text:
@@ -12,10 +13,11 @@ let styles = {
     title:
     {
       fontSize: "40px;"
-    }, 
+    },
     body:
     {
-      fontSize: "20px;"
+      fontSize: "20px;",
+      color: "#585858"
     }
 
   },
@@ -23,6 +25,7 @@ let styles = {
     background: "transparent",
     height: "100vh",
     width: "100vh",
+    float: "right",
     margin: "0 auto",
     padding: "10px",
     alignContent: "right",
@@ -31,10 +34,10 @@ let styles = {
 
   },
   SearchContainer: {
-    background: "#D89B00",
+    background: "#D89B00 ",
     height: "auto",
     width: "60%",
-    margin: "0 auto",
+    float: "center",
     padding: "45px",
     zIndex: "99",
     alignContent: "right",
@@ -51,41 +54,6 @@ let styles = {
     padding: "15px",
     fontSize: "15px",
     borderRadius: "5px"
-  },
-  userIn: {
-    width: "100%",
-    margin: "15px auto",
-    borderColor: "black",
-    borderRadius: "10px",
-    borderWeight: "2px",
-    boxShadow: '0 3px 5px 2px rgba(41, 41, 41, .3)',
-    backgroundColor: "transparent",
-    padding: "5%",
-    placeholderTextColor: "#fff",
-    borderLeftWidth: "20px"
-  },
-  cityInput: {
-    display: "inlineBlock",
-    border: "none",
-    boxSizing: "content-box",
-    padding: "10px 20px",
-    margin: "20px",
-    borderRadius: "3px",
-    color: "rgba(0,0,0,1)",
-    textOverflow: "clip",
-    background: "#D89B00",
-  },
-  searchButton: {
-    display: "inlineBlock",
-    border: "none",
-    boxSizing: "content-box",
-    padding: "10px 20px",
-    margin: "20px",
-    borderRadius: "3px",
-    color: "rgba(0,0,0,1)",
-    textOverflow: "clip",
-    background: "#D89B00",
-    cursor: "pointer"
   },
 }
 
@@ -104,7 +72,6 @@ export default class Search extends Component {
     console.log("Person Count");
   }
 
-
   handleSearch = () => {
     API.searchFoursquare(this.state.inputValue).then(res => {
       const listItems = res.data.response.venues.map(venue => {
@@ -119,7 +86,6 @@ export default class Search extends Component {
   updateInputValue = (e) => {
     this.setState({ inputValue: e.target.value })
   }
-
   render(props) {
 
     const displayResults = () => {
@@ -128,23 +94,11 @@ export default class Search extends Component {
       }
     }
 
+
+
     return (
-      <div style={styles.container} className="body-conatiner">
-        <div style={styles.SearchContainer} className="search-conatiner">
-          <h3 style={styles.text.title}>
-            Search For Your Favorite Pubs!
-          </h3>
-          <h5 style={styles.text.body}>
-            Enter any location... Our API does the rest!
-            <br />
-            Our Tech is sure to make your bar crawl experience one of a kind
-          </h5>
-          <input value={this.state.inputValue} onChange={this.updateInputValue} style={styles.userIn} placeholder="Choose Your City!"></input>
-          <input value={this.state.personCount} onChange={this.handlePersonCount} style={styles.userIn} placeholder="How Many People Are Joining?"></input>
-          <input value={this.state.pubCount} onChange={this.handleBarCount} style={styles.userIn} placeholder="How much can you drink?"></input>
-          <br />
-          <button type="submit" style={styles.primary} onClick={this.handleSearch} className="searchButton">DRINK!!!</button>
-        </div>
+      <div>
+        <SearchForm />
         <div className="searchResults">
           {displayResults()}
         </div>

@@ -1,54 +1,17 @@
-import React from "react";
-import Search from "./components/Search";
-import bg from './images/bg4.png';
-import { isAbsolute } from "path";
-import GoogleMapsContainer from './components/Map/GoogleMapsContainer'
-import YouTubePlayer from 'react-player/lib/players/YouTube'
- 
-let styles = {
-  introImgDiv: {
-    position: isAbsolute,
-    backgroundImage: `url(${bg})`,
-    height: "100%",
-    width: "100%",
-    zIndex: "2",
-    paddingTop: "150px"
+import React, { Component } from 'react'
+import Home from './Pages/Home/Home';
+
+class App extends Component {
+  state= {
+    this: "MasterState"
   }
-}
-
-const SearchExpDiv = () => {
-  return (
-    <div style={styles.introImgDiv} className="-intro-img-conatiner">
-    <Search />
-    </div>
-  )
-}
-
-
-function App() {
-  return (
-    <div>
-
-      <YouTubePlayer
-  url='https://www.youtube.com/watch?v=TtZv5N0PX6g'
-  playing
-  controls
-  // Other ReactPlayer props will work here
-/>
-      <div className="row"> 
-      </div>
-      <div className="row">
-        {SearchExpDiv()}
-      </div>
-      <div className="row">
-       
-      </div>
-      <GoogleMapsContainer/>
-      
-      
-    </div>
-  );
-  
-}
-
-export default App;
+  render() {
+    console.log(this.state.this);
+    return (
+            <Home />
+        )
+      }
+    }
+    
+    
+    export default App;
