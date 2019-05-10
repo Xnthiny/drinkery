@@ -3,7 +3,8 @@ import Search from "./components/Search";
 import bg from './images/bg4.png';
 import { isAbsolute } from "path";
 import GoogleMapsContainer from './components/Map/GoogleMapsContainer'
-
+import YouTubePlayer from 'react-player/lib/players/YouTube'
+ 
 let styles = {
   introImgDiv: {
     position: isAbsolute,
@@ -27,8 +28,14 @@ const SearchExpDiv = () => {
 function App() {
   return (
     <div>
+
+      <YouTubePlayer
+  url='https://www.youtube.com/watch?v=TtZv5N0PX6g'
+  playing
+  controls
+  // Other ReactPlayer props will work here
+/>
       <div className="row"> 
-      
       </div>
       <div className="row">
         {SearchExpDiv()}
@@ -37,8 +44,11 @@ function App() {
        
       </div>
       <GoogleMapsContainer/>
+      
+      
     </div>
   );
+  
 }
 
 export default App;
