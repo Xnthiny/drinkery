@@ -40,7 +40,6 @@ function App() {
         {SearchExpDiv()}
       </div>
       <div className="row">
-        <MapContainer />
       </div>
     </div>
   );
