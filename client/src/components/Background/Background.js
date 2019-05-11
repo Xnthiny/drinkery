@@ -1,5 +1,5 @@
 import React, { Children } from 'react';
-import bg from '../../images/bg6.png';
+import bg from '../../images/bg.png';
 import { isAbsolute } from "path";
 import './Background.css';
 
