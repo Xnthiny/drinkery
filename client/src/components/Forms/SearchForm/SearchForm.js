@@ -4,35 +4,23 @@ import CrawlListItem from "../../CrawlListItem"
 import "./searchform.css"
 
 export default class SearchForm extends Component {
-    state = {
-        where: "",
-        howMany: "",
-        results: ""
-    }
 
-    updateWhere = (e) => {
-        this.setState({ where: e.target.value })
-    }
-
-    updateHowMany = (e) => {
-        this.setState({ howMany: e.target.value })
-    }
-
-    handleSearch = (event) => {
-        event.preventDefault();
-        console.log(this.state.where)
-        API.searchFoursquare(this.state.where).then(res => {
-            const listItems = res.data.response.venues.map(venue => {
-                return (
-                    <CrawlListItem selected={false} address={venue.location.formattedAddress} name={venue.name} key={venue.id} />
-                )
+    render(props) {
+        console.log("Location: " + JSON.stringify(this.props.location))
+    
+        let handleSearch = (event) => {
+            event.preventDefault();
+            API.searchFoursquare(this.props.location).then(res => {
+                const listItems = res.data.response.venues.map(venue => {
+                    return (
+                        <CrawlListItem selected={false} address={venue.location.formattedAddress} name={venue.name} key={venue.id} />
+                    )
+                })
+                this.props.updateResults(listItems)
+                console.log(this.props.results)
             })
-            this.setState({ results: listItems })
-            console.log(this.state.results)
-        })
-    }
+        }
 
-    render() {
         return (
             <div className="search-form">
                 <div className="search-title">
@@ -43,18 +31,19 @@ export default class SearchForm extends Component {
                     <div className="input-div">
                         <label id="label" htmlFor="city">WHERE</label>
                         <br />
-                        <input id="city-input" name="city" value={this.state.where} onChange={this.updateWhere} placeholder="Anywhere"></input>
+                        <input id="city-input" name="city" value={this.props.location} onChange={this.props.changeLocation} placeholder="Anywhere"></input>
                     </div>
                     <div className="input-div">
                         <label id="label" htmlFor="how-many">HOW MANY PEOPLE?</label>
                         <br />
-                        <input id="count-input" name="how-many" value={this.state.howMany} onChange={this.updateHowMany} placeholder="Enter a number"></input>
+                        <input id="count-input" name="how-many" value={this.props.numPeople} onChange={this.props.updatePeople} placeholder="Enter a number"></input>
                     </div>
                     <div className="button-div">
-                        <button id="search-button" type="submit" onClick={this.handleSearch}>Search</button>
+                        <button id="search-button" type="submit" onClick={handleSearch}>Search</button>
                     </div>
                 </form>
             </div>
         )
     }
 }
+

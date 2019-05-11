@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Search from "../../components/Search";
+import SearchForm from '../../components/Forms/SearchForm/SearchForm'
 import Navbar from '../../components/Navbar/Navbar';
 import bg from '../../images/bg4.png';
 import { isAbsolute } from "path";
@@ -21,21 +21,32 @@ let styles = {
 }
 
 
-const SearchExpDiv = () => {
-    return (
-        <div style={styles.introImgDiv} className="-intro-img-conatiner">
-            <Search />
-        </div>
-    )
-}
-
-
 class Home extends Component {
     state = {
-        this: "Text",
-        NavStyle: "",
-        HamburgerToggle: false
+        location: "",
+        numPeople: "",
+        results: "",
     };
+
+    updateLocation = (event) => {
+        let myLocation = event.target.value
+        this.setState({
+            location: myLocation
+        })
+    }
+
+    updateResults = (results) => {
+        this.setState({
+            results: results
+        })
+    }
+
+    updatePeople = (event) => {
+        let personCount = event.target.value
+        this.setState({
+            numPeople: personCount
+        })
+    }
 
     render() {
         return (
@@ -48,10 +59,20 @@ class Home extends Component {
                     </div>
                 </div>
                 <div stlye={{ marginTop: "65px" }} className="row">
-                    {SearchExpDiv()}
+
+                    <SearchForm
+                    location={this.state.location}
+                    changeLocation={this.updateLocation}
+                    numPeople={this.state.numPeople}
+                    updatePeople={this.updatePeople}
+                    results={this.state.results}
+                    updateResults={this.updateResults}
+                    />
+
                 </div>
                 <div className="row">
                     <MapContainer />
+
                 </div>
             </div >
         )
