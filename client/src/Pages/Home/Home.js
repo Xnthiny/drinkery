@@ -1,33 +1,12 @@
 import React, { Component } from 'react'
-import Search from "../../components/Search";
 import Navbar from '../../components/Navbar/Navbar';
-import bg from '../../images/bg4.png';
-import { isAbsolute } from "path";
 import MapContainer from '../../components/Map/GoogleMapsContainer';
 import Toolbar from '../../components/Toolbar/Toolbar';
 import SideDrawer from '../../components/SideDrawer/SideDrawer';
 import HamburgerToggle from '../../components/SideDrawer/HamburgerToggle';
 import './Home.css';
-
-let styles = {
-    introImgDiv: {
-        position: isAbsolute,
-        backgroundImage: `url(${bg})`,
-        height: "100%",
-        width: "100%",
-        zIndex: 2,
-        paddingTop: "150px"
-    }
-}
-
-
-const SearchExpDiv = () => {
-    return (
-        <div style={styles.introImgDiv} className="-intro-img-conatiner">
-            <Search />
-        </div>
-    )
-}
+import SearchForm from '../../components/Forms/SearchForm/SearchForm';
+import Background from '../../components/Background/Background';
 
 
 class Home extends Component {
@@ -45,10 +24,12 @@ class Home extends Component {
                         {/* <SideDrawer /> */}
                         {console.log(this.state.this)}
                         <Toolbar />
+                        <Background> </Background>  <SearchForm style={{ position: "relative", zIndex: "99" }} />
                     </div>
                 </div>
                 <div stlye={{ marginTop: "65px" }} className="row">
-                    {SearchExpDiv()}
+
+
                 </div>
                 <div className="row">
                     <MapContainer />
