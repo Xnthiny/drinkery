@@ -7,7 +7,6 @@ let styles = {
   mapContainer: {
     width: "50%",
     height: "atuo",
-    marginBottom: "100px"
   }
 }
 

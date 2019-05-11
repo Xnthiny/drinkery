@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import SearchForm from '../../components/Forms/SearchForm/SearchForm'
 import Navbar from '../../components/Navbar/Navbar';
-import bg from '../../images/bg4.png';
-import { isAbsolute } from "path";
 import MapContainer from '../../components/Map/GoogleMapsContainer';
 import Toolbar from '../../components/Toolbar/Toolbar';
 import SideDrawer from '../../components/SideDrawer/SideDrawer';
 import HamburgerToggle from '../../components/SideDrawer/HamburgerToggle';
 import './Home.css';
+import Background from '../../components/Background/Background';
 
 let styles = {
     introImgDiv: {
@@ -19,7 +18,6 @@ let styles = {
         paddingTop: "150px"
     }
 }
-
 
 class Home extends Component {
     state = {
@@ -56,10 +54,10 @@ class Home extends Component {
                         {/* <SideDrawer /> */}
                         {console.log(this.state.this)}
                         <Toolbar />
+                        <Background> </Background>  <SearchForm style={{ position: "relative", zIndex: "99" }} />
                     </div>
                 </div>
                 <div stlye={{ marginTop: "65px" }} className="row">
-
                     <SearchForm
                     location={this.state.location}
                     changeLocation={this.updateLocation}
@@ -68,7 +66,6 @@ class Home extends Component {
                     results={this.state.results}
                     updateResults={this.updateResults}
                     />
-
                 </div>
                 <div className="row">
                     <MapContainer />
