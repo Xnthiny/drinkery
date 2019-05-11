@@ -1,0 +1,25 @@
+.container {
+    background: rgb(49, 49, 49);
+    width: 100%;
+    height: 28.5em;
+    overflow: scroll;
+}
+
+#results-btn {
+    display: inline-block;
+    border: none;
+    float: right;
+    box-sizing: content-box;
+    padding: 10px 20px;
+    margin: 20px;
+    outline: none;
+    color: rgba(0,0,0,1);
+    text-overflow: clip;
+    background: black;
+    color: #d89b00;
+    cursor: pointer;
+    border-radius: 3px;
+    border-color: black;
+    border-radius: 10px;
+    border-width: 2px;
+}

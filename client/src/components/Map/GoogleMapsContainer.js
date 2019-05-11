@@ -6,7 +6,7 @@ import CurrentLocation from '../SimpleMaps';
 let styles = {
   mapContainer: {
     width: "50%",
-    height: "atuo",
+    height: "auto",
   }
 }
 

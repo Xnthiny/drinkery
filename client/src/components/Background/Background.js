@@ -8,15 +8,14 @@ let styles = {
     position: isAbsolute,
     width: "100%",
     height: "100vh",
-    zIndex:2,
-    background: `url(${bg})`
+    zIndex:0,
   }
 }
 
 export default function Bakground(props) {
   return (
     <div id='background-container' className='background-container' style={styles.Background}>
-      <div className={Children} />
+      <img src={bg}></img>
     </div>
   )
 }
