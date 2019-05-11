@@ -1,5 +1,5 @@
 import React, { Children } from 'react';
-import bg from '../../images/bg4.png';
+import bg from '../../images/bg6.png';
 import { isAbsolute } from "path";
 import './Background.css';
 
@@ -8,6 +8,7 @@ let styles = {
     position: isAbsolute,
     width: "100%",
     height: "100vh",
+    zIndex:2,
     background: `url(${bg})`
   }
 }
