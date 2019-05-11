@@ -7,6 +7,8 @@ import SideDrawer from '../../components/SideDrawer/SideDrawer';
 import HamburgerToggle from '../../components/SideDrawer/HamburgerToggle';
 import './Home.css';
 import Background from '../../components/Background/Background';
+import Results from '../../components/Results/Results';
+import Confirm from '../../components/Modals/ConfirmModal/Confirm';
 
 class Home extends Component {
     state = {
@@ -37,25 +39,36 @@ class Home extends Component {
 
     render() {
         return (
-            <div>
-                <Background />
-                <Toolbar />
-                        {/* <SideDrawer /> */}
-                        <SearchForm
-                            location={this.state.location}
-                            changeLocation={this.updateLocation}
-                            numPeople={this.state.numPeople}
-                            updatePeople={this.updatePeople}
-                            results={this.state.results}
-                            updateResults={this.updateResults}
-                        />
-                        
-                        <div className="row">
-                            <MapContainer />
-                            <Results results={this.state.results} />
-                        </div>
+            <div className="Home">
+                <div className="row">
+                    <div className="col-12">
+                        <Background ></Background>
+                        <Toolbar />
+                    </div>
+                </div>
+
+                <div className="row"  >
+                    {/* <SideDrawer /> */}
+                    <SearchForm style={{ top: "-12em" }}
+                        location={this.state.location}
+                        changeLocation={this.updateLocation}
+                        numPeople={this.state.numPeople}
+                        updatePeople={this.updatePeople}
+                        results={this.state.results}
+                        updateResults={this.updateResults}
+                    />
+
+
 
                 </div>
+                <div className="row">
+                    <div className="map-container">
+                        <MapContainer />
+                        <Confirm />
+                    </div>
+                    <Results results={this.state.results} />
+                </div>
+            </div>
         )
     }
 }

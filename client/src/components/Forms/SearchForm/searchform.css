@@ -1,5 +1,9 @@
+#results-row {
+    top: -25.5em;
+}
+
 .search-form {    
-    top: -750px;
+    top: -42em;
     justify-content: center;
     background: rgba(41, 41, 41);
     min-width: 50%;
