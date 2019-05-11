@@ -7,7 +7,6 @@ import SideDrawer from '../../components/SideDrawer/SideDrawer';
 import HamburgerToggle from '../../components/SideDrawer/HamburgerToggle';
 import './Home.css';
 import Background from '../../components/Background/Background';
-import Results from "../../components/Results/Results"
 
 class Home extends Component {
     state = {
@@ -55,6 +54,7 @@ class Home extends Component {
                             <MapContainer />
                             <Results results={this.state.results} />
                         </div>
+
                 </div>
         )
     }
