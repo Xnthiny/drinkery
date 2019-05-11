@@ -7,6 +7,8 @@ import SideDrawer from '../../components/SideDrawer/SideDrawer';
 import HamburgerToggle from '../../components/SideDrawer/HamburgerToggle';
 import './Home.css';
 import Background from '../../components/Background/Background';
+import bg from '../../images/bg.png';
+import {isAbsolute} from 'path';
 
 let styles = {
     introImgDiv: {
@@ -54,7 +56,7 @@ class Home extends Component {
                         {/* <SideDrawer /> */}
                         {console.log(this.state.this)}
                         <Toolbar />
-                        <Background> </Background>  <SearchForm style={{ position: "relative", zIndex: "99" }} />
+                        <Background> </Background>  
                     </div>
                 </div>
                 <div stlye={{ marginTop: "65px" }} className="row">
