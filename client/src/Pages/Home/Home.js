@@ -3,7 +3,6 @@ import SearchForm from '../../components/Forms/SearchForm/SearchForm'
 import Navbar from '../../components/Navbar/Navbar';
 import MapContainer from '../../components/Map/GoogleMapsContainer';
 import Toolbar from '../../components/Toolbar/Toolbar';
-import SideDrawer from '../../components/SideDrawer/SideDrawer';
 import HamburgerToggle from '../../components/SideDrawer/HamburgerToggle';
 import './Home.css';
 import Background from '../../components/Background/Background';
@@ -16,6 +15,12 @@ class Home extends Component {
         numPeople: "",
         results: "",
     };
+
+    drawerToggleClickHandler = () => {
+        this.setState((prevState) => {
+            return { sideDrawerOpen: !prevState.sideDrawerOpen }
+        });
+    }
 
     updateLocation = (event) => {
         let myLocation = event.target.value
@@ -37,37 +42,43 @@ class Home extends Component {
         })
     }
 
+   
     render() {
         return (
             <div className="Home">
                 <div className="row">
                     <div className="col-12">
-                        <Background ></Background>
-                        <Toolbar />
+
+                        <Background />
                     </div>
                 </div>
-
-                <div className="row"  >
-                    {/* <SideDrawer /> */}
-                    <SearchForm style={{ top: "-12em" }}
-                        location={this.state.location}
-                        changeLocation={this.updateLocation}
-                        numPeople={this.state.numPeople}
-                        updatePeople={this.updatePeople}
-                        results={this.state.results}
-                        updateResults={this.updateResults}
-                    />
-
-
-
+                <div className="row">
+                    <div className="col-12">
+                        <SearchForm
+                            location={this.state.location}
+                            changeLocation={this.updateLocation}
+                            numPeople={this.state.numPeople}
+                            updatePeople={this.updatePeople}
+                            results={this.state.results}
+                            updateResults={this.updateResults}
+                        />
+                    </div>
+                    <div className="instructional"> 
+                        <div className="col"> HHHH</div>
+                        <div className="col"> BBBB</div>
+                    </div>
                 </div>
                 <div className="row">
-                    <div className="map-container">
+                    <div className="col">
                         <MapContainer />
                         <Confirm />
                     </div>
-                    <Results results={this.state.results} />
+                    <div className="col">
+                        <Results results={this.state.results} />
+                    </div>
                 </div>
+
+
             </div>
         )
     }

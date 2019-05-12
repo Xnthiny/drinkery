@@ -56,3 +56,21 @@ li a:active {
     text-decoration: wavy;
 }
 
+
+@media  (max-width: 768px) {
+    .toolbar-links-list {
+    display: none;
+    }
+    .logo {
+    float: right;
+    width: 50%;
+    height: auto;
+    }
+
+}
+
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+}
