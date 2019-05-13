@@ -8,6 +8,7 @@ import './Home.css';
 import Background from '../../components/Background/Background';
 import Results from '../../components/Results/Results';
 import Confirm from '../../components/Modals/ConfirmModal/Confirm';
+import Instrucitonal from '../../components/Instructional/Instrucitonal';
 
 class Home extends Component {
     state = {
@@ -42,18 +43,17 @@ class Home extends Component {
         })
     }
 
-   
+
     render() {
         return (
             <div className="Home">
-                <div className="row">
-                    <div className="col-12">
-
+                <div className="row" >
+                    <div className="col-12" style={{ zIndex: 0 }}>
                         <Background />
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-12">
+                <div className="row" className='search-col'>
+                    <div className="col-12" >
                         <SearchForm
                             location={this.state.location}
                             changeLocation={this.updateLocation}
@@ -63,12 +63,12 @@ class Home extends Component {
                             updateResults={this.updateResults}
                         />
                     </div>
-                    <div className="instructional"> 
-                        <div className="col"> HHHH</div>
-                        <div className="col"> BBBB</div>
-                    </div>
                 </div>
-                <div className="row">
+                <div className="row" >
+                    <div className='col-12 results-col'>
+                        <Instrucitonal />
+                    </div>
+
                     <div className="col">
                         <MapContainer />
                         <Confirm />

@@ -1,12 +1,10 @@
 #results-row {
-    top:-49em;
     display: flex; /* equal height of the children */
 }
 
 
 
 .search-form {  
-    top:-46em;
     justify-content: center;
     background: rgba(41, 41, 41);
     min-width: 50%;

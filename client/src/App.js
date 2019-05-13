@@ -27,6 +27,7 @@ class App extends Component {
       backdrop = <Backdrop click={this.backdropClickHandler} />;
     }
 
+
     console.log(this.state.this);
     return (
       <div>
