@@ -1,4 +1,4 @@
-.side-drawer-nav {
+.side-drawer {
     height: 100%;
     background-color:black;
     box-shadow: 2px 0px 5px rgb(0,0,0, 0.5);
@@ -7,9 +7,14 @@
     left:0;
     width: 70%;
     max-width: 70%;
-    z-index: 100;   
+    z-index: 150;   
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
 }
 
+.side-drawer.open {
+    transform: translateX(0);
+}
 .side-drawer-list {
     height: 100%;
     font-size: 40px;
@@ -19,6 +24,7 @@
     flex-direction: column;   
     justify-content: center; 
 }
+
 
 
 li a {
@@ -39,4 +45,11 @@ li a:active {
     color: black;
     font-size: 1.5em;
     text-decoration: wavy;
+}
+
+
+@media (min-width: 696px) {
+    .side-drawer {
+        display: none;
+    }
 }

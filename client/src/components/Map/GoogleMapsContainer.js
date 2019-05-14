@@ -36,24 +36,24 @@ export class MapContainer extends Component {
   render() {
     return (
       <div style={styles.mapContainer}>
-      <CurrentLocation centerAroundCurrentLocation google={this.props.google}>
-        <Marker onClick={this.onMarkerClick} name={'current location'} />
-        <InfoWindow
-          marker={this.state.activeMarker}
-          visible={this.state.showingInfoWindow}
-          onClose={this.onClose}
-        >
-          <div>
-            <h4>{this.state.selectedPlace.name}</h4>
-          </div>
-        </InfoWindow>
-      </CurrentLocation>
+        <CurrentLocation centerAroundCurrentLocation google={this.props.google}>
+          <Marker onClick={this.onMarkerClick} name={'current location'} />
+          <InfoWindow
+            marker={this.state.activeMarker}
+            visible={this.state.showingInfoWindow}
+            onClose={this.onClose}
+          >
+            <div>
+              <h4>{this.state.selectedPlace.name}</h4>
+            </div>
+          </InfoWindow>
+        </CurrentLocation>
       </div>
     );
   }
 }
-  
+
 
 export default GoogleApiWrapper({
-    apiKey: "AIzaSyBMD3ojp-P28ggup4xeFUZI9i6rYDJwRNU"
+  apiKey: "AIzaSyBMD3ojp-P28ggup4xeFUZI9i6rYDJwRNU"
 })(MapContainer)

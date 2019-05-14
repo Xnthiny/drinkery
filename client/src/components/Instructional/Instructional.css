@@ -1,0 +1,54 @@
+#instructions {
+    top:-20em;
+    color: white;
+    display: inline;
+}
+
+.text-body{
+    text-align: center;
+    padding:10px;
+}
+
+h2 {
+    color: white;
+}
+
+.logo-instructions {
+    height: auto;
+    width: 80%;
+}
+
+p {
+    font-size: 20px;
+    color: white;
+}
+
+.intr {
+    text-align: center;
+    display: flex;
+}
+
+.how {
+    margin: 10px;
+    height: 105px;
+    width: 105px;
+
+}
+.who {
+    margin: 10px;
+    height: 105px;
+    width: 105px;
+
+}
+.where {
+    margin: 10px;
+    height: 105px;
+    width: 105px;
+}
+
+.col {
+  flex: 1; /* additionally, equal width */
+  padding: 1em;
+  border: none; 
+}
+ 

@@ -3,10 +3,12 @@ import SearchForm from '../../components/Forms/SearchForm/SearchForm'
 import Navbar from '../../components/Navbar/Navbar';
 import MapContainer from '../../components/Map/GoogleMapsContainer';
 import Toolbar from '../../components/Toolbar/Toolbar';
-import SideDrawer from '../../components/SideDrawer/SideDrawer';
 import HamburgerToggle from '../../components/SideDrawer/HamburgerToggle';
 import './Home.css';
 import Background from '../../components/Background/Background';
+import Results from '../../components/Results/Results';
+import Confirm from '../../components/Modals/ConfirmModal/Confirm';
+import Instrucitonal from '../../components/Instructional/Instrucitonal';
 
 class Home extends Component {
     state = {
@@ -14,6 +16,12 @@ class Home extends Component {
         numPeople: "",
         results: "",
     };
+
+    drawerToggleClickHandler = () => {
+        this.setState((prevState) => {
+            return { sideDrawerOpen: !prevState.sideDrawerOpen }
+        });
+    }
 
     updateLocation = (event) => {
         let myLocation = event.target.value
@@ -37,10 +45,14 @@ class Home extends Component {
 
     render() {
         return (
-            <div>
-                <Background />
-                <Toolbar />
-                        {/* <SideDrawer /> */}
+            <div className="Home">
+                <div className="row" >
+                    <div className="col-12" style={{ zIndex: 0 }}>
+                        <Background />
+                    </div>
+                </div>
+                <div className="row" className='search-col'>
+                    <div className="col-12" >
                         <SearchForm
                             location={this.state.location}
                             changeLocation={this.updateLocation}
@@ -49,13 +61,24 @@ class Home extends Component {
                             results={this.state.results}
                             updateResults={this.updateResults}
                         />
-                        
-                        <div className="row">
-                            <MapContainer />
-                            <Results results={this.state.results} />
-                        </div>
-
+                    </div>
                 </div>
+                <div className="row" >
+                    <div className='col-12 results-col'>
+                        <Instrucitonal />
+                    </div>
+
+                    <div className="col">
+                        <MapContainer />
+                        <Confirm />
+                    </div>
+                    <div className="col">
+                        <Results results={this.state.results} />
+                    </div>
+                </div>
+
+
+            </div>
         )
     }
 }

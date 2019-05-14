@@ -4,7 +4,8 @@ export default function MapStyles(props) {
   return (
     <div>
         <div style={{
-            color: 'white',
+
+            color: 'black',
             background: 'grey',
             padding: '15px 10px',
             display: 'inline-flex',

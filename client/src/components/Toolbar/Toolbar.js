@@ -4,13 +4,13 @@ import HamburgerToggle from '../SideDrawer/HamburgerToggle';
 import logo from '../../images/drinkery-logo.png';
 
 
-const Toolbar = () => {
+const Toolbar = props => {
 
     return (
         <header className="toolbar">
             <nav className="toolbar-nav">
                 <div className="hamburger">
-                    <HamburgerToggle />
+                    <HamburgerToggle click={props.drawerClickHandler} />
                 </div>
                 <div className="toolbar-logo"><a href='/'><img className="logo" src={logo} /></a></div>
                 <div className="spacer"> </div>
