@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import Home from './Pages/Home/Home';
+import Home from './Pages/Home/Home'
 import Toolbar from '../src/components/Toolbar/Toolbar'
-import SideDrawer from './components/SideDrawer/SideDrawer';
-import Backdrop from './components/Backdrop/Backdrop';
+import SideDrawer from './components/SideDrawer/SideDrawer'
+import Backdrop from './components/Backdrop/Backdrop'
+import LoginPage from './Pages/LoginPage/LoginPage'
 
 class App extends Component {
   state = {
@@ -36,6 +37,7 @@ class App extends Component {
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
         <Home />
+        <LoginPage />
       </div>
     )
   }

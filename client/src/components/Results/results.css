@@ -3,7 +3,7 @@
     border: 10px white;
     width: 100%;
     min-height: 500px;
-    max-height:500px;
+    max-height:100vh;
     overflow: scroll;
     position: relative;
 }

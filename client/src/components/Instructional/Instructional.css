@@ -49,6 +49,39 @@ p {
 .col {
   flex: 1; /* additionally, equal width */
   padding: 1em;
-  border: none; 
+  border: none;
 }
- 
+
+
+/* 
+@media (max-width: 768px) {
+    .col {
+    flex: none;
+    width: 300px;
+    }
+    #instructions {
+        width: 100%;
+
+    }
+} */
+
+
+ @media screen and (min-width: 48em) {
+  col:before {
+    content: '';
+    float: right;
+    display: block;
+    width: 300px;
+    height: 150px;
+    margin: 0 0 15px 15px;
+  }
+  .logo-instructions {
+      width: 200px;
+  }
+  .buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+  }
+}

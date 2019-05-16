@@ -1,0 +1,39 @@
+span {
+    color: #d89b00;
+}
+label {
+    color: white;
+}
+
+#register-container {
+    margin: 0 auto;
+    width: 400px;
+    transform: translateY(-110%);
+}
+
+#register-bg {
+    filter: blur(2px);
+}
+span a {
+    color: #d89b00;
+}
+
+span a:hover {
+    color: white;
+    text-decoration: "none";
+    font-weight: 600;
+}
+.search-title {
+    margin-top:40px;
+}
+
+#register-search-form {
+    height: 400px;
+    min-height: 6em;
+    display: table-cell;
+    vertical-align: middle 
+}
+
+.Links {
+    text-align: center;
+}

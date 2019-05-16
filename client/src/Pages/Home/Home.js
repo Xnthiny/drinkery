@@ -9,6 +9,8 @@ import Background from '../../components/Background/Background';
 import Results from '../../components/Results/Results';
 import Confirm from '../../components/Modals/ConfirmModal/Confirm';
 import Instrucitonal from '../../components/Instructional/Instrucitonal';
+import ControlledCarousel from '../../components/Carousel/Carousel'
+
 
 class Home extends Component {
     state = {
@@ -76,7 +78,7 @@ class Home extends Component {
                         <Results results={this.state.results} />
                     </div>
                 </div>
-
+                <ControlledCarousel />
 
             </div>
         )
