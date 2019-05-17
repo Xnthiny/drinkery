@@ -7,11 +7,7 @@ import Results from '../../components/Results/Results';
 import Confirm from '../../components/Modals/ConfirmModal/Confirm';
 import Instrucitonal from '../../components/Instructional/Instrucitonal';
 import ControlledCarousel from '../../components/Carousel/Carousel'
-<<<<<<< HEAD
-import RecipeReviewCard from '../../components/Cards/CrawlCard/CrawlCard'
-=======
 import Navbar from "../../components/Navbar/Navbar";
->>>>>>> 8cfaaab3ceced73dbefd12ed60f3221103b0251a
 
 
 class Home extends Component {
@@ -65,9 +61,6 @@ class Home extends Component {
                         />
                     </div>
                 </div> */}
-                    <div className="row" >
-
-                    </div>
                 </div>
                 <br />
                 <div className='col-12 results-col'>
