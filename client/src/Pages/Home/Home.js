@@ -10,6 +10,7 @@ import Results from '../../components/Results/Results';
 import Confirm from '../../components/Modals/ConfirmModal/Confirm';
 import Instrucitonal from '../../components/Instructional/Instrucitonal';
 import ControlledCarousel from '../../components/Carousel/Carousel'
+import RecipeReviewCard from '../../components/Cards/CrawlCard/CrawlCard'
 
 
 class Home extends Component {
@@ -78,7 +79,19 @@ class Home extends Component {
                         <Results results={this.state.results} />
                     </div>
                 </div>
-                <ControlledCarousel />
+                <div>
+                    <ControlledCarousel />
+                </div >
+                <div className="card-class-container">
+                    <div className="card-class-item">
+                        <RecipeReviewCard />
+                    </div>
+                    {/* <div className="card-class-item">
+
+                        <ImgMediaCard />
+                    </div> */}
+
+                </div>
 
             </div>
         )

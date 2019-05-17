@@ -31,7 +31,7 @@ export default class SearchForm extends Component {
                 </div>
                 <form>
                     <div className="input-div">
-                        <label id="label" htmlFor="city">WHERE</label>
+                        <label id="label" htmlFor="city">WHERE ARE YOU DRINKING?</label>
                         <br />
                         <input id="city-input" name="city" value={this.props.location} onChange={this.props.changeLocation} placeholder="Anywhere"></input>
                     </div>

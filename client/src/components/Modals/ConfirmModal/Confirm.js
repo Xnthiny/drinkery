@@ -15,14 +15,17 @@ class Confirm extends React.Component {
 
     render() {
         return (
-            <main>
-                <h1>React Modal</h1>
-                <Modal show={this.state.show} handleClose={this.hideModal} >
-                    <p>Modal</p>
-                    <p>Data</p>
-                </Modal>
+            <div>
+                <main>
+                    <h1>React Modal</h1>
+                    <Modal show={this.state.show} handleClose={this.hideModal} >
+                        <p>Modal</p>
+                        <p>Data</p>
+                    </Modal>
+                </main>
                 <button type='button' onClick={this.showModal}>Open</button>
-            </main>
+
+            </div>
         )
     }
 }
@@ -44,4 +47,3 @@ const Modal = ({ handleClose, show, children }) => {
     );
 };
 export default Confirm;
- 
