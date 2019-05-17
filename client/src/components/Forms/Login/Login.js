@@ -13,7 +13,7 @@ export default class Login extends Component {
         // }
 
         return (
-            <div id='login-container' style={{ top: "-39em" }}>
+            <div id='login-container'>
                 <div className="search-form">
                     <div className="search-title">
                         <h3 id="title">Login to DRINKERY!</h3>
@@ -40,14 +40,8 @@ export default class Login extends Component {
                     </form>
                     <div className="Links">
                         <span>
-                            |  <a href={`/${Register}`}>Register</a> |
+                         <a href="/register">Not a user?</a>
                             </span>
-                        <span>
-                            |  <a href="/">Forgot Password</a> |
-                            </span>
-                        <span>
-                            |  <a href="/">Forgot UserName</a>  |
-                        </span>
                     </div>
                 </div>
             </div>

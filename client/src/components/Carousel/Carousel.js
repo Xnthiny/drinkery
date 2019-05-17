@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import './Carousel.css'
-import img1 from '../../images/img1.png'
-import img2 from '../../images/img7.png'
-import img3 from '../../images/img5.png'
+import img1 from '../../images/bg2.jpg'
+import img2 from '../../images/bg3.jpg'
+import img3 from '../../images/bg4.jpg'
 
 
 export default class ControlledCarousel extends React.Component {

@@ -1,11 +1,12 @@
 import React from 'react';
 import './Toolbar.css';
 import HamburgerToggle from '../SideDrawer/HamburgerToggle';
-import logo from '../../images/drinkery-logo.png';
+import logo from '../../../images/drinkery-logo.png';
+import { execFile } from 'child_process';
+import LoginPage from "../../../Pages/LoginPage/LoginPage"
 
 
-const Toolbar = props => {
-
+export default function Toolbar(props) {
     return (
         <header className="toolbar">
             <nav className="toolbar-nav">
@@ -16,7 +17,7 @@ const Toolbar = props => {
                 <div className="spacer"> </div>
                 <div>
                     <ul className="toolbar-links-list">
-                        <li className="LOGIN"><a href="./"> LOGIN</a> </li>
+                        <li className="LOGIN"><a href="/login"> LOGIN</a> </li>
                         <li className="HOME"><a href="#"> HOME</a> </li>
                         <li className="DRINK"><a href="./"> DRINK</a> </li>
                     </ul>
@@ -25,5 +26,3 @@ const Toolbar = props => {
         </header>
     );
 }
-
-export default Toolbar;
