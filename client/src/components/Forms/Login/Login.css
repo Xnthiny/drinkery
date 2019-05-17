@@ -8,8 +8,8 @@ label {
 #login-container {
     margin: 0 auto;
     width: 400px;
-    transform: translateY(-110%);
 }
+
 #register-bg {
     filter: blur(2px);
 }

@@ -7,25 +7,6 @@ export default class Register extends Component {
 
 
     render(props) {
-        console.log("Register Page: ")
-
-        // state = {
-        //     name: "Charles",
-        //     email: "",
-        //     password: ""
-        // }
-        // console.log(this.state.name);
-        // // let handleRegister = (event, name, email, password) => {
-        // //     event.preventDefault();
-        // //     const user = {
-        // //         name: name,
-        // //         email: email,
-        // //         password: password
-        // //     }
-
-        // //     API.login()
-        // // }
-
         return (
             <div id='register-container' style={{ top: "-39em" }}>
                 <div className="search-form">
@@ -37,35 +18,29 @@ export default class Register extends Component {
                     </div>
                     <form id='register-search-form'>
                         <div className="input-div">
-                            <label id="label" htmlFor="name">NAME</label>
+                            <label id="label" htmlFor="name">name</label>
                             <br />
-                            {/* <input id="name-input" name="name" value={this.props.name} onChange={this.props.name} placeholder="Name"></input> */}
+                            <input id="name-input" name="name" value={this.props.name} onChange={this.props.name} placeholder="Name"></input>
                         </div>
                         <div className="input-div">
-                            <label id="label" htmlFor="email">WH@TS YOUR EMAIL</label>
+                            <label id="label" htmlFor="email">email</label>
                             <br />
-                            {/* <input id="email-input" name="user_email" value={this.props.email} onChange={this.props.email} placeholder="Email"></input> */}
+                            <input id="email-input" name="user_email" value={this.props.email} onChange={this.props.email} placeholder="Email"></input>
                         </div>
                         <div className="input-div">
-                            <label id="label" htmlFor="password">PASSWORD</label>
+                            <label id="label" htmlFor="password">password</label>
                             <br />
-                            {/* <input id="password-input" name="password" value={this.props.password} onChange={this.props.email} placeholder="Password"></input> */}
+                            <input id="password-input" name="password" value={this.props.password} onChange={this.props.email} placeholder="Password"></input>
                         </div>
                         <div className="button-div">
-                            {/* <button id="register-button" type="submit" onClick={handleRegister()}>REGISTER</button> */}
+                            <button id="register-button" type="submit">REGISTER</button>
                         </div>
 
 
                     </form>
                     <div className="Links">
                         <span>
-                            |  <a href={`/${Login}`}>Login</a>  |
-                            </span>
-                        <span>
-                            |  <a href="/">Forgot Password</a>  |
-                            </span>
-                        <span>
-                            |  <a href="/">Forgot UserName</a>  |
+                            <a href="/login">Already a user?</a>
                         </span>
                     </div>
                 </div>

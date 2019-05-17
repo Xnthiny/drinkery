@@ -1,20 +1,36 @@
 import React, { Component } from "react";
+import Toolbar from "./Toolbar/Toolbar";
+import SideDrawer from "./SideDrawer/SideDrawer";
+import Backdrop from "./Backdrop/Backdrop";
+import { constants } from "fs";
 
 class Navbar extends Component {
     state = {
-        isOpen: false
-    };
+        mobile: null,
+        sidebarOpen: false,
+        navBackground: false
+    }
 
-    toggleCollapse = () => {
-        this.setState({ isOpen: !this.state.isOpen });
+    drawerClickHandler = () => {
+        this.setState((prevState) => {
+            return { sidebarOpen: !prevState.sidebarOpen}
+        })
+    }
+
+    backdropClickHandler = () => {
+        this.setState({sidebarOpen: false})
     }
 
     render() {
+        let backdrop = (this.state.sidebarOpen) ? <Backdrop click={this.backdropClickHandler} /> : console.log("nope")
+
         return (
-            <Navbar color="indigo" dark expand="md">
-            
-            </Navbar>
-        );
+            <div >
+                <Toolbar drawerClickHandler={this.drawerClickHandler} />
+                <SideDrawer show={this.state.sidebarOpen} />
+                {backdrop}
+            </div>
+        )
     }
 }
 
