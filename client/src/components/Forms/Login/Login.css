@@ -25,6 +25,49 @@ span a:hover {
 .search-title {
     margin-top:40px;
 }
+.search-form {
+    transform: translateY(5%)
+}
+
+input {
+    background: rgb(29, 29, 29);
+    width: 95%;
+    height: 30px;
+    font-size: 22px;
+    display: inline-block;
+    box-sizing: content-box;
+    padding: 10px 20px;
+    margin: 10px auto;
+    border-radius: 3px;
+    outline: none;
+    color: #d89b00;
+    text-overflow: clip;
+    border-color: black;
+    border-radius: 10px;
+    border-width: 2px;
+    box-shadow: 0 3px 5px 2px rgba(41, 41, 41, .3);
+    border-Left-Width: 20px;
+}
+
+#login-button {
+    display: inline-block;
+    border: none;
+    box-sizing: content-box;
+    padding: 10px 20px;
+    margin: 5px;
+    outline: none;
+    color: rgba(0,0,0,1);
+    text-overflow: clip;
+    background: #d89b00;
+    color: black;
+    cursor: pointer;
+    border-radius: 3px;
+    border-color: black;
+    border-radius: 10px;
+    border-width: 2px;
+    border-Left-Width: 20px;
+}
+
 
 #login-search-form {
     height: 400px;
@@ -36,3 +79,5 @@ span a:hover {
 .Links {
     text-align: center;
 }
+
+
