@@ -67,13 +67,6 @@ class Home extends Component {
                     <Instrucitonal />
                     
                 </div>
-                <div className=''> </div>
-                <div className='col'>
-                    <MapContainer /> 
-                    </div>
-                    <div className='col'>
-                        <Results />
-                    </div>
             </div>
 
         )

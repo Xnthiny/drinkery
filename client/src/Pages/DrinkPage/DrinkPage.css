@@ -1,3 +1,10 @@
+.results-container {
+    height:100%;
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
 @media only screen and (min-width: 601px) {
   div.example {
     font-size: 80px;
@@ -9,7 +16,6 @@
   div.example {
     font-size: 30px;
   }
-
 }
 
 .row {
@@ -19,6 +25,7 @@
 
 .col {
   background-color: #292929;
+  top: 15em;
   flex: 1; /* additionally, equal width */
   padding: 1em;
   border: none; 

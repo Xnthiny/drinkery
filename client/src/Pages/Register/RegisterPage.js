@@ -3,7 +3,7 @@ import Register from '../../components/Forms/Login/Register'
 // import bgLogin from '../../images/bg5.png'
 // import bgRegister from '../../images/b5.png'
 import Background from '../../components/Background/Background'
-import bg from '../../images/bg4.jpg'
+import RegisterBG from '../../images/bg4.png'
 import Navbar from "../../components/Navbar/Navbar"
 import "./RegisterPage.css";
 import { isAbsolute } from "path";
@@ -13,7 +13,7 @@ import Section from '../../components/Background/Background'
 let styles = {
     background: {
         backgroundColor: 'transparent',
-        backgroundImage: bg,
+        backgroundImage: RegisterBG,
         position: isAbsolute
     },
     Nav: {

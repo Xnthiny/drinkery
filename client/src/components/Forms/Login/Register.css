@@ -54,8 +54,15 @@ input {
     border-Left-Width: 20px;
 }
 
+.button-div {
+    width: 100%;
+    align-content: center;
+    text-align: center;
+
+}
+
 #register-button {
-    display: inline-block;
+    text-align: center;
     border: none;
     box-sizing: content-box;
     padding: 10px 20px;

@@ -17,9 +17,9 @@ export default function Toolbar(props) {
                 <div className="spacer"> </div>
                 <div>
                     <ul className="toolbar-links-list">
+                        <li className="HOME"><a href="/"> HOME</a> </li>
+                        <li className="DRINK"><a href="/drink"> DRINK</a> </li>
                         <li className="LOGIN"><a href="/login"> LOGIN</a> </li>
-                        <li className="HOME"><a href="#"> HOME</a> </li>
-                        <li className="DRINK"><a href="./"> DRINK</a> </li>
                     </ul>
                 </div>
             </nav>

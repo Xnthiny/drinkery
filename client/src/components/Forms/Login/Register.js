@@ -3,6 +3,7 @@ import Login from "./Login"
 import "./Register.css"
 import API from '../../../utils/API';
 
+
 export default class Register extends Component {
 
 
@@ -35,7 +36,6 @@ export default class Register extends Component {
                         <div className="button-div">
                             <button id="register-button" type="submit">REGISTER</button>
                         </div>
-
 
                     </form>
                     <div className="Links">
