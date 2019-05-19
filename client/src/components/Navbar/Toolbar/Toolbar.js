@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Toolbar.css';
 import HamburgerToggle from '../SideDrawer/HamburgerToggle';
 import logo from '../../../images/drinkery-logo.png';
@@ -6,10 +6,16 @@ import { execFile } from 'child_process';
 import LoginPage from "../../../Pages/LoginPage/LoginPage"
 
 
-export default function Toolbar(props) {
+    
+const Toolbar = props => {
+    let toolbarClasses = 'toolbar';
+    if (props.onScroll) {
+        toolbarClasses = 'toolbar solid'
+    }
+
     return (
-        <header className="toolbar">
-            <nav className="toolbar-nav">
+        <header className={toolbarClasses}>
+            <nav className="toolbar-nav" onScroll={props.click}>
                 <div className="hamburger">
                     <HamburgerToggle click={props.drawerClickHandler} />
                 </div>
@@ -25,4 +31,7 @@ export default function Toolbar(props) {
             </nav>
         </header>
     );
+    
 }
+
+export default Toolbar;

@@ -24,7 +24,7 @@ export default class SearchForm extends Component {
         return (
             <div className="search-form">
                 <div className="search-title">
-                    <h3 id="title">Begin your crawl.</h3>
+                    <h3 id="title">Begin your Drinkery.</h3>
                     <h5 id="subtitle">Drinkery is one of a kind technology innovating the way we party. <br />  
                     Be on the forefront of customizedable entertainmnet and <br />see how Drinkery gets the party going!
                     </h5>

@@ -10,7 +10,7 @@ export default function ResultsIntro() {
                     <div className='results-text'>
                         <div className='title'>
                             <h1>
-                                START YOUR CRAWL!
+                                BOTTOMS UP!
                                 </h1>
                             <div className='titles'>
                                 <div className='map-title'>

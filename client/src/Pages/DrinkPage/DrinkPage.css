@@ -25,7 +25,6 @@
 
 .col {
   background-color: #292929;
-  top: 15em;
   flex: 1; /* additionally, equal width */
   padding: 1em;
   border: none; 
