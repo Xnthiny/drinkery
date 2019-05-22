@@ -16,6 +16,7 @@ class DrinkPage extends Component {
         location: "",
         numPeople: "",
         results: "",
+        selected: false
     };
 
     drawerToggleClickHandler = () => {
@@ -36,6 +37,7 @@ class DrinkPage extends Component {
             results: results
         })
     }
+
 
     updatePeople = (event) => {
         let personCount = event.target.value
@@ -70,7 +72,7 @@ class DrinkPage extends Component {
                         <MapContainer />
                     </div>
                     <div className='col'>
-                        <Results results={this.state.results} />
+                        <Results results={this.state.results} onclick="myFunction(event)" />
                     </div>
                     {/* <div className='confirm-modal'>
                             <Confirm />

@@ -25,13 +25,13 @@ export default class RegisterPage extends Component {
 
     render() {
         return (
-            <div className='background' > 
-            <div>
-                <Navbar style={styles.Nav}/>
-                <Section />
-                <div className='register-div' >
-                    <Register />
-                </div>
+            <div className='background' >
+                <div>
+                    <Navbar style={styles.Nav} />
+                    <Section ></Section>
+                    <div className='register-div' >
+                        <Register />
+                    </div>
                 </div>
             </div>
         )

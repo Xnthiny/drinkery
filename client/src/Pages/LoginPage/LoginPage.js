@@ -28,10 +28,11 @@ export default class LoginPage extends Component {
             <div className='background' >
                 <div>
                     <Navbar style={styles.Nav} />
-                    <Section />
-                    <div className='register-div' >
+                    <Section ></Section>
+                    <div className='login-div' >
                         <Login />
                     </div>
+
                 </div>
             </div>
         )

@@ -5,15 +5,17 @@ import "./searchform.css"
 
 export default class SearchForm extends Component {
 
+
+
     render(props) {
         console.log("Location: " + JSON.stringify(this.props.location))
-    
+
         let handleSearch = (event) => {
             event.preventDefault();
             API.searchFoursquare(this.props.location).then(res => {
                 const listItems = res.data.response.venues.map(venue => {
                     return (
-                        <CrawlListItem selected={false} address={venue.location.formattedAddress} name={venue.name} key={venue.id} />
+                        <CrawlListItem selected={false} address={venue.location.formattedAddress} name={venue.name} key={venue.id} click={{ selected: true }} />
                     )
                 })
                 this.props.updateResults(listItems)
@@ -25,8 +27,8 @@ export default class SearchForm extends Component {
             <div className="search-form">
                 <div className="search-title">
                     <h3 id="title">Begin your Drinkery.</h3>
-                    <h5 id="subtitle">Drinkery is one of a kind technology innovating the way we party. <br />  
-                    Be on the forefront of customizedable entertainmnet and <br />see how Drinkery gets the party going!
+                    <h5 id="subtitle">Drinkery is one of a kind technology innovating the way we party. <br />
+                        Be on the forefront of customizedable entertainmnet and <br />see how Drinkery gets the party going!
                     </h5>
                 </div>
                 <form>

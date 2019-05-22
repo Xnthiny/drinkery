@@ -35,7 +35,7 @@ span a:hover {
 }
 
 input {
- background: rgb(29, 29, 29);
+    background: rgb(29, 29, 29);
     width: 95%;
     height: 30px;
     font-size: 22px;
@@ -56,17 +56,19 @@ input {
 
 .button-div {
     width: 100%;
+    margin: 0 auto;
     align-content: center;
     text-align: center;
-
+    display: inherit;
 }
 
 #register-button {
+    margin: 7px;
+    display: inline;
     text-align: center;
     border: none;
     box-sizing: content-box;
     padding: 10px 20px;
-    margin: 7px;
     outline: none;
     color: rgba(0,0,0,1);
     text-overflow: clip;

@@ -1,4 +1,14 @@
 
 .register-div {
     margin: 0 auto;
+    z-index: 99;
+    position: static;
+    transform: translateY(-135%)  
+}
+
+
+@media screen and (max-width: 768px) {
+    .register-div {
+    transform: translateY(-75%)  
+    }
 }
