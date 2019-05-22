@@ -26,7 +26,7 @@ span a:hover {
     margin-top:40px;
 }
 .search-form {
-    transform: translateY(5%)
+    transform: translateY(7%)
 }
 
 input {
@@ -50,7 +50,8 @@ input {
 }
 
 #login-button {
-    display: inline-block;
+    top: 0;
+    left: 0;
     border: none;
     box-sizing: content-box;
     padding: 10px 20px;

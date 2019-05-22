@@ -1,13 +1,23 @@
+
+
 .toolbar {
+    background: var(--toolbar-background-color);
     width: 100%;
     position: fixed;
     top: 0;
     left:0;
     height: 60px;
     padding-top: 10px;
-    background: transparent;
-    z-index: 99;
+    background: none;
+    z-index: 201;
 }
+
+.toolbar.solid {
+    background: black;
+    height: 5em;
+    z-index: 201;
+}
+
 .logo {
     margin-left: 0.5rem;
     width: 35%;

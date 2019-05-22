@@ -3,22 +3,23 @@ import Toolbar from "./Toolbar/Toolbar";
 import SideDrawer from "./SideDrawer/SideDrawer";
 import Backdrop from "./Backdrop/Backdrop";
 import { constants } from "fs";
+import styles from '../Navbar/Toolbar/Toolbar.module.css';
 
 class Navbar extends Component {
     state = {
         mobile: null,
         sidebarOpen: false,
-        navBackground: false
+        toolbarBG: false
     }
 
     drawerClickHandler = () => {
         this.setState((prevState) => {
-            return { sidebarOpen: !prevState.sidebarOpen}
+            return { sidebarOpen: !prevState.sidebarOpen }
         })
     }
 
     backdropClickHandler = () => {
-        this.setState({sidebarOpen: false})
+        this.setState({ sidebarOpen: false })
     }
 
     render() {
@@ -26,7 +27,7 @@ class Navbar extends Component {
 
         return (
             <div >
-                <Toolbar drawerClickHandler={this.drawerClickHandler} />
+                <Toolbar drawerClickHandler={this.drawerClickHandler} onScroll={this.handleScroll} className={styles.Toolbar} />
                 <SideDrawer show={this.state.sidebarOpen} />
                 {backdrop}
             </div>

@@ -11,38 +11,7 @@ import Navbar from "../../components/Navbar/Navbar";
 
 
 class Home extends Component {
-    state = {
-        location: "",
-        numPeople: "",
-        results: "",
-    };
-
-    drawerToggleClickHandler = () => {
-        this.setState((prevState) => {
-            return { sideDrawerOpen: !prevState.sideDrawerOpen }
-        });
-    }
-
-    updateLocation = (event) => {
-        let myLocation = event.target.value
-        this.setState({
-            location: myLocation
-        })
-    }
-
-    updateResults = (results) => {
-        this.setState({
-            results: results
-        })
-    }
-
-    updatePeople = (event) => {
-        let personCount = event.target.value
-        this.setState({
-            numPeople: personCount
-        })
-    }
-
+ 
     render() {
         return (
             <div>
@@ -67,13 +36,6 @@ class Home extends Component {
                     <Instrucitonal />
                     
                 </div>
-                <div className=''> </div>
-                <div className='col'>
-                    <MapContainer /> 
-                    </div>
-                    <div className='col'>
-                        <Results />
-                    </div>
             </div>
 
         )

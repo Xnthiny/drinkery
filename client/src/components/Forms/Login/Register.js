@@ -3,6 +3,7 @@ import Login from "./Login"
 import "./Register.css"
 import API from '../../../utils/API';
 
+
 export default class Register extends Component {
 
 
@@ -32,13 +33,12 @@ export default class Register extends Component {
                             <br />
                             <input id="password-input" name="password" value={this.props.password} onChange={this.props.email} placeholder="Password"></input>
                         </div>
-                        <div className="button-div">
-                            <button id="register-button" type="submit">REGISTER</button>
-                        </div>
 
 
                     </form>
-                    <div className="Links">
+                    <div className="button-div">
+                        <button id="register-button" type="submit">REGISTER</button>
+                    </div>                    <div className="Links">
                         <span>
                             <a href="/login">Already a user?</a>
                         </span>
