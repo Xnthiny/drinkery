@@ -2,11 +2,10 @@
     display: flex; /* equal height of the children */
 }
 
-
-
 .search-form {  
     justify-content: center;
     background: rgba(41, 41, 41);
+    top: 6em;    
     min-width: 50%;
     max-width: 500px;
     padding: 15px;
@@ -111,6 +110,6 @@
 
 @media screen and (max-width: 768px) {
     .search-form {
-        transform: translateY(40%);      
+        transform: translateY(5%);      
     }
 }

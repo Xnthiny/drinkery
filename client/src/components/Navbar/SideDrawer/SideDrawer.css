@@ -15,6 +15,7 @@
 .side-drawer.open {
     transform: translateX(0);
 }
+
 .side-drawer-list {
     height: 100%;
     font-size: 40px;

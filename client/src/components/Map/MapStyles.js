@@ -13,8 +13,7 @@ export default function MapStyles(props) {
             alignItems: 'center',
             justifyContent: 'center',
             borderRadius: '100%',
-            transform: 'translate(-50%, -50%)'
-        }}>
+          }}>
             {props.text};
         </div>
     </div>
