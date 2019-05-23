@@ -1,8 +1,8 @@
-const { User } = require("../models");
+const mongoose = require("mongoose");
+const { User, Crawl } = require("../models");
 const jwt = require("jsonwebtoken");
 const validateLoginInput = require("../helpers/loginValidator");
 const validateRegisterInput = require("../helpers/registrationValidator");
-
 // Require the secret sauce
 const jwtSecret = process.env.JWTSECRET;
 
@@ -84,7 +84,7 @@ module.exports = {
       return res.status(400).json(errors);
     }
 
-    const { email, name, password } = req.body;
+    const { email, name, password, crawls } = req.body;
     User.findOne({ email: email }).then(user => {
       if (user) {
         errors.email = "email already registered";
@@ -94,7 +94,8 @@ module.exports = {
         const newUser = new User({
           name,
           email,
-          password
+          password,
+          crawls
         })
           .save()
           .then(user => res.status(201).json(user))
@@ -106,5 +107,33 @@ module.exports = {
           });
       }
     });
+  },
+  createCrawl: (req, res) => {
+    const { title, crawl_location, authorID, venues, date_created } = req.body
+    Crawl.find({}).then(crawl => {
+      if(!crawl) {
+        return res.status(409).json("cannot create replicate crawl")
+      } else {
+        const newCrawl = new Crawl({
+          title,
+          crawl_location,
+          venues,
+          authorID,
+          date_created
+        })
+        .save()
+        .then(crawl => {
+          User.updateOne(
+            {_id: authorID},
+            {$push: {crawls: crawl._id}}
+          ).then(updatedUser => {
+            res.status(201).json({crawl, updatedUser})
+          })
+        })
+        .catch(err => {
+          console.log(err)
+        })
+      }}
+    )
   }
 };

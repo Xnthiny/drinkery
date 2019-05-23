@@ -65,15 +65,7 @@ class Home extends Component {
                 <br />
                 <div className='col-12 results-col'>
                     <Instrucitonal />
-                    
                 </div>
-                <div className=''> </div>
-                <div className='col'>
-                    <MapContainer /> 
-                    </div>
-                    <div className='col'>
-                        <Results />
-                    </div>
             </div>
 
         )
