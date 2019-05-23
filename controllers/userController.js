@@ -127,7 +127,7 @@ module.exports = {
             {_id: authorID},
             {$push: {crawls: crawl._id}}
           ).then(updatedUser => {
-            res.status(201).json({crawl, updatedUser})
+            console.log(updatedUser)
           })
         })
         .catch(err => {
