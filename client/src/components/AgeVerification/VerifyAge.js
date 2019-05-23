@@ -2,7 +2,7 @@ import React from 'react'
 import introImg from '../../images/verift.png'
 import "./VerifyAge.css"
 import logo from '../../images/drinkery-logo.png'
-import { index } from '../../Pages/Home/Home'
+// import { index } from '../../Pages/Home/Home'
 
 let styles = {
     container: {

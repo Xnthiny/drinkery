@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import SearchForm from '../../components/Forms/SearchForm/SearchForm'
-import MapContainer from '../../components/Map/GoogleMapsContainer';
+// import SearchForm from '../../components/Forms/SearchForm/SearchForm'
+// import MapContainer from '../../components/Map/GoogleMapsContainer';
 import './Home.css';
-import Background from '../../components/Background/Background';
-import Results from '../../components/Results/Results';
-import Confirm from '../../components/Modals/ConfirmModal/Confirm';
+// import Background from '../../components/Background/Background';
+// import Results from '../../components/Results/Results';
+// import Confirm from '../../components/Modals/ConfirmModal/Confirm';
 import Instrucitonal from '../../components/Instructional/Instrucitonal';
 import ControlledCarousel from '../../components/Carousel/Carousel'
 import Navbar from "../../components/Navbar/Navbar";

@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-dom";
+// import { render } from "react-dom";
 import Tabs from "../Tabs";
 import glamorous from "glamorous";
 import CrawlCard from '../../Cards/CrawlCard/CrawlCard'
@@ -22,7 +22,7 @@ let ProfileTabs = () => (
                 id: "tab1"
             }}xw
         >
-            <Tabs.Tab styles={styles.tab} id="tab1" title="Tab 1">
+            <Tabs.Tab styles={styles.tabs} id="tab1" title="Tab 1">
                 <glamorous.Div padding={20}>
                     <div className='col-4' id='card-div'>
                         <CrawlCard />
@@ -34,6 +34,7 @@ let ProfileTabs = () => (
                     <div className='col-4' id='card-div'>
                         <CrawlCard />
                     </div>
+                    
                 </glamorous.Div>
             </Tabs.Tab>
         </Tabs>

@@ -18,11 +18,11 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import './CrawlCard.css';
 import barImg from '../../../images/London.gif'
-import results from '../../Results/Results'
+// import results from '../../Results/Results'
 
 const styles = theme => ({
     card: {
-        maxWidth: 300,
+        maxWidth: 300 +'em',
         backgroundColor: "black",
         color: "white"
     },
@@ -122,7 +122,7 @@ class CrawlCard extends React.Component {
                     <CardContent className={classes.cardText}>
                         <Typography className={classes.type} paragraph>Method:</Typography>
                         <Typography className={classes.type} paragraph>
-                            {results}
+                            {/* {results} */}
                         </Typography>
                     </CardContent>
                 </Collapse>
