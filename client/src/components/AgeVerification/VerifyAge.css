@@ -12,22 +12,29 @@
     align-content: center;
 }
 
-
-
 .verify-age-form {
     z-index: 201;
     position: relative;
-    border: 1px solid#d89b00;
+    transform: translateY(100%);
 }
 
+.verify-logo {
+    max-width: 40%;
+}
 .age-form-title-div {
     
 }
+
+.verify-age-div {
+    line-spacing: 45px;
+}
+
 .age-form-title {
 
 }
 .verify-buttons {
     display: inline-flex;
+    margin: 0 auto;
 }
 
 .verify-age-button {
@@ -41,7 +48,7 @@
     outline: none;
     color: rgba(0,0,0,1);
     text-overflow: clip;
-    background: black;
+    background: #292929;
     color: #d89b00;    
     cursor: pointer;
     border-radius: 3px;
@@ -49,7 +56,6 @@
     border-radius: 10px;
     border-width: 2px;
 }
-
 
 .verify-age-button:hover {
     margin: 7px auto;
@@ -63,15 +69,13 @@
     color: rgba(0,0,0,1);
     text-overflow: clip;
     background: #d89b00;
-    color: black;    
+    color: #292929;    
     cursor: pointer;
     border-radius: 3px;
     border-color: black;
     border-radius: 10px;
     border-width: 2px;
 }
-
-
 
 .decline-age-button {
     margin: 7px 10px;
@@ -84,7 +88,7 @@
     outline: none;
     color: rgba(0,0,0,1);
     text-overflow: clip;
-    background: black;
+    background: #292929;
     color: #d89b00;    
     cursor: pointer;
     border-radius: 3px;
@@ -106,7 +110,7 @@
     color: rgba(0,0,0,1);
     text-overflow: clip;
     background: #d89b00;
-    color: black;    
+    color: #292929;    
     cursor: pointer;
     border-radius: 3px;
     border-color: black;
@@ -120,4 +124,18 @@
 
 .a{
     color: #d89b00;
+}
+
+
+@media screen and (max-width: 768px) {
+    .verify-buttons {
+        display: inline; 
+    }
+    .verify-age-form {
+        transform: translateY(60%)
+    }
+    .verify-logo {
+        max-width: 50%;
+    }
+
 }

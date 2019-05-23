@@ -1,12 +1,13 @@
 import React from 'react'
-import bg from '../../images/bg.png'
+import introImg from '../../images/verift.png'
 import "./VerifyAge.css"
+import logo from '../../images/drinkery-logo.png'
 import { index } from '../../Pages/Home/Home'
 
 let styles = {
     container: {
         color: "white",
-        backgroundImage: `url(${bg})`,
+        backgroundImage: `url(${introImg})`,
     }
 }
 
@@ -18,8 +19,8 @@ export default function VerifyAge(props) {
                 <form className='verify-age-form'>
                     <div className='age-form-title-div' >
                         <h1 className='age-form-title' >
-                            Hello
-                    </h1>
+                            <img src={logo} alt='logo' className='verify-logo' />
+                    </h1>   
                     </div>
                     <h3 className='drinking-age-label'> <label />Are you of Drinking Age?</h3>
                     <div className='verify-buttons'>
