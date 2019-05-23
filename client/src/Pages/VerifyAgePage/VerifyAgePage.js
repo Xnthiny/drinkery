@@ -1,4 +1,4 @@
-import React, { Component } from './node_modules/react'
+import React, { Component } from 'react'
 import VerifyAge from '../../components/AgeVerification/VerifyAge';
 
 export default class VerifyAgePage extends Component {
@@ -6,7 +6,7 @@ export default class VerifyAgePage extends Component {
          return (
             <div>
                    <VerifyAge />
-            </div> 
+            </div>
          )
      }
 }

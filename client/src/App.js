@@ -13,7 +13,7 @@ class App extends Component {
       <Router>
         <div>
           <Route exact path="/" component={VerifyAgePage} />
-          <Route exact path="/index" component={Home} />
+          <Route path="/index" component={Home} />
           <Route path="/login" component={LoginPage} />
           <Route path="/register" component={RegisterPage} />
           <Route path="/drink" component={DrinkPage} />

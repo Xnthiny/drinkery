@@ -8,6 +8,6 @@
 
 @media screen and (max-width: 768px) {
     .login-div {
-    transform: translateY(-85%)  
+    transform: translateY(-85%)
     }
 }
