@@ -20,6 +20,7 @@ export default class SearchForm extends Component {
                 })
                 this.props.updateResults(listItems)
                 console.log(this.props.results)
+                console.log(this.props.results.selected)
             })
         }
 
