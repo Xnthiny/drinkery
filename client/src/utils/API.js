@@ -10,6 +10,13 @@ export default {
     return axios.get("api/users" + id);
   },
   // Gets the crawls with the given id
+  login: function(userData) {
+    return axios.post("api/login/", userData)
+  },
+  // Makes post request to userController and begins login logic
+  register: function(userData) {
+    return axios.post("api/register", userData);
+  },
   getCrawls: function (id) {
     return axios.get("/api/crawls/" + id);
   },

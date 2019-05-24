@@ -8,6 +8,11 @@ let validateEmail = (email) => {
 }
 
 const userSchema = new Schema({
+  _id: {
+    type: Schema.Types.ObjectId,
+    quantity: Number,
+    auto: true
+  },
   name: {
     type: String,
     required: true
@@ -27,6 +32,9 @@ const userSchema = new Schema({
   password: {
     type: String,
     required: true
+  },
+  crawls: {
+    type: Array
   }
 });
 
