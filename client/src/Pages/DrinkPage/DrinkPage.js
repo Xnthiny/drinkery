@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import SearchForm from '../../components/Forms/SearchForm/SearchForm'
-import MapContainer from '../../components/Map/GoogleMapsContainer';
+import GoogleMaps from '../../components/SimpleMaps';
 import Background from '../../components/Background/Background';
 import Results from '../../components/Results/Results';
 import Confirm from '../../components/Modals/ConfirmModal/Confirm';
@@ -16,7 +16,9 @@ class DrinkPage extends Component {
         location: "",
         numPeople: "",
         results: "",
-        selected: false
+        selected: false,
+        lat: [],
+        lng: []
     };
 
     drawerToggleClickHandler = () => {
@@ -46,6 +48,14 @@ class DrinkPage extends Component {
         })
     }
 
+    getLat = () => {
+        const latitudes = this.state.results.map(cords => {
+            return cords.props.lat
+        })
+
+        this.setState({lat: latitudes})
+    }
+
     render() {
         return (
             <div className="Home">
@@ -69,7 +79,7 @@ class DrinkPage extends Component {
                 <br />
                 <div className='row' id='results-row' >
                     <div className='col'>
-                        <MapContainer />
+                        <GoogleMaps lat={this.state.lat} lng={this.state.lng}/>
                     </div>
                     <div className='col'>
                         <Results results={this.state.results} onclick="myFunction(event)" />

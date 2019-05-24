@@ -34,6 +34,7 @@ class Home extends Component {
                 <br />
                 <div className='col-12 results-col'>
                     <Instrucitonal />
+                    <MapContainer/>
                     
                 </div>
             </div>

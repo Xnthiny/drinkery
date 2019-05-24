@@ -15,7 +15,7 @@ export default class SearchForm extends Component {
             API.searchFoursquare(this.props.location).then(res => {
                 const listItems = res.data.response.venues.map(venue => {
                     return (
-                        <CrawlListItem selected={false} address={venue.location.formattedAddress} name={venue.name} key={venue.id} click={{ selected: true }} />
+                        <CrawlListItem selected={false} lat={venue.location.lat} lng={venue.location.lng} address={venue.location.formattedAddress} name={venue.name} key={venue.id} click={{ selected: true }} />
                     )
                 })
                 this.props.updateResults(listItems)

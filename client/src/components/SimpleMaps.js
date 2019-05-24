@@ -1,127 +1,70 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-const mapStyles = {
-  map: {
+import { GoogleMap, withScriptjs, withGoogleMap, Marker } from "react-google-maps"
+import SearchForm from "../components/Forms/SearchForm/SearchForm"
+
+
+const[
+  InfoWindow= false,
+  activeMarker={},
+  selectedPlace={}
+]
+
+function Map() {
+
+
+  return (
+    <GoogleMap
+      defaultZoom={10}
+      defaultCenter={{ lat: 25.761681, lng: -80.191788 }}
     
-    position: 'absolute',
-    width: '98%',
-    height: '90%'
-  }
-};
-export class CurrentLocation extends React.Component {
-  constructor(props) {
-    super(props);
-
-    const { lat, lng } = this.props.initialCenter;
-    this.state = {
-      currentLocation: {
-        lat: lat,
-        lng: lng
-      }
-    };
-  }
-  componentDidMount() {
-    if (this.props.centerAroundCurrentLocation) {
-      if (navigator && navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(pos => {
-          const coords = pos.coords;
-          this.setState({
-            currentLocation: {
-              lat: coords.latitude,
-              lng: coords.longitude
-            }
-          });
-        });
-      }
-    }
-    this.loadMap();
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (prevProps.google !== this.props.google) {
-      this.loadMap();
-    }
-    if (prevState.currentLocation !== this.state.currentLocation) {
-      this.recenterMap();
-    }
-  }
-
-  loadMap() {
-    if (this.props && this.props.google) {
-      // checks if google is available
-      const { google } = this.props;
-      const maps = google.maps;
-
-      const mapRef = this.refs.map;
-
-      // reference to the actual DOM element
-      const node = ReactDOM.findDOMNode(mapRef);
-
-      let { zoom } = this.props;
-      const { lat, lng } = this.state.currentLocation;
-      const center = new maps.LatLng(lat, lng);
-      const mapConfig = Object.assign(
-        {},
-        {
-          center: center,
-          zoom: zoom
-        }
-      );
-      // maps.Map() is constructor that instantiates the map
-      this.map = new maps.Map(node, mapConfig);
-    }
-  }
-
-  recenterMap() {
-    const map = this.map;
-    const current = this.state.currentLocation;
-
-    const google = this.props.google;
-    const maps = google.maps;
-
-    if (map) {
-      let center = new maps.LatLng(current.lat, current.lng);
-      map.panTo(center);
-    }
-  }
-
-  renderChildren() {
-    const { children } = this.props;
-
-    if (!children) return;
-
-    return React.Children.map(children, c => {
-      if (!c) return;
-      return React.cloneElement(c, {
-        map: this.map,
-        google: this.props.google,
-        mapCenter: this.state.currentLocation
+     >
+     {this.props.lat.map(venue => (
+        <Marker 
+        position={{
+          lat: venue,
+        }} 
+        
+  
+        />
+      ))}
+        
+        
+  
+     </GoogleMap>
+    
+  )
+      }  
+      onVenueClick = (marker) =>
+      this.setState({
+        selectedPlace: {},
+        activeMarker: marker,
+        showingInfoWindow: true
       });
-    });
-  }
 
-  render() {
-    const style = Object.assign({}, mapStyles.map);
-
-    return (
-      <div>
-        <div style={style} ref="map">
-          Loading map...
+  const WrappedMap = withScriptjs(withGoogleMap(Map));
+      
+export default function GoogleMaps(props){
+  return (
+    <div style={{ width:"100vw", height:"100vh"}}>
+        <WrappedMap
+          googleMapURL={"https://maps.googleapis.com/maps/api/js?key=AIzaSyBMD3ojp-P28ggup4xeFUZI9i6rYDJwRNU"}
+          loadingElement={<div style={{ height: "100%" }} />}
+          containerElement={<div style={{ height: "100%" }} />}
+          mapElement={<div style={{ height: "100%" }} />}
+          />
+          <Marker onClick={this.onMarkerClick} name={"venue"} />
+           <InfoWindow
+            marker={this.state.activeMarker}
+            visible={this.state.showingInfoWindow}
+            onClose={this.onClose}
+          >
+            <div>
+              <h4>{this.state.selectedPlace.name}</h4>
+            </div>
+          </InfoWindow>
         </div>
-        {this.renderChildren()}
-      </div>
-    );
-  }
+      
+      );
 }
-export default CurrentLocation;
 
-CurrentLocation.defaultProps = {
-  zoom: 14,
-  initialCenter: {
-    lat: 25.770247,
-    lng: -80.195172
-  },
-  centerAroundCurrentLocation: false,
-  visible: true
-};
