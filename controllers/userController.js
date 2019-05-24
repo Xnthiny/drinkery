@@ -7,6 +7,12 @@ const validateRegisterInput = require("../helpers/registrationValidator");
 const jwtSecret = process.env.JWTSECRET;
 
 module.exports = {
+  searchUserCrawls: (req, res) => {
+    const userID = req.params.id;
+    User.find({_id: userID}).then(user => {
+      
+    })
+  },
   getAll: (req, res) => {
     User.find({})
       .then(user => res.status(200).json(user))

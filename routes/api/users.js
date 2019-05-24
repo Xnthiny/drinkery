@@ -89,4 +89,8 @@ router.get("/test", (req, res) => {
   res.status("200").json("the user endpoint works");
 });
 
+router.get("/:id/crawls", (req, res) => {
+  userController.searchUserCrawls(req, res);
+})
+
 module.exports = router;

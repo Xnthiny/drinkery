@@ -11,12 +11,12 @@ export default class Login extends Component {
 
     handleLogin = (event) => {
         event.preventDefault();
-        const loginInfo = {
+        const info = {
             email: this.state.email,
             password: this.state.password
         }
 
-        API.login(loginInfo).then(data => {
+        API.login(info).then(data => {
             console.log(data)
         })
     }
