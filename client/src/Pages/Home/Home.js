@@ -8,6 +8,7 @@ import './Home.css';
 import Instrucitonal from '../../components/Instructional/Instrucitonal';
 import ControlledCarousel from '../../components/Carousel/Carousel'
 import Navbar from "../../components/Navbar/Navbar";
+import SimpleSearch from '../../components/Forms/SimpleSearch/SimpleSearch'
 
 
 class Home extends Component {
@@ -18,6 +19,7 @@ class Home extends Component {
                 <div className="Home">
                     <Navbar />
                     <ControlledCarousel />
+                    <SimpleSearch />
                     {/* <div className="row" className='search-col'>
                     <div className="col-12" >
                         <SearchForm

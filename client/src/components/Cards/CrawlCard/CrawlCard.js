@@ -33,7 +33,7 @@ const styles = theme => ({
 
     },
     type: {
-        color: "white"
+        color: "yarn stz"
     },
     actions: {
         display: 'flex',
@@ -90,8 +90,9 @@ class CrawlCard extends React.Component {
                     title="Crawl Card . City Img"
                 />
                 <CardContent >
-                    <Typography className={classes.type} component="p">
-                        <h4 className='crawl-name' style={classes.crawlTitle}>
+                    <Typography className={classes.type} >
+                        {/*  */}
+                        <h4 id='crawl-name' className={classes.crawlTitle} >
                             Crawl Card . Title
                         </h4>
                         <h5 className='crawl-city'>

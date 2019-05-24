@@ -23,14 +23,14 @@ let ProfileTabs = () => (
             }}xw
         >
             <Tabs.Tab styles={styles.tabs} id="tab1" title="Tab 1">
-                <glamorous.Div padding={20}>
+                <glamorous.Div >
                     <div className='col-4' id='card-div'>
                         <CrawlCard />
                     </div>
                 </glamorous.Div>
             </Tabs.Tab>
             <Tabs.Tab id="tab2" title="Tab 2">
-                <glamorous.Div padding={20}>
+                <glamorous.Div >
                     <div className='col-4' id='card-div'>
                         <CrawlCard />
                     </div>

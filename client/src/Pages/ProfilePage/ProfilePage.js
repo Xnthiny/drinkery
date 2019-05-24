@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ProfileTabs from '../../components/Tabs/ProfileTabs/ProfileTabs';
-import  Avatar from '../../components/Avatar/Avatar'
+import Avatar from '../../components/Avatar/Avatar'
 
 
 export default class ProfilePage extends Component {
