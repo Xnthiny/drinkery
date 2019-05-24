@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react'
 import UserProfile from 'react-user-profile'
-import photo from '../../../images/avatar.png'
+import avatar from '../../../images/avatar.png'
 
-class UserProfile extends Component {
+class User extends Component {
     render() {
         const photo = {photo}
         const userName = 'Harvey Specter'
@@ -12,7 +12,7 @@ class UserProfile extends Component {
         const comments = [
             {
                 id: '1',
-                photo: 'https://api-cdn.spott.tv/rest/v004/image/images/e91f9cad-a70c-4f75-9db4-6508c37cd3c0?width=587&height=599',
+                photo: {avatar},
                 userName: 'Mike Ross',
                 content: 'Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. ',
                 createdAt: 1543858000000
@@ -27,4 +27,4 @@ class UserProfile extends Component {
     }
 }
 
-export default UserProfile;
+export default User;
