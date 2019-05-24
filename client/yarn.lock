@@ -8694,6 +8694,13 @@ react-transition-group@^2.2.1, react-transition-group@^2.5.0, react-transition-g
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
 
+react-user-profile@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-user-profile/-/react-user-profile-1.0.3.tgz#4b34629e1da4bf74ed6ca709164ee5d3f2e34b7a"
+  integrity sha512-ygJvgMhcEommMEttF7x9/lwqmfMlG7Q4bHOu0yT8yo5+kHxOxp295wCFyFbpXb6pkpEpxer+7NxYF3ExpcYBXA==
+  dependencies:
+    prop-types "^15.6.2"
+
 react@>=16.3.2, react@^16.3.2, react@^16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
