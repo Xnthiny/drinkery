@@ -12,6 +12,7 @@ import Section from '../../components/Background/Background'
 let styles = {
     background: {
         backgroundImage: LoginBG,
+        
         position: isAbsolute
     },
     Nav: {
