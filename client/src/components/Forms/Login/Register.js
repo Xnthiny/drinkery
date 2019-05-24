@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Login from "./Login"
+// import Login from "./Login"
 import "./Register.css"
-import API from '../../../utils/API';
+// import API from '../../../utils/API';
 
 
 export default class Register extends Component {

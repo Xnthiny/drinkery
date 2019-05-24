@@ -3,12 +3,10 @@ import SearchForm from '../../components/Forms/SearchForm/SearchForm'
 import GoogleMaps from '../../components/SimpleMaps';
 import Background from '../../components/Background/Background';
 import Results from '../../components/Results/Results';
-import Confirm from '../../components/Modals/ConfirmModal/Confirm';
 import Navbar from "../../components/Navbar/Navbar";
 import Section from '../../components/Background/Section/Section'
 import ResultsIntro from '../../components/Instructional/Results/ResultsIntro/ResultsIntro'
 import './DrinkPage.css'
-import SearchBG from '../../images/img1.png'
 
 
 class DrinkPage extends Component {

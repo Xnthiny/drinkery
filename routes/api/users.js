@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const userController = require("../../controllers/userController");
 const authCheck = require("../../middleware/authenticationCheck");
-const { authenticate, authorization } = require("../../middleware/");
+const { authenticate, authorize } = require("../../middleware/");
 
 /**
  * @access  Private
@@ -29,7 +29,7 @@ router.get("/current", authCheck, (req, res) => {
  * @route   DELETE api/users/:id
  * @returns a 200 JSON representation of the current users
  * */
-router.delete("/:id", [authenticate, authorization], (req, res) => {
+router.delete("/:id", authenticate, authorize, (req, res) => {
   userController.deleteById(req, res);
 });
 
@@ -54,6 +54,15 @@ router.get("/:id", authenticate, (req, res) => {
  **/
 router.post("/login", (req, res) => {
   userController.login(req, res);
+});
+
+// * @access  Public
+// * @desc    Creates new crawl
+// * @route   POST api/newcrawl/
+// * @returns a 200 JSON representation of the created crawl
+// * */
+router.post("/newcrawl", (req, res) => {
+ userController.createCrawl(req, res);
 });
 
 /**

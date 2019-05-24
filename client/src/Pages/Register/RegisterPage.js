@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Register from '../../components/Forms/Login/Register'
 // import bgLogin from '../../images/bg5.png'
 // import bgRegister from '../../images/b5.png'
-import Background from '../../components/Background/Background'
+// import Background from '../../components/Background/Background'
 import RegisterBG from '../../images/bg4.png'
 import Navbar from "../../components/Navbar/Navbar"
 import "./RegisterPage.css";

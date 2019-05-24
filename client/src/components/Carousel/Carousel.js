@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import './Carousel.css'
-import img1 from '../../images/bg2.jpg'
-import img2 from '../../images/bg3.jpg'
-import img3 from '../../images/bg4.jpg'
+import img1 from '../../images/img1.png'
+import img2 from '../../images/img7.png'
+import img3 from '../../images/img6.png'
 
 
 export default class ControlledCarousel extends React.Component {
@@ -41,8 +41,8 @@ export default class ControlledCarousel extends React.Component {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>"Reality is an illusion</h3>
-                        <p>that occurs due to lack of alcohol." <br /><strong> ~ Anonymous</strong></p>
+                        <h1>"Reality is an illusion</h1>
+                        <h3>that occurs due to lack of alcohol." <br /><strong> ~ Anonymous</strong></h3>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -52,9 +52,9 @@ export default class ControlledCarousel extends React.Component {
                         alt="Third slide"
                     />
 
-                    <Carousel.Caption>
-                        <h3>"To some it's a six-pack. </h3>
-                        <p>To me it's a Support Group." <br /><strong> ~ Leo Durocher</strong></p>
+                    <Carousel.Caption >
+                        <h1>"To some it's a six-pack. </h1>
+                        <h3>To me it's a Support Group." <br /><strong> ~ Leo Durocher</strong></h3>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -65,10 +65,10 @@ export default class ControlledCarousel extends React.Component {
                     />
 
                     <Carousel.Caption>
-                        <h3>"Work is the curse </h3>
-                        <p>
+                        <h1>"Work is the curse </h1>
+                        <h3>
                             of the drinking classes." <br /> <strong> ~ Oscar Wilde</strong>
-            </p>
+                        </h3>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
