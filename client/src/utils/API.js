@@ -7,15 +7,15 @@ export default {
   },
   // Gets the user with the given id
   getUser: function (id) {
-    return axios.get("api/users" + id);
+    return axios.get("http://localhost:5000/api/users/" + id);
   },
   // Gets the crawls with the given id
   login: function(userData) {
-    return axios.post("api/login/", userData)
+    return axios.post("http://localhost:5000/api/users/login", userData)
   },
   // Makes post request to userController and begins login logic
   register: function(userData) {
-    return axios.post("https://localhost:5000/api/register", userData);
+    return axios.post("http://localhost:5000/api/users/register", userData);
   },
   getCrawls: function (id) {
     return axios.get("/api/crawls/" + id);

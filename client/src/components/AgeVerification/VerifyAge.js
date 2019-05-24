@@ -6,8 +6,7 @@ import logo from '../../images/drinkery-logo.png'
 
 let styles = {
     container: {
-        color: "white",
-        backgroundImage: `url(${introImg})`,
+        color: "white"
     }
 }
 

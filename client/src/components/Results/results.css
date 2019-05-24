@@ -1,9 +1,9 @@
 .container {
-    background: rgb(49, 49, 49);
-    border: 10px white;
+    border: 2px solid #d89b00;
+    border-radius: 1em;
     width: 100%;
     min-height: 500px;
-    max-height:100vh;
+    max-height:70vh;
     overflow: scroll;
     position: relative;
 }
@@ -15,12 +15,11 @@
 
 #results-btn {
     display: inline-block;
-    border: none;
-    float: right;
     box-sizing: content-box;
     padding: 10px 20px;
     margin: 20px;
     outline: none;
+    text-align: center;
     color: rgba(0,0,0,1);
     text-overflow: clip;
     background: black;

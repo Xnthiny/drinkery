@@ -2,6 +2,7 @@ const express = require("express");
 const mongoSanitize = require("express-mongo-sanitize");
 const helmet = require("helmet");
 const path = require("path");
+const cors = require("cors")
 
 const dbConnector = require("./config/db");
 const routes = require("./routes");
@@ -14,7 +15,7 @@ const app = express();
 const PORT = process.env.port || 5001;
 
 // MiddleWares
-
+app.use(cors());
 // refactored to use helmet set security-related HTTP response headers
 app.use(helmet());
 // Will replace prohibited characters with _,

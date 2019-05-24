@@ -3,12 +3,14 @@
     margin: 0 auto;
     z-index: 99;
     position: static;
-    transform: translateY(-135%)  
 }
 
 
-@media screen and (max-width: 768px) {
-    .register-div {
-    transform: translateY(-75%)  
-    }
+.background {
+    height: 100vh;
+    background: linear-gradient(
+   35deg,
+   #ffbc04ce,
+   #f700ffc4
+   );
 }

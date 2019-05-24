@@ -1,0 +1,14 @@
+#header {
+    width: 100%;
+    color: rgb(255, 255, 255);
+    text-align: center; 
+    margin: 0 auto;
+}
+
+#results-list {
+    background: white;
+}
+
+.button-div {
+    text-align: center;
+}

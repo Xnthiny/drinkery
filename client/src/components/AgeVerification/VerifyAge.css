@@ -1,7 +1,7 @@
 .verify-background-container {
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color: rgb(19, 21, 27);
 }
 
 .verify-age-div {
@@ -38,41 +38,32 @@
 }
 
 .verify-age-button {
-    margin: 7px auto;
+    margin: 7px 10px;
     font-size: 25px;
     display: inline;
     text-align: center;
-    border: none;
+    border: 2px solid #d89b00;
     box-sizing: content-box;
     padding: .4rem 6rem;
-    outline: none;
-    color: rgba(0,0,0,1);
     text-overflow: clip;
-    background: #292929;
+    background: none;
     color: #d89b00;    
-    cursor: pointer;
-    border-radius: 3px;
-    border-color: black;
     border-radius: 10px;
     border-width: 2px;
 }
 
 .verify-age-button:hover {
-    margin: 7px auto;
+    margin: 7px 10px;
     font-size: 25px;
     display: inline;
     text-align: center;
-    border: none;
+    border: 2px solid #d89b00;
     box-sizing: content-box;
     padding: .4rem 6rem;
-    outline: none;
-    color: rgba(0,0,0,1);
     text-overflow: clip;
     background: #d89b00;
     color: #292929;    
     cursor: pointer;
-    border-radius: 3px;
-    border-color: black;
     border-radius: 10px;
     border-width: 2px;
 }
@@ -82,17 +73,12 @@
     font-size: 25px;
     display: inline;
     text-align: center;
-    border: none;
+    border: 2px solid #d89b00;
     box-sizing: content-box;
     padding: .4rem 6rem;
-    outline: none;
-    color: rgba(0,0,0,1);
     text-overflow: clip;
-    background: #292929;
+    background: none;
     color: #d89b00;    
-    cursor: pointer;
-    border-radius: 3px;
-    border-color: black;
     border-radius: 10px;
     border-width: 2px;
     
@@ -103,17 +89,13 @@
     font-size: 25px;
     display: inline;
     text-align: center;
-    border: none;
+    border: 2px solid #d89b00;
     box-sizing: content-box;
     padding: .4rem 6rem;
-    outline: none;
-    color: rgba(0,0,0,1);
     text-overflow: clip;
     background: #d89b00;
     color: #292929;    
     cursor: pointer;
-    border-radius: 3px;
-    border-color: black;
     border-radius: 10px;
     border-width: 2px;
 }

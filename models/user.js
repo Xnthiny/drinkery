@@ -38,6 +38,15 @@ const userSchema = new Schema({
   }
 });
 
+// userSchema.methods.comparePassword = function(candidatePassword) {
+//   return new Promise((resolve, reject) => {
+//     bcrypt.compare(candidatePassword, this.password, (err, isMatch) => {
+//       if (err) reject(err, "passwords not a match");
+//       return resolve(isMatch);
+//     });
+//   });
+// };
+
 const User = mongoose.model("User", userSchema);
 
 module.exports = User;

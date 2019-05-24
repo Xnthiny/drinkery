@@ -77,15 +77,11 @@ class DrinkPage extends Component {
                 <br />
                 <div className='row' id='results-row' >
                     <div className='col'>
-                        <GoogleMaps lat={this.state.lat} lng={this.state.lng}/>
+                        {/* <GoogleMaps lat={this.state.lat} lng={this.state.lng}/> */}
                     </div>
                     <div className='col'>
                         <Results results={this.state.results} onclick="myFunction(event)" />
                     </div>
-                    {/* <div className='confirm-modal'>
-                            <Confirm />
-
-                        </div> */}
                 </div>
             </div>
         )

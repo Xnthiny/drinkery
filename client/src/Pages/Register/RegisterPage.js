@@ -28,7 +28,7 @@ export default class RegisterPage extends Component {
             <div className='background' >
                 <div>
                     <Navbar style={styles.Nav} />
-                    <Section ></Section>
+                    <br />
                     <div className='register-div' >
                         <Register />
                     </div>

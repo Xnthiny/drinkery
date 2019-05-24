@@ -1,25 +1,29 @@
 import React, { Component } from 'react'
 import './SimpleSearch.css'
+import { Redirect } from 'react-router-dom'
 
 class SimpleSearch extends Component {
     state = {
-        location: "Miami",
+        redirect: false
     }
 
-    updateLocation = (event) => {
-        let myLocation = event.target.value
-        this.setState({
-            location: myLocation
-        })
-        console.log(this.state.location)
+    setRedirect = () => {
+        this.setState({redirect: true})
     }
 
-    render() {
+    renderRedirect = (props) => {
+        const query = `${this.props.location}/feed`
+        if(this.state.redirect) {
+            return <Redirect to={query} />
+        }
+    }
+    render(props) {
         return (
             <div className='simple-search'>
+                {this.renderRedirect()}
                 <label > <h2 className='simple-search-label'>Begin your crawl.</h2></label>
-                <input className='simple-search-input' value={this.state.location} onChange={this.updateLocation} />
-                <button className='simple-search-button' href='/drink' onClick={this.updateLocation} > SEARCH </button>
+                <input className='simple-search-input' onChange={this.props.updateLocation} placeholder="Where are you?"/>
+                <button className='simple-search-button' onClick={this.setRedirect}>SEARCH</button>
             </div>
         )
     }

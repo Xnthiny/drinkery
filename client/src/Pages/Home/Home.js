@@ -12,26 +12,22 @@ import SimpleSearch from '../../components/Forms/SimpleSearch/SimpleSearch'
 
 
 class Home extends Component {
+    state = {
+        location: ""
+    }
+
+    updateLocation = (event) => {
+        this.setState({location: event.target.value})
+    }
  
     render() {
         return (
             <div>
                 <div className="Home">
                     <Navbar />
-                    <ControlledCarousel />
-                    <SimpleSearch />
-                    {/* <div className="row" className='search-col'>
-                    <div className="col-12" >
-                        <SearchForm
-                            location={this.state.location}
-                            changeLocation={this.updateLocation}
-                            numPeople={this.state.numPeople}
-                            updatePeople={this.updatePeople}
-                            results={this.state.results}
-                            updateResults={this.updateResults}
-                        />
-                    </div>
-                </div> */}
+                    {/* <ControlledCarousel /> */}
+                    <br />
+                    <SimpleSearch location={this.state.location} updateLocation={this.updateLocation}/>
                 </div>
                 <br />
                 <div className='col-12 results-col'>

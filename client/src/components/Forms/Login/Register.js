@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-// import Login from "./Login"
+import Login from "./Login"
 import "./Register.css"
-// import API from '../../../utils/API';
+import API from '../../../utils/API';
 
 
 export default class Register extends Component {
@@ -28,19 +28,25 @@ export default class Register extends Component {
         const info = {
             name: this.state.name,
             email: this.state.email,
-            password: this.state.password
+            password: this.state.password,
+            crawls: []
         }
 
-        API.register(info).then(data => {
-            console.log(data)
-            console.log(info)
+        API.register(info).then((data, err) => {
+            if(err) {
+                console.log(err)
+            } else {
+                console.log(data.data._id)
+                localStorage.setItem("loggedInUser", data.data._id)
+            }
         })
     }
+
 
     render() {
         return (
             <div id='register-container'>
-                <div className="search-form" >
+                <div className="register-form" >
                     <div className="search-title">
                         <h3 id="title">Register to DRINKERY!</h3>
                         <h5 id="subtitle">Welcome to our community of party enthuiest. <br />
@@ -54,7 +60,7 @@ export default class Register extends Component {
                             <input id="name-input" name="name" value={this.state.name} onChange={this.handleNameChange} placeholder="Name"></input>
                         </div>
                         <div className="input-div">
-                            <label id="label" htmlFor="email">EM@IL</label>
+                            <label id="label" htmlFor="email">EMAIL</label>
                             <br />
                             <input id="email-input" name="user_email" value={this.state.email} onChange={this.handleEmailChange} placeholder="Email"></input>
                         </div>
@@ -72,6 +78,7 @@ export default class Register extends Component {
                         <span>
                             <a href="/login">Already a user?</a>
                         </span>
+                        <span>{this.showError}</span>
                     </div>
                 </div>
             </div>

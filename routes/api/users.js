@@ -34,12 +34,12 @@ router.delete("/:id", authenticate, authorize, (req, res) => {
 });
 
 /**
- * @access  Private
+ * @access  Public
  * @desc    Return The user specified by ID
  * @route   GET api/users/:id
  * @returns a 200 JSON representation of the current users
  * */
-router.get("/:id", authenticate, (req, res) => {
+router.get("/:id", (req, res) => {
   userController.findById(req, res);
 });
 

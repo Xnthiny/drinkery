@@ -6,6 +6,7 @@ import RegisterPage from "./Pages/Register/RegisterPage";
 import DrinkPage from './Pages/DrinkPage/DrinkPage'
 import VerifyAgePage from './Pages/VerifyAgePage/VerifyAgePage';
 import ProfilePage from './Pages/ProfilePage/ProfilePage'
+import ResultsPage from './Pages/ResultsPage/ResultsPage'
 
 class App extends Component {
 
@@ -15,7 +16,7 @@ class App extends Component {
         <div>
           <Route exact path="/" component={VerifyAgePage} />
           <Route path="/index" component={Home} />
-          <Route path="/drink" component={DrinkPage} />
+          <Route path="/:location/feed" component={ResultsPage} />
           <Route path="/login" component={LoginPage} />
           <Route path="/register" component={RegisterPage} />
           <Route path="/profile" component={ProfilePage} />

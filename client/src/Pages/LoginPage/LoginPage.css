@@ -2,12 +2,4 @@
     margin: 0 auto;
     z-index: 99;
     position: static;
-    transform: translateY(-140%)  
-}
-
-
-@media screen and (max-width: 768px) {
-    .login-div {
-    transform: translateY(-85%)
-    }
 }

@@ -25,9 +25,6 @@ span a:hover {
 .search-title {
     margin-top:40px;
 }
-.search-form {
-    transform: translateY(7%)
-}
 
 input {
     background: rgb(29, 29, 29);

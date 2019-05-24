@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import API from "../utils/API"
+import { truncateSync } from 'fs';
 
 
 
@@ -8,21 +9,31 @@ export default class CrawlListItem extends Component {
 
   state = {
     background: "#D89B00",
-    venueNameColor: "black"
+    venueNameColor: "black",
+    selected: false
   }
 
-  buttonClick = (props) => {
-    console.log(this.props)
-    if (this.state.background === "#D89B00") {
-      props.selected = true;
-      this.setState({ background: "black", venueNameColor: "#D89B00" })
-    } else {
-      props.selected = false;
-      this.setState({ background: "#D89B00", venueNameColor: "black" });
+  componentDidUpdate = (props) => {
+    const venue = {
+      name: this.props.name,
+      address: this.props.address,
+      id: this.props.id
     }
+    this.props.pushToSelectedVenues(venue)
+
   }
 
   render(props) {
+
+    let buttonClick = (props) => {
+      if (this.state.background === "#D89B00") {
+        this.setState({selected: true, background: "black", venueNameColor: "#D89B00"})
+      } else {
+        this.setState({selected: false, background: "#D89B00", venueNameColor: "black", selected: false});
+      }
+    }
+
+
     let styles = {
       listItem: {
         width: "80%",
@@ -69,7 +80,7 @@ export default class CrawlListItem extends Component {
         <div style={styles.text}>
           <div style={styles.venueName}>
             {this.props.name.toUpperCase()}
-            <button onClick={this.buttonClick} style={styles.button}>{icon()}</button>
+            <button onClick={buttonClick} style={styles.button}>{icon()}</button>
           </div>
           <div style={styles.venueAddress}>
             {this.props.address[0]} <br /> {this.props.address[1]}

@@ -25,7 +25,7 @@ class Navbar extends Component {
         let backdrop = (this.state.sidebarOpen) ? <Backdrop click={this.backdropClickHandler} /> : console.log("nope")
 
         return (
-            <div >
+            <div className="nav">
                 <Toolbar drawerClickHandler={this.drawerClickHandler} onScroll={this.handleScroll} className={styles.Toolbar} />
                 <SideDrawer show={this.state.sidebarOpen} />
                 {backdrop}

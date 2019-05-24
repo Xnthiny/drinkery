@@ -7,20 +7,20 @@ const validateRegisterInput = require("../helpers/registrationValidator");
 const jwtSecret = process.env.JWTSECRET;
 
 module.exports = {
-  searchUserCrawls: (req, res) => {
-    const userID = req.params.id;
-    User.find({_id: userID}).then(user => {
-      
-    })
-  },
+  // searchUserCrawls: (req, res) => {
+  //   const userID = req.params.id;
+  //   User.find({_id: userID}).then(user => {
+
+  //   })
+  // },
   getAll: (req, res) => {
     User.find({})
-      .then(user => res.status(200).json(user))
-      .catch(err => res.status(500).json(err));
+      .then(user => res.render(user))
+      .catch(err => res.json(err));
   },
   findById: (req, res) => {
-    User.find({ id: req.params.id })
-      .then(user => res.status(200).json(user))
+    User.find({ _id: req.params.id })
+      .then(user => res.json(user))
       .catch(err => res.status(500).json(err));
   },
   deleteById: (req, res) => {
@@ -33,6 +33,8 @@ module.exports = {
       .catch(err => res.status(500).json(err));
   },
   login: (req, res) => {
+    
+    console.log("login called")
     const { errors, isValid } = validateLoginInput(req.body);
     // Check Validation
     if (!isValid) {
@@ -40,47 +42,52 @@ module.exports = {
     }
     //short hand for email:email
     const { email, password } = req.body;
+    let isMatch = true;
     User.findOne({ email }).then(user => {
-      //check for user
-      if (!user) {
-        errors.user = "User not found";
-        return res.status(404).json(errors);
+      if(!user) {
+        return res.json("user not found")
+      } else if (user.password !== password) {
+        return res.json("incorrect password")
+      } else {
+        res.json(user)
       }
-      user
-        .comparePassword(password)
-        .then(isMatch => {
-          if (isMatch) {
-            const payload = {
-              id: user.id,
-              email: user.email,
-              name: user.name
-            }; // created JWT payload
-            jwt.sign(
-              payload,
-              jwtSecret,
-              {
-                expiresIn: 720000
-              },
-              (err, token) => {
-                res.json({
-                  success: true,
-                  token: "Bearer " + token
-                });
-              }
-            );
-          } else {
-            errors.password = "Password incorrect";
-            return res.status(400).json(errors);
-          }
-        })
-        .catch(err => {
-          console.log(err);
-          return res.status("500").json({
-            login: "an error has occurred in the login process"
-          });
-        });
-    });
+    })
+
+    // User.findOne({ email }).then(user => {
+    //   //check for user
+    //   if (!user) {
+    //     errors.user = "User not found";
+    //     return res.status(404).json(errors);
+    //   } else if (password !== user.password) {
+    //     isMatch = false
+    //   }
+    //   if (isMatch) {
+    //     const payload = {
+    //       id: user.id,
+    //       email: user.email,
+    //       name: user.name
+    //     }; // created JWT payload
+    //     jwt.sign(
+    //       payload,
+    //       jwtSecret,
+    //       {
+    //         expiresIn: 720000
+    //       },
+    //       (err, token) => {
+    //         res.json({
+    //           success: true,
+    //           token: "Bearer " + token,
+    //           id: payload.id
+    //         });
+    //       }
+    //     );
+    //   } else {
+    //     errors.password = "Password incorrect";
+    //     return res.status(400).json(errors);
+    //   }
+    // });
   },
+
   register: (req, res) => {
     console.log("called");
     const { errors, isValid } = validateRegisterInput(req.body);
@@ -94,7 +101,7 @@ module.exports = {
     User.findOne({ email: email }).then(user => {
       if (user) {
         errors.email = "email already registered";
-        return res.status(409).json(errors);
+        return res.json(errors);
       } else {
         //es6 short hand for name:name, email:email etc.
         const newUser = new User({
@@ -117,7 +124,7 @@ module.exports = {
   createCrawl: (req, res) => {
     const { title, crawl_location, authorID, venues, date_created } = req.body
     Crawl.find({}).then(crawl => {
-      if(!crawl) {
+      if (!crawl) {
         return res.status(409).json("cannot create replicate crawl")
       } else {
         const newCrawl = new Crawl({
@@ -127,19 +134,20 @@ module.exports = {
           authorID,
           date_created
         })
-        .save()
-        .then(crawl => {
-          User.updateOne(
-            {_id: authorID},
-            {$push: {crawls: crawl._id}}
-          ).then(updatedUser => {
-            console.log(updatedUser)
+          .save()
+          .then(crawl => {
+            User.updateOne(
+              { _id: authorID },
+              { $push: { crawls: crawl._id } }
+            ).then(updatedUser => {
+              console.log(updatedUser)
+            })
           })
-        })
-        .catch(err => {
-          console.log(err)
-        })
-      }}
+          .catch(err => {
+            console.log(err)
+          })
+      }
+    }
     )
   }
 };

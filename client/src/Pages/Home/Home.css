@@ -9,18 +9,17 @@
   div.example {
     font-size: 30px;
   }
-
 }
 
-.row {
-  background-color: #292929;
-  display: flex; /* equal height of the children */
+body {
+  background-color: rgb(19, 21, 27) !important;
 }
 
-.col {
-  background-color: #292929;
-  flex: 1; /* additionally, equal width */
-  padding: 1em;
-  border: none; 
+.Home {
+  height: 500px;
+  background: linear-gradient(
+   35deg,
+   #0f3147,
+   #1d252d
+   );
 }
- 
