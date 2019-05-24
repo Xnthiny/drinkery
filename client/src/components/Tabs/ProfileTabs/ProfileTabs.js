@@ -8,14 +8,14 @@ import './ProfileTabs.css'
 
 const styles = {
     tabs: {
-    maxHeight: "800px",
-    maxWidth: "100%",
-    overflow: "scroll",
-    margin: "0 auto",
-    width: "97%",
-    fontFamily: "sans-serif",
-    textAlign: "center",
-    backgroundColor: "#d89b00",
+        maxHeight: "800px",
+        maxWidth: "100%",
+        overflow: "scroll",
+        margin: "0 auto",
+        width: "97%",
+        fontFamily: "sans-serif",
+        textAlign: "center",
+        backgroundColor: "#d89b00",
     },
     tab: {
         backgroundColor: "#black"
@@ -27,21 +27,21 @@ let ProfileTabs = () => (
         <Tabs
             activeTab={{
                 id: "Crawls"
-            }}xw
+            }} xw
         >
             <Tabs.Tab styles={styles.tabs} id="Crawls" title="Crawls">
                 <glamorous.Div >
                     <div className='crawls-container' >
-                        <div className='col-4' id='card-div'>
+                        <div className='col-3' id='card-div'>
                             <CrawlCard id='test' />
                         </div>
-                        <div className='col-4' id='card-div'>
+                        <div className='col-3' id='card-div'>
                             <CrawlCard id='test1' />
                         </div>
-                        <div className='col-4' id='card-div'>
+                        <div className='col-3' id='card-div'>
                             <CrawlCard id='test2' />
                         </div>
-                        <div className='col-4' id='card-div'>
+                        <div className='col-3' id='card-div'>
                             <CrawlCard id='test3' />
                         </div>
                     </div>
@@ -49,7 +49,7 @@ let ProfileTabs = () => (
                 </glamorous.Div>
             </Tabs.Tab>
             <Tabs.Tab styles={styles.tabs} id="My-Profile" title="My Profile">
-                <glamorous.Div > 
+                <glamorous.Div >
                     <UserProfileForm />
                 </glamorous.Div>
             </Tabs.Tab>

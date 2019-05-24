@@ -24,8 +24,8 @@ const styles = theme => ({
     card: {
         margin: "5px",
         flexDirection: "row",
-        maxWidth: "400px",
-        minWidth: "350px",
+        maxWidth: "350px",
+        minWidth: "300px",
         backgroundColor: "black",
         color: "white",
         position: "relative"

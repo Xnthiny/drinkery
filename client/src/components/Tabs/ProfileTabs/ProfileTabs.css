@@ -1,11 +1,13 @@
 .crawls-container {
+    width: 100%;
+    margin: 0 auto;
     display:inline-flex;
     flex-wrap:wrap;
     margin-right:20px;
     overflow:hidden;
     height: auto;
     width: 80%;
-    float: left;
+    float: center;
 }
 
 @media screen and (max-width: 568px) {

@@ -1,0 +1,25 @@
+.user-profile {
+    width: 80%;
+
+}
+.sc-chPdSV.jGSJkP {
+        width: 80%;
+}
+
+.sc-EHOje.sc-bZQynM.gwdJle {
+        width: 80%;
+}
+
+.sc-bdVaJa.imCwjR {
+        width: 80%;
+}
+.sc-EHOje.sc-kAzzGY.bgxsQu {
+        width: 80%;
+}
+
+@media screen and (max-width: 568px) {
+  .user-profile {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
