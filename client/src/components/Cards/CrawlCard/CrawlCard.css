@@ -6,3 +6,18 @@
 .Typography {
     color:white;
 }
+
+
+@media screen and (max-width: 568px) {
+  .card {
+    margin: 0 auto;
+    flex-direction:column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    margin: 0 auto;
+    flex-direction:column;
+  }
+}

@@ -22,18 +22,23 @@ import barImg from '../../../images/London.gif'
 
 const styles = theme => ({
     card: {
-        maxWidth: 300 +'em',
+        margin: "5px",
+        flexDirection: "row",
+        maxWidth: "400px",
+        minWidth: "350px",
         backgroundColor: "black",
-        color: "white"
+        color: "white",
+        position: "relative"
+
     },
     media: {
+        color: "white",
         height: 0,
         paddingTop: '56.25%', // 16:9
-        color: "white"
 
     },
     type: {
-        color: "yarn stz"
+        color: "white"
     },
     actions: {
         display: 'flex',
@@ -57,8 +62,16 @@ const styles = theme => ({
     },
     crawlTitle: {
         color: "#D89B00"
+    }, 
+    crawlSubTitle: {
+        color: "white"
+    },
+    header: {
+        color: "#D89B00"
     }
 });
+
+
 
 class CrawlCard extends React.Component {
     state = { expanded: false };
@@ -70,7 +83,7 @@ class CrawlCard extends React.Component {
 
         return (
             <Card className={classes.card}>
-                <CardHeader
+                <CardHeader 
                     avatar={
                         <Avatar aria-label="Recipe" className={classes.avatar}>
                             MB
@@ -83,6 +96,7 @@ class CrawlCard extends React.Component {
                     }
                     title="Crawl Card . Title "
                     subheader="Crawl Card . Sub Title"
+                    className={classes.header}
                 />
                 <CardMedia
                     className={classes.media}
@@ -95,7 +109,7 @@ class CrawlCard extends React.Component {
                         <h4 id='crawl-name' className={classes.crawlTitle} >
                             Crawl Card . Title
                         </h4>
-                        <h5 className='crawl-city'>
+                        <h5 className={classes.crawlSubTitle}>
                             Crawl Card . City
                         </h5>
 

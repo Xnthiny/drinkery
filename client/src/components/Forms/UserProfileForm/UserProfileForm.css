@@ -1,0 +1,42 @@
+.user-form-div {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.user-form {
+    margin-top: 2em;
+}
+
+.user-form-input {
+    width: 90%;
+    margin-top: 15px;
+}
+
+.user-form-label {
+    margin-top: 2em;
+    margin: 0 auto;
+    font-weight: 700;
+    font-family: 'Gotham';
+    align-content: left;
+    text-align: left;
+    color:black;
+    font-size: 2em;
+}
+
+@media screen and (max-width: 568px) {
+  .user-form-input {
+    width: 90%;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .crawls-container {
+    margin: 0 auto;
+    flex-direction:column;
+  }
+  .user-form-div {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
