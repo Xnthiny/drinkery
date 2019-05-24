@@ -15,7 +15,7 @@ export default {
   },
   // Makes post request to userController and begins login logic
   register: function(userData) {
-    return axios.post("api/register", userData);
+    return axios.post("https://localhost:5000/api/register", userData);
   },
   getCrawls: function (id) {
     return axios.get("/api/crawls/" + id);

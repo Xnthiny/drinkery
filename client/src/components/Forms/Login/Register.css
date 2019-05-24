@@ -23,8 +23,7 @@ span a {
 
 span a:hover {
     color: white;
-    text-decoration: "none";
-    font-weight: 600;
+    text-decoration: none;
 }
 .search-title {
     margin-top:40px;

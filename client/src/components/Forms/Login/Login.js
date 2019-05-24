@@ -1,17 +1,35 @@
 import React, { Component } from 'react'
 import Register from "./Register"
+import API from "../../../utils/API";
 import "./Login.css"
 
 export default class Login extends Component {
+    state = {
+        email: "",
+        password: ""
+    }
 
-    render(props) {
-        console.log("Login Page: ")
+    handleLogin = (event) => {
+        event.preventDefault();
+        const loginInfo = {
+            email: this.state.email,
+            password: this.state.password
+        }
 
-        // let handleLogin = (event) => {
-        //     event.preventDefault();
-        //     console.log('works')
-        // }
+        API.login(loginInfo).then(data => {
+            console.log(data)
+        })
+    }
 
+    handleEmailChange = (event) => {
+        this.setState({email: event.target.value})
+    }
+
+    handlePasswordChange = (event) => {
+        this.setState({password: event.target.value})
+    }
+
+    render() {
         return (
             <div id='login-container'>
                 <div className="search-form">
@@ -25,15 +43,15 @@ export default class Login extends Component {
                         <div className="input-div" >
                             <label id="label" htmlFor="email">EM@IL</label>
                             <br />
-                            <input id="email-input" name="email" value={this.props.email} onChange={this.props.email} placeholder="Email"></input>
+                            <input id="email-input" name="email" value={this.state.email} onChange={this.handleEmailChange} placeholder="Email"></input>
                         </div>
                         <div className="input-div">
                             <label id="label" htmlFor="password">PASSWORD</label>
                             <br />
-                            <input id="password-input" name="password" value={this.props.password} onChange={this.props.password} placeholder="Password"></input>
+                            <input id="password-input" name="password" value={this.state.password} onChange={this.handlePasswordChange} placeholder="Password"></input>
                         </div>
                         <div className="button-div">
-                            <button id="login-button" type="submit" >LOGIN</button>
+                            <button id="login-button" type="submit" onClick={this.handleLogin}>LOGIN</button>
                         </div>
 
 
