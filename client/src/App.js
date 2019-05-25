@@ -10,11 +10,18 @@ import ResultsPage from './Pages/ResultsPage/ResultsPage'
 
 class App extends Component {
 
+  checkAge = () => {
+    if(localStorage.getItem("ofAge")) {
+      return <Route exact path="/" component={Home} />
+    } else {
+      return <Route exact path="/" component={VerifyAgePage} />
+    }
+  }
   render() {
     return (
       <Router>
         <div>
-          <Route exact path="/" component={VerifyAgePage} />
+          {this.checkAge()}
           <Route path="/index" component={Home} />
           <Route path="/:location/feed" component={ResultsPage} />
           <Route path="/login" component={LoginPage} />
