@@ -47,8 +47,9 @@ export default class Login extends Component {
                 <div className="login-form">
                     <div className="search-title">
                         <h3 id="title">Login to DRINKERY!</h3>
-                        <h5 id="subtitle">Welcome Back to our community of party enthuiest. <br />
-                            Ready to DRINK? Login to Drinkery! <br /> You'll probably find your new favorite bar!
+                        <h5 id="subtitle">
+                            Welcome Back to our community of party enthuiest.
+                            Ready to DRINK? Login to Drinkery!You'll probably find your new favorite bar!
                     </h5>
                     </div>
                     <form id='login-search-form'>

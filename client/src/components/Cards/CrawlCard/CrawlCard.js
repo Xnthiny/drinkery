@@ -134,14 +134,39 @@ class CrawlCard extends React.Component {
                     <CardContent className={classes.cardText}>
                         <Typography className={classes.type} paragraph>
                             <div className='title'>
-                                {classes.title}
-                                HELLOW WORLD MY NAME IS ALBER 
+                                <h2> This is my First Crawl!</h2>                                 
                             </div>
                         </Typography>
                         <Typography className={classes.type} paragraph>
                             {/* {results} */}
-
-
+                           <div className='location-title' >
+                                AMERICAN SOCIAL
+                               </div> 
+                               <div className='location-address' >
+                                690 SW 1st Ct. 
+                                Miami, FL 33130
+                               </div>
+                               <div className='location-title' >
+                                TOPGOLF
+                               </div> 
+                               <div className='location-address' >
+                                11850 NW 22nd St. 
+                                Doral, FL 33182
+                               </div>
+                            <div className='location-title' >
+                                DAVE & BUSTER'S
+                               </div>
+                            <div className='location-address' >
+                                11481 NW 12th St, # 622 (Ramblas 9, upstairs - level 2) 
+                                Miami, FL 33172
+                               </div>
+                            <div className='location-title' >
+                                YARD HOUSE
+                               </div>
+                            <div className='location-address' >
+                                601 Silks Run 
+                                Hallandale, FL 33009
+                               </div>
                         </Typography>
                     </CardContent>
                 </Collapse>

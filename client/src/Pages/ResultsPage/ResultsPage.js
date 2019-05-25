@@ -47,7 +47,7 @@ export default class ResultsPage extends Component {
         const venues = this.state.selectedVenues
         
         return (
-            <div>
+            <div className='Results-Page'>
                 <Navbar />
                 <br />
                 <div id="header">

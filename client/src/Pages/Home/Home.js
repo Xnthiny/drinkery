@@ -9,7 +9,8 @@ import Instrucitonal from '../../components/Instructional/Instrucitonal';
 import ControlledCarousel from '../../components/Carousel/Carousel'
 import Navbar from "../../components/Navbar/Navbar";
 import SimpleSearch from '../../components/Forms/SimpleSearch/SimpleSearch'
-
+import Carousel from '../../components/Carousel/Carousel';
+import Footer from '../../components/Footer/Footer'
 
 class Home extends Component {
     state = {
@@ -30,9 +31,17 @@ class Home extends Component {
                     <SimpleSearch location={this.state.location} updateLocation={this.updateLocation}/>
                 </div>
                 <br />
+
                 <div className='col-12 results-col'>
                     <Instrucitonal />
                 </div>
+                <div className='Carousel' >
+                    <Carousel />
+                </div>
+                <div className='footer' >
+                    <Footer />
+                </div>
+
             </div>
 
         )

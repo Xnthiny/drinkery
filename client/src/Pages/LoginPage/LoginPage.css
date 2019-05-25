@@ -6,11 +6,7 @@
 
 .background.login {
     height: 100vh;
-    background: linear-gradient(
-   35deg,
-   #04eeffce,
-   #f700ffc4
-   );
+    background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
 }
 
 #login-container {
@@ -19,5 +15,8 @@
     border-radius: 5em 1em 5em;
     border: 3px solid #d89b00;
     padding: 1%;
-    background: #131313;
+}
+
+#login-container button {
+  text-align: center;
 }

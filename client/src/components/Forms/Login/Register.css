@@ -11,8 +11,14 @@ label {
     border-radius: 1em 5em 1em;
     border: 3px solid #d89b00;
     padding: 1%;
-    background: #131313;
+    background: rgb(29,29,29,.8);
 }
+
+
+.subtitle {
+    text-align: justify;
+}
+
 
 #register-bg {
     filter: blur(2px);
@@ -27,7 +33,7 @@ span a {
 }
 
 span a:hover {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 .search-title {

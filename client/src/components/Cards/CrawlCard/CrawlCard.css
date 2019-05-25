@@ -7,6 +7,18 @@
     color:white;
 }
 
+.location-title {
+  font-size: 20px;
+  color: #d89b00;
+  text-align: right;
+  margin: 1%;
+}
+.location-address {
+  font-size: 20px;
+  color: white;
+  text-align: right;
+  margin: 14px auto;
+}
 
 @media screen and (max-width: 568px) {
   .card {

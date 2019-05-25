@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import './Toolbar.css';
 import HamburgerToggle from '../SideDrawer/HamburgerToggle';
-import logo from '../../../images/drinkery-logo.png';
+import logo from '../../../images/drinkery-logo-black.png';
 import { execFile } from 'child_process';
 import LoginPage from "../../../Pages/LoginPage/LoginPage"
 import API from '../../../utils/API';
-
-
 
 export default class Toolbar extends Component {
     state = {

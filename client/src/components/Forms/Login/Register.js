@@ -49,8 +49,8 @@ export default class Register extends Component {
                 <div className="register-form" >
                     <div className="search-title">
                         <h3 id="title">Register to DRINKERY!</h3>
-                        <h5 id="subtitle">Welcome to our community of party enthuiest. <br />
-                            Ready to Join? Sign Up for Drinkery Today! <br />see how Drinkery gets the party going!
+                        <h5 id="subtitle">Welcome to our community of party enthuiest. 
+                            Ready to Join? Sign Up for Drinkery Today!see how Drinkery gets the party going!
                     </h5>
                     </div>
                     <form id='register-search-form' >
