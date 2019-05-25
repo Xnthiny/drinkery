@@ -25,7 +25,7 @@ export default class RegisterPage extends Component {
 
     render() {
         return (
-            <div className='background' >
+            <div className='background register' >
                 <div>
                     <Navbar style={styles.Nav} />
                     <br />

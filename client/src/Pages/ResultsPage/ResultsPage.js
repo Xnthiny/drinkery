@@ -72,6 +72,7 @@ export default class ResultsPage extends Component {
         const venues = this.state.selectedVenues
         
         return (
+            <div className='Results-Page'>
             <div>
                 {this.renderRedirect()}
                 <Navbar />

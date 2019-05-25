@@ -6,11 +6,12 @@
 }
 
 
-.background {
+.background.register {
     height: 100vh;
+    
     background: linear-gradient(
    35deg,
    #ffbc04ce,
-   #f700ffc4
+   #ff0059c4
    );
 }
