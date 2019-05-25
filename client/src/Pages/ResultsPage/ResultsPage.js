@@ -5,12 +5,20 @@ import Navbar from "../../components/Navbar/Navbar"
 import "./ResultsPage.css"
 import ResultsIntro from "../../components/Instructional/Results/ResultsIntro/ResultsIntro"
 import Results from "../../components/Results/Results"
+import { Redirect } from 'react-router-dom'
 
 export default class ResultsPage extends Component {
     state = {
         results: "",
         selectedVenues: "",
-        
+        redirect: false
+    }
+
+
+    renderRedirect() {
+        if(this.state.redirect) {   
+            return <Redirect to="/profile" />
+        }
     }
 
 
@@ -36,8 +44,25 @@ export default class ResultsPage extends Component {
         this.setState({ selectedVenues: [...this.state.selectedVenues, venueInfo]})
     }
 
-    saveSelected = () => {
+    saveSelected = (props) => {
         console.log(this.state.selectedVenues)
+        const user = localStorage.getItem("loggedInUser")
+        if(!user) {
+            alert("Log in to save a crawl!")
+        } else {
+            const title = prompt("Name your crawl!")
+            const data = {
+                title,
+                location: this.props.match.params.location,
+                venues: this.state.selectedVenues,
+                authorID: user
+            }
+
+            API.saveCrawl(data).then(res => {
+                this.setState({redirect: true})
+            })
+        }
+
     }
 
     render(props) {
@@ -48,6 +73,7 @@ export default class ResultsPage extends Component {
         
         return (
             <div>
+                {this.renderRedirect()}
                 <Navbar />
                 <br />
                 <div id="header">

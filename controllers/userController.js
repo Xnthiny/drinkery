@@ -33,7 +33,7 @@ module.exports = {
       .catch(err => res.status(500).json(err));
   },
   login: (req, res) => {
-    
+
     console.log("login called")
     const { errors, isValid } = validateLoginInput(req.body);
     // Check Validation
@@ -123,31 +123,46 @@ module.exports = {
   },
   createCrawl: (req, res) => {
     const { title, crawl_location, authorID, venues, date_created } = req.body
-    Crawl.find({}).then(crawl => {
-      if (!crawl) {
-        return res.status(409).json("cannot create replicate crawl")
+
+    const newCrawl = new Crawl({
+      title,
+      crawl_location,
+      venues,
+      authorID,
+      date_created
+    })
+
+    Crawl.create(newCrawl).then(savedCrawl => {
+      User.updateOne(
+        {_id: authorID },
+        { $push: {crawls: savedCrawl._id}}
+      ).then(updatedUser => {
+        if(!updatedUser) {
+          console.log("No user found")
+        } else {
+          res.json({savedCrawl, updatedUser})
+        }
+      })
+      // User.updateOne(
+      //   { _id: authorID },
+      //   { $push: { crawls: crawl._id } }
+      // ).then(updatedUser => {
+      //   if(!updatedUser) {
+      //     console.log("No user found")
+      //   } else {
+      //     res.json(updatedUser)
+      //   }
+      // }).catch(err => console.log(err))
+    })
+  },
+  searchForCrawl: (req, res) => {
+    const crawlID = req.body
+    Crawl.findById(crawlID).then(crawl => {
+      if(!crawl) {
+        console.log("no crawl found")
       } else {
-        const newCrawl = new Crawl({
-          title,
-          crawl_location,
-          venues,
-          authorID,
-          date_created
-        })
-          .save()
-          .then(crawl => {
-            User.updateOne(
-              { _id: authorID },
-              { $push: { crawls: crawl._id } }
-            ).then(updatedUser => {
-              console.log(updatedUser)
-            })
-          })
-          .catch(err => {
-            console.log(err)
-          })
+        res.json(crawl)
       }
-    }
-    )
+    })
   }
 };

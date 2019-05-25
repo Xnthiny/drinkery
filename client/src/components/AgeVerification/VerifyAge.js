@@ -11,7 +11,12 @@ let styles = {
 }
 
 
+
 export default function VerifyAge(props) {
+    const setAge = (event) => {
+        localStorage.setItem("ofAge", true)
+    }
+
     return (
         <div className='verify-background-container' style={styles.container}>
             <div className='verify-age-div'>
@@ -24,7 +29,7 @@ export default function VerifyAge(props) {
                     <h3 className='drinking-age-label'> <label />Are you of Drinking Age?</h3>
                     <div className='verify-buttons'>
                         <div className='verify-age-button-div'>
-                            <button href='/index' alt='verify-age-button' className='verify-age-button' type='submit' alt='verify-age'> <a href='/index' alt='verify-age' style={{ style: 202, color: "inherit", textDecoration: 'none' }}>Yes</a></button>
+                            <button onClick={setAge} href='/index' alt='verify-age-button' className='verify-age-button' type='submit' alt='verify-age'> <a href='/index' alt='verify-age' style={{ style: 202, color: "inherit", textDecoration: 'none' }}>Yes</a></button>
                         </div>
                         <div className='decline-age-button-div' >
                             <button className='decline-age-button' >No</button>

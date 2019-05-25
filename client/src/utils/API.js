@@ -5,6 +5,12 @@ export default {
   getUsers: function () {
     return axios.get("/api/users");
   },
+  saveCrawl: function(data) {
+    return axios.post("http://localhost:5000/api/users/newcrawl", data)
+  },
+  searchCrawl: function(crawlID) {
+    return axios.get("http://localhost:5000/api/users/")
+  }
   // Gets the user with the given id
   getUser: function (id) {
     return axios.get("http://localhost:5000/api/users/" + id);
