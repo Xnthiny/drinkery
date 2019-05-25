@@ -22,18 +22,23 @@ import barImg from '../../../images/London.gif'
 
 const styles = theme => ({
     card: {
-        maxWidth: 300 +'em',
+        margin: "5px",
+        flexDirection: "row",
+        maxWidth: "350px",
+        minWidth: "300px",
         backgroundColor: "black",
-        color: "white"
+        color: "white",
+        position: "relative"
+
     },
     media: {
+        color: "white",
         height: 0,
         paddingTop: '56.25%', // 16:9
-        color: "white"
 
     },
     type: {
-        color: "yarn stz"
+        color: "white"
     },
     actions: {
         display: 'flex',
@@ -57,8 +62,16 @@ const styles = theme => ({
     },
     crawlTitle: {
         color: "#D89B00"
+    },
+    crawlSubTitle: {
+        color: "white"
+    },
+    header: {
+        color: "#D89B00"
     }
 });
+
+
 
 class CrawlCard extends React.Component {
     state = { expanded: false };
@@ -73,7 +86,7 @@ class CrawlCard extends React.Component {
                 <CardHeader
                     avatar={
                         <Avatar aria-label="Recipe" className={classes.avatar}>
-                            MB
+                            D
                         </Avatar>
                     }
                     action={
@@ -81,8 +94,8 @@ class CrawlCard extends React.Component {
                             <MoreVertIcon />
                         </IconButton>
                     }
-                    title="Crawl Card . Title "
-                    subheader="Crawl Card . Sub Title"
+                    title={classes.title}
+                    subheader={classes.location}
                 />
                 <CardMedia
                     className={classes.media}
@@ -93,13 +106,13 @@ class CrawlCard extends React.Component {
                     <Typography className={classes.type} >
                         {/*  */}
                         <h4 id='crawl-name' className={classes.crawlTitle} >
-                            Crawl Card . Title
+                            {classes.title}
                         </h4>
                         <h5 className='crawl-city'>
-                            Crawl Card . City
+                            {classes.location}
                         </h5>
 
-          </Typography>
+                    </Typography>
                 </CardContent>
                 <CardActions className={classes.actions} disableActionSpacing>
                     <IconButton aria-label="Add to favorites">
@@ -121,9 +134,15 @@ class CrawlCard extends React.Component {
                 </CardActions>
                 <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
                     <CardContent className={classes.cardText}>
-                        <Typography className={classes.type} paragraph>Method:</Typography>
+                        <Typography className={classes.type} paragraph>
+                            <div className='title'>
+                                {classes.title}
+                            </div>
+                        </Typography>
                         <Typography className={classes.type} paragraph>
                             {/* {results} */}
+
+
                         </Typography>
                     </CardContent>
                 </Collapse>

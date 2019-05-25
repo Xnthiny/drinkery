@@ -1,0 +1,25 @@
+.crawls-container {
+    width: 100%;
+    margin: 0 auto;
+    display:inline-flex;
+    flex-wrap:wrap;
+    margin-right:20px;
+    overflow:hidden;
+    height: auto;
+    width: 80%;
+    float: center;
+}
+
+@media screen and (max-width: 568px) {
+  .crawls-container {
+    margin: 0 auto;
+    flex-direction:column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .crawls-container {
+    margin: 0 auto;
+    flex-direction:column;
+  }
+}
