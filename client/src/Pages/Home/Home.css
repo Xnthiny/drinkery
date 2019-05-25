@@ -17,9 +17,13 @@ body {
 
 .Home {
   height: 500px;
-  background: linear-gradient(
-   35deg,
-   #0f3147,
-   #1d252d
-   );
+  background: conic-gradient(at center 10%, white 40%, #d89b00 0 70%, #131313 0);
+
+
+ 
+   /* 
+  background: conic-gradient(
+   rgba(216, 155, 0, 0.879),
+   #131313
+   ); */
 }

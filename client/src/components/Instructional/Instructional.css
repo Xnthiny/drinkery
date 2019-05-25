@@ -60,7 +60,6 @@ p {
     }
     #instructions {
         width: 100%;
-
     }
 } */
 
@@ -68,7 +67,7 @@ p {
  @media screen and (min-width: 48em) {
   col:before {
     content: '';
-    float: right;
+    float: center;
     display: block;
     width: 300px;
     height: 150px;

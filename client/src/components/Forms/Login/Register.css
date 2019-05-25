@@ -7,11 +7,16 @@ label {
 
 #register-container {
     margin: 0 auto;
-    width: 400px;
+    max-width: 400px;
+    border-radius: 1em 5em 1em;
+    border: 3px solid #d89b00;
+    padding: 1%;
+    background: #131313;
 }
 
 #register-bg {
     filter: blur(2px);
+    
 }
 span a {
     color: #d89b00;
@@ -84,7 +89,7 @@ input {
     height: 400px;
     min-height: 6em;
     display: table-cell;
-    vertical-align: middle 
+    vertical-align: middle;
 }
 
 .Links {

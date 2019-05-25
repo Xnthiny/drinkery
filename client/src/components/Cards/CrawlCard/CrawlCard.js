@@ -86,7 +86,7 @@ class CrawlCard extends React.Component {
                 <CardHeader
                     avatar={
                         <Avatar aria-label="Recipe" className={classes.avatar}>
-                            D
+                            W
                         </Avatar>
                     }
                     action={
@@ -105,9 +105,7 @@ class CrawlCard extends React.Component {
                 <CardContent >
                     <Typography className={classes.type} >
                         {/*  */}
-                        <h4 id='crawl-name' className={classes.crawlTitle} >
-                            {classes.title}
-                        </h4>
+                        
                         <h5 className='crawl-city'>
                             {classes.location}
                         </h5>
@@ -137,6 +135,7 @@ class CrawlCard extends React.Component {
                         <Typography className={classes.type} paragraph>
                             <div className='title'>
                                 {classes.title}
+                                HELLOW WORLD MY NAME IS ALBER 
                             </div>
                         </Typography>
                         <Typography className={classes.type} paragraph>

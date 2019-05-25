@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import ProfileTabs from '../../components/Tabs/ProfileTabs/ProfileTabs';
 import Avatar from '../../components/Avatar/Avatar'
-
+import Navbar from '../../components/Navbar/Navbar'
 
 export default class ProfilePage extends Component {
     render() {
         return (
             <div className='Profile-Page'>
+                <Navbar />
                 <div className='user-profile-div' >
                     <div className='user-info' >
                         <div className='container'>

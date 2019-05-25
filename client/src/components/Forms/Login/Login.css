@@ -68,10 +68,10 @@ input {
 
 
 #login-search-form {
-    height: 400px;
+    height: 500px;
     min-height: 6em;
     display: table-cell;
-    vertical-align: middle 
+    vertical-align: middle;
 }
 
 .Links {

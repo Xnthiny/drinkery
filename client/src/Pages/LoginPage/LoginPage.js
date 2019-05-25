@@ -26,7 +26,7 @@ export default class LoginPage extends Component {
 
     render() {
         return (
-            <div className='background' >
+            <div className='background login' >
                 <div>
                     <Navbar style={styles.Nav} />
                     <br />

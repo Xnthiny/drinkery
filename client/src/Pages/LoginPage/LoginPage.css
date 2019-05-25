@@ -3,3 +3,21 @@
     z-index: 99;
     position: static;
 }
+
+.background.login {
+    height: 100vh;
+    background: linear-gradient(
+   35deg,
+   #04eeffce,
+   #f700ffc4
+   );
+}
+
+#login-container {
+    margin: 0 auto;
+    max-width: 400px;
+    border-radius: 5em 1em 5em;
+    border: 3px solid #d89b00;
+    padding: 1%;
+    background: #131313;
+}
