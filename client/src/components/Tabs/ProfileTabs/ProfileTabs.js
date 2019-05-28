@@ -41,9 +41,6 @@ let ProfileTabs = () => (
                         <div className='col-3' id='card-div'>
                             <CrawlCard id='test2' />
                         </div>
-                        <div className='col-3' id='card-div'>
-                            <CrawlCard id='test3' />
-                        </div>
                     </div>
 
                 </glamorous.Div>

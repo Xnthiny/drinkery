@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import Login from '../../components/Forms/Login/Login'
 // import bgLogin from '../../images/bg5.png'
@@ -12,7 +13,7 @@ import Section from '../../components/Background/Background'
 let styles = {
     background: {
         backgroundImage: LoginBG,
-        
+
         position: isAbsolute
     },
     Nav: {
@@ -26,7 +27,7 @@ export default class LoginPage extends Component {
 
     render() {
         return (
-            <div className='background' >
+            <div className='background login' >
                 <div>
                     <Navbar style={styles.Nav} />
                     <br />
@@ -37,6 +38,5 @@ export default class LoginPage extends Component {
                 </div>
             </div>
         )
+        }
     }
-
-}
