@@ -9,6 +9,7 @@ import Instrucitonal from '../../components/Instructional/Instrucitonal';
 import ControlledCarousel from '../../components/Carousel/Carousel'
 import Navbar from "../../components/Navbar/Navbar";
 import SimpleSearch from '../../components/Forms/SimpleSearch/SimpleSearch'
+import { relative } from 'path';
 
 
 class Home extends Component {
@@ -17,21 +18,30 @@ class Home extends Component {
     }
 
     updateLocation = (event) => {
-        this.setState({location: event.target.value})
+        this.setState({ location: event.target.value })
     }
- 
+
     render() {
         return (
             <div>
                 <div className="Home">
                     <Navbar />
                     {/* <ControlledCarousel /> */}
+                    <br/>
+                
+                    
+                    
                     <br />
-                    <SimpleSearch location={this.state.location} updateLocation={this.updateLocation}/>
+                    <SimpleSearch location={this.state.location} updateLocation={this.updateLocation} />
+                    <br />
+
+
                 </div>
+
                 <br />
                 <div className='col-12 results-col'>
                     <Instrucitonal />
+
                 </div>
             </div>
 

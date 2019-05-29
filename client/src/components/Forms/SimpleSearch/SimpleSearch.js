@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './SimpleSearch.css'
 import { Redirect } from 'react-router-dom'
+import ModVid from "../../Video/video"
 
 class SimpleSearch extends Component {
     state = {
@@ -24,6 +25,7 @@ class SimpleSearch extends Component {
                 <label > <h2 className='simple-search-label'>Begin your crawl.</h2></label>
                 <input className='simple-search-input' onChange={this.props.updateLocation} placeholder="Where are you?"/>
                 <button className='simple-search-button' onClick={this.setRedirect}>SEARCH</button>
+                <ModVid/>
             </div>
         )
     }
