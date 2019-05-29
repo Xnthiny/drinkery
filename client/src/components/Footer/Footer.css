@@ -1,6 +1,15 @@
-.card-text {
-    background: black;
+#Footer {
+    background: #d89b00;
     color: white;
+}
+#Footer a {
+    color: white;
+}
+
+#footer-container {
+    background: #d89b00;
+    color: black;
+
 }
 
 .Typography {
@@ -9,7 +18,7 @@
 
 .location-title {
   font-size: 20px;
-  color: #d89b00;
+  color: black;
   text-align: right;
   margin: 1%;
 }

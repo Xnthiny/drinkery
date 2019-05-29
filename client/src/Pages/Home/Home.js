@@ -9,6 +9,7 @@ import Instrucitonal from '../../components/Instructional/Instrucitonal';
 import ControlledCarousel from '../../components/Carousel/Carousel'
 import Navbar from "../../components/Navbar/Navbar";
 import SimpleSearch from '../../components/Forms/SimpleSearch/SimpleSearch'
+import Footer from '../../components/Footer/Footer'
 
 
 class Home extends Component {
@@ -33,6 +34,7 @@ class Home extends Component {
                 <div className='col-12 results-col'>
                     <Instrucitonal />
                 </div>
+                <Footer />
             </div>
 
         )

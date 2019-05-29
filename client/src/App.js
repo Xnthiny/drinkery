@@ -7,6 +7,7 @@ import DrinkPage from './Pages/DrinkPage/DrinkPage'
 import VerifyAgePage from './Pages/VerifyAgePage/VerifyAgePage';
 import ProfilePage from './Pages/ProfilePage/ProfilePage'
 import ResultsPage from './Pages/ResultsPage/ResultsPage'
+import './App.css'
 
 class App extends Component {
 

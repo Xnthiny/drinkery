@@ -1,11 +1,12 @@
 import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import './Footer.css'
 
 const Footer = () => {
     return (
         <MDBFooter id="Footer" className="font-small pt-4 mt-4">
-            <MDBContainer fluid className="text-center text-md-left">
-                <MDBRow>
+            <MDBContainer fluid className="text-center text-md-left" >
+                <MDBRow id='footer-container'>
                     <MDBCol md="6">
                         <h5 className="title">Footer Content</h5>
                         <p>
