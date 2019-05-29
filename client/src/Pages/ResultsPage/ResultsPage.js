@@ -6,7 +6,6 @@ import "./ResultsPage.css"
 import ResultsIntro from "../../components/Instructional/Results/ResultsIntro/ResultsIntro"
 import Results from "../../components/Results/Results"
 import { Redirect } from 'react-router-dom'
-
 export default class ResultsPage extends Component {
     state = {
         results: "",
@@ -16,7 +15,7 @@ export default class ResultsPage extends Component {
 
 
     renderRedirect() {
-        if(this.state.redirect) {   
+        if (this.state.redirect) {
             return <Redirect to="/profile" />
         }
     }
@@ -41,13 +40,13 @@ export default class ResultsPage extends Component {
     }
 
     updateSelectedVenues = (venueInfo) => {
-        this.setState({ selectedVenues: [...this.state.selectedVenues, venueInfo]})
+        this.setState({ selectedVenues: [...this.state.selectedVenues, venueInfo] })
     }
 
     saveSelected = (props) => {
         console.log(this.state.selectedVenues)
         const user = localStorage.getItem("loggedInUser")
-        if(!user) {
+        if (!user) {
             alert("Log in to save a crawl!")
         } else {
             const title = prompt("Name your crawl!")
@@ -59,7 +58,7 @@ export default class ResultsPage extends Component {
             }
 
             API.saveCrawl(data).then(res => {
-                this.setState({redirect: true})
+                this.setState({ redirect: true })
             })
         }
 
@@ -70,18 +69,33 @@ export default class ResultsPage extends Component {
         const location = this.props.match.params.location
         const results = this.state.results
         const venues = this.state.selectedVenues
-        
+
         return (
-            <div>
+            <div className='Results'>
+
                 {this.renderRedirect()}
                 <Navbar />
                 <br />
-                <div id="header">
-                    <h1 id="header-title">Showing results for: {location}</h1>
+                <div className='row' style={{ background: 'transparent' }}>
+                    <div className='col-12' style={{ background: 'transparent' }}>
+                        <div className="location-image-div" >
+                            <img className='location-iamge' src={`../../images/miami.png`} alt='location-image'>
+
+                            </img>
+                        </div>
+
+                    </div>
                 </div>
-                <Results results={results} />
-                <div className="button-div">
-                    <button onClick={this.saveSelected} id="results-btn">SAVE DRINKERY!</button>
+                <div className='row' style={{ background: 'transparent' }}>
+                    <div className='col-12' style={{ background: 'transparent' }}>
+                        <div id="header">
+                            <h1 id="header-title">Showing results for: {location}</h1>
+                        </div>
+                        <Results results={results} />
+                        <div className="button-div">
+                            <button onClick={this.saveSelected} id="results-btn">SAVE DRINKERY!</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         )

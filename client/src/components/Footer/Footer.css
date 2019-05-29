@@ -1,15 +1,24 @@
 #Footer {
+    bottom: 0;    
+    font-family: 'Quicksand', sans-serif;
     background: #d89b00;
     color: white;
+    position: relative;
 }
+
 #Footer a {
     color: white;
+}
+#Footer a:hover {
+    color: #393939;
+}
+#Footer a:active {
+    color: black;
 }
 
 #footer-container {
     background: #d89b00;
     color: black;
-
 }
 
 .Typography {
@@ -41,4 +50,149 @@
     margin: 0 auto;
     flex-direction:column;
   }
+}
+
+.title {
+  font-size: 30px;
+  padding: -5%;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.social-icons {
+    float: left;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.instagram-div {
+  width: 80px;
+  height: auto;
+  border-radius: 10px;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.instagram {
+  width: 70px;
+  height: auto;
+}
+.instagram-div:hover  {
+  background: white;
+  transform: translate3d()
+}
+
+
+.twitter-div {
+  width: 80px;
+  height: auto;
+  padding: 1%;
+  border-radius: 10px;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.twitter-div:hover  {
+  background: white;
+  transform: translate3d()
+}
+
+.twitter {
+  width: 50px;
+  height: auto;
+  
+}
+
+.facebook-div {
+  width: 80px;
+  height: auto;
+  padding: 1%;
+    border-radius: 10px;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.facebook-div:hover  {
+  background: white;
+  transform: translate3d()
+}
+
+.facebook {
+  width: 55px;
+  height: auto;
+}
+
+.vimeo-div {
+  width: 80px;
+  height: auto;
+  padding: 2%;
+    border-radius: 10px;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.vimeo-div:hover  {
+  background: white;
+  transform: translate3d()
+}
+
+
+.vimeo {
+  width: 50px;
+  height: auto;
+
+}
+
+
+.youtube-div {
+  width: 80px;
+  height: auto;
+  top: -2%;
+  border-radius: 10px;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.youtube-div:hover  {
+  background: white;
+  transform: translate3d()
+}
+
+.youtube {
+  width: 80px;
+  height: auto;
+}
+
+.linkedin-div:hover  {
+  background: white;
+  transform: translate3d()
+}
+
+.linkedin-div {
+  width: 80px;
+  height: auto;
+  padding: 1%;
+    border-radius: 10px;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.linekdin {
+  width: 70px;
+  height: auto;
 }

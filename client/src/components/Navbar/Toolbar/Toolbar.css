@@ -11,7 +11,7 @@
     z-index: 201;
 }
 .toolbar:hover {
-    background: white;
+    background: rgb(255,255,255, 0.8);
 }
 
 .toolbar.solid {
