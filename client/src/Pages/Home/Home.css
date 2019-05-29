@@ -1,3 +1,4 @@
+
 @media only screen and (min-width: 601px) {
   div.example {
     font-size: 80px;
@@ -5,7 +6,7 @@
 }
 
 /* If the screen size is 600px or less, set the font-size of <div> to 30px */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   div.example {
     font-size: 30px;
   }
@@ -17,9 +18,11 @@ body {
 
 .Home {
   height: 500px;
-  background: linear-gradient(
-   35deg,
-   #0f3147,
-   #1d252d
-   );
-}
+  background: conic-gradient(at center 10%, #856001 40%, #d89b00  0 70%, white 0);
+ 
+   /* 
+  background: conic-gradient(
+   rgba(216, 155, 0, 0.879),
+   #131313
+   ); */
+} 

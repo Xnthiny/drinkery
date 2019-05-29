@@ -1,6 +1,6 @@
 #header {
     width: 100%;
-    color: rgb(255, 255, 255);
+    color: rgb(13, 13, 13);
     text-align: center; 
     margin: 0 auto;
 }
@@ -11,4 +11,8 @@
 
 .button-div {
     text-align: center;
+}
+
+.Results { 
+      background: conic-gradient(at center 50%, #fff 0%, #909090  0 50%, #fff 0);
 }
