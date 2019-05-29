@@ -156,7 +156,7 @@ module.exports = {
     })
   },
   searchForCrawl: (req, res) => {
-    const crawlID = req.body
+    const crawlID = req.params.crawlID
     Crawl.findById(crawlID).then(crawl => {
       if(!crawl) {
         console.log("no crawl found")

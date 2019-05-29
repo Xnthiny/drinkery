@@ -9,12 +9,8 @@ import Instrucitonal from '../../components/Instructional/Instrucitonal';
 import ControlledCarousel from '../../components/Carousel/Carousel'
 import Navbar from "../../components/Navbar/Navbar";
 import SimpleSearch from '../../components/Forms/SimpleSearch/SimpleSearch'
-<<<<<<< HEAD
 import { relative } from 'path';
-=======
-import Footer from '../../components/Footer/Footer'
->>>>>>> 72233ce560f472ef305fcf30bcfd1684f2298179
-
+import Footer from  '../../components/Footer/Footer'
 
 class Home extends Component {
     state = {

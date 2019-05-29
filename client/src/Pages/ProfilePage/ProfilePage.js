@@ -4,12 +4,13 @@ import Avatar from '../../components/Avatar/Avatar'
 import Navbar from "../../components/Navbar/Navbar"
 import API from '../../utils/API';
 import './ProfilePage.css'
-
-    const crawlArray = () => {
-        Object.keys(this.state.crawls).map(i => {
-            return this.state.crawls[i]
-        })
-    }
+import CrawlCard from '../../components/Cards/CrawlCard/CrawlCard'
+import Tabs from '../../components/Tabs/Tabs'
+// const crawlArray = () => {
+//     Object.keys(this.state.crawls).map(i => {
+//         return <p>this.state.crawls[i] </p>
+//     })
+// }
 
 export default class ProfilePage extends Component {
     state = {
@@ -32,6 +33,20 @@ export default class ProfilePage extends Component {
     }
 
 
+    crawlSearch() {
+        let crawlArray = this.state.crawls
+        for (let i of crawlArray) {
+            API.searchCrawl(i).then(crawl => {
+                return (
+                    <CrawlCard
+                        author={this.state.name.toUpperCase()}
+                        subheader={crawl.data.crawl_location}
+                        title={crawl.data.title}
+                    />
+                )
+            })
+        }
+    }
     // componentDidMount() {
     //     const stateCrawls = this.state.crawls
     //     stateCrawls.forEach(crawl => {
@@ -40,7 +55,10 @@ export default class ProfilePage extends Component {
     //         })
     //     })
     // }
+
+
     render() {
+
         return (
             <div className='Profile-Page'>
                 <Navbar />
@@ -55,13 +73,6 @@ export default class ProfilePage extends Component {
                                     {this.state.name.toUpperCase()}
                                 </h1>
                                 <h2>
-                                    {Object.keys(this.state.crawls).map(i => {
-                                          console.log(this.state.crawls[i])
-                                          const crawlArray = this.setState(this.crawl_data = crawlArray)
-                                          
-                                    })}
-                                    {console.log(this.state)
-}
                                 </h2>
 
                             </div>
@@ -70,7 +81,9 @@ export default class ProfilePage extends Component {
                 </div>
 
                 <div className='profile-tabs'>
-                    <ProfileTabs />
+                    <ProfileTabs  >
+                        <Tabs.Tab id='Crawls' /> {this.crawlSearch()} 
+                    </ProfileTabs>
                 </div>
 
             </div>

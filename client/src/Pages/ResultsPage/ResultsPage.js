@@ -52,7 +52,7 @@ export default class ResultsPage extends Component {
             const title = prompt("Name your crawl!")
             const data = {
                 title,
-                location: this.props.match.params.location,
+                crawl_location: this.props.match.params.location,
                 venues: this.state.selectedVenues,
                 authorID: user
             }
@@ -72,7 +72,6 @@ export default class ResultsPage extends Component {
 
         return (
             <div className='Results'>
-
                 {this.renderRedirect()}
                 <Navbar />
                 <br />

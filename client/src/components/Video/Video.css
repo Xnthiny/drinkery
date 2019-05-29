@@ -1,0 +1,21 @@
+#video-button {
+    display: inline;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 18px;
+    border: 2px solid black;
+    padding: 10px 20px;
+    text-decoration: none;
+    outline: none;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    border-radius: 10px;
+    border-width: 2px;
+}
+
+
+#video-button:hover {
+    background: black;
+    color: #d89b00;
+}

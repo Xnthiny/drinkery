@@ -94,13 +94,13 @@ class CrawlCard extends React.Component {
                             <MoreVertIcon />
                         </IconButton>
                     }
-                    title={classes.title}
+                    title={classes.author}
                     subheader={classes.location}
                 />
                 <CardMedia
                     className={classes.media}
                     image={barImg}
-                    title="Crawl Card . City Img"
+                    title={classes.title}
                 />
                 <CardContent >
                     <Typography className={classes.type} >
@@ -140,9 +140,7 @@ class CrawlCard extends React.Component {
                             </div>
                         </Typography>
                         <Typography className={classes.type} paragraph>
-                            {/* {results} */}
-
-
+                                {classes.venues}
                         </Typography>
                     </CardContent>
                 </Collapse>

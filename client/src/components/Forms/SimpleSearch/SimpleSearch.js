@@ -24,8 +24,10 @@ class SimpleSearch extends Component {
                 {this.renderRedirect()}
                 <label > <h2 className='simple-search-label'>Begin your crawl.</h2></label>
                 <input className='simple-search-input' onChange={this.props.updateLocation} placeholder="Where are you?"/>
-                <button className='simple-search-button' onClick={this.setRedirect}>SEARCH</button>
-                <ModVid/>
+                <div className='simple-form-buttons' >
+                    <button className='simple-search-button' onClick={this.setRedirect}>SEARCH</button>
+                    <ModVid />
+                </div>
             </div>
         )
     }

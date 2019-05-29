@@ -22,7 +22,8 @@ const styles = {
     }
 };
 
-let ProfileTabs = () => (
+
+let ProfileTabs = (props) => (
     <div style={styles.tabs}>
         <Tabs
             activeTab={{
@@ -33,7 +34,7 @@ let ProfileTabs = () => (
                 <glamorous.Div >
                     <div className='crawls-container' >
                         <div className='col-3' id='card-div'>
-                            <CrawlCard id='test' />
+                                                        
                         </div>
                         <div className='col-3' id='card-div'>
                             <CrawlCard id='test1' />

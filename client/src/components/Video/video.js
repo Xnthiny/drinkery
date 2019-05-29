@@ -1,7 +1,7 @@
 import React from 'react';
 import ModalVideo from 'react-modal-video';
 import '../Video/modal-video.scss';
-
+import './Video.css'
 
 class ModVid extends React.Component {
       
@@ -22,11 +22,9 @@ class ModVid extends React.Component {
     
       render () {
         return (
-          <div>
+          <div >
             <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId='zpaLHwwYxE8' onClose={() => this.setState({isOpen: false})} />
-            <button classname="video" onClick={this.openModal}>Watch Video</button>
-
-
+            <button classname="video" id='video-button' onClick={this.openModal}>WATCH VIDEO</button>
           </div>
         )
       }
