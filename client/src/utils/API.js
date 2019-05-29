@@ -9,7 +9,7 @@ export default {
     return axios.post("http://localhost:5000/api/users/newcrawl", data)
   },
   searchCrawl: function(crawlID) {
-    return axios.get("http://localhost:5000/api/users/")
+    return axios.get("http://localhost:5000/api/users/crawl/" + crawlID)
   },
   // Gets the user with the given id
   getUser: function (id) {

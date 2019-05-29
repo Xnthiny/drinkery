@@ -5,11 +5,11 @@ import Navbar from "../../components/Navbar/Navbar"
 import API from '../../utils/API';
 import './ProfilePage.css'
 
-    const crawlArray = () => {
-        Object.keys(this.state.crawls).map(i => {
-            return this.state.crawls[i]
-        })
-    }
+// const crawlArray = () => {
+//     Object.keys(this.state.crawls).map(i => {
+//         return this.state.crawls[i]
+//     })
+// }
 
 export default class ProfilePage extends Component {
     state = {
@@ -25,7 +25,9 @@ export default class ProfilePage extends Component {
                 const data = user.data[0]
                 this.setState({ name: data.name, crawls: data.crawls, email: data.email })
                 console.log(this.state)
-            })
+            }).catch(err => console.log(err))
+
+
         } else {
             alert("must be logged in")
         }
@@ -56,12 +58,19 @@ export default class ProfilePage extends Component {
                                 </h1>
                                 <h2>
                                     {Object.keys(this.state.crawls).map(i => {
-                                          console.log(this.state.crawls[i])
-                                          const crawlArray = this.setState(this.crawl_data = crawlArray)
-                                          
+                                        console.log(this.state.crawls[i])
+                                        const crawlArray = this.setState(this.crawl_data = crawlArray)
+
                                     })}
-                                    {console.log(this.state)
-}
+                                    {/* {Object.keys(this.state.crawl).map(i => {
+                                        API.searchCrawl((this.state.crawls[i])).then(user => {
+                                            const data = user.data[0]
+                                            this.setState({ name: data.name, crawls: data.crawls, email: data.email })
+                                            console.log(this.state)
+                                        }).catch(err => console.log(err))
+                                    })}*/}
+                                    {console.log(this.state) 
+                                    }
                                 </h2>
 
                             </div>
