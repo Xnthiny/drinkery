@@ -10,7 +10,7 @@ export default {
   },
   searchCrawl: function(crawlID) {
     return axios.get("http://localhost:5000/api/users/")
-  }
+  },
   // Gets the user with the given id
   getUser: function (id) {
     return axios.get("http://localhost:5000/api/users/" + id);

@@ -1,14 +1,17 @@
 
 
 .toolbar {
-    background: var(--toolbar-background-color);
+    background: transparent;
     width: 100%;
     top: 0;
     left:0;
-    height: 60px;
+    height: 70px;
     padding-top: 10px;
     background: none;
     z-index: 201;
+}
+.toolbar:hover {
+    background: rgb(255,255,255, 0.8);
 }
 
 .toolbar.solid {
@@ -39,6 +42,7 @@ black
     flex: 1;
 }
 
+
 .toolbar-links-list {
     list-style: none;
     margin: 0;
@@ -46,25 +50,11 @@ black
     display: flex;
 }
 
-.login-btn {
-    color: #d89b00;
-    border: 2px solid #d89b00;
-    border-radius: 10em;
+.toolbar-links-list:hover {
+    color: white;
 }
-
-.login-btn:hover {
-    background-color: rgb(26, 27, 29)
-}
-
-.signup-btn {
-    border: 2px solid #d89b00;
-    color: #1a1b1d !important;
-    border-radius: 10em;
-}
-
-.signup-btn:hover {
-    color: rgb(26, 27, 29);
-    background-color: #d89b00;
+.signup-btn.a:hover {
+    color: white;
 }
 
 

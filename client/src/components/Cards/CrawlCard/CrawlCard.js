@@ -17,7 +17,7 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import './CrawlCard.css';
-import barImg from '../../../images/London.gif'
+import barImg from '../../../images/London.gif';
 // import results from '../../Results/Results'
 
 const styles = theme => ({

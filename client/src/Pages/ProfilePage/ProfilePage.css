@@ -1,0 +1,18 @@
+.user-profile-div {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    border-radius:0px;
+}
+
+.user-info-div {
+    width: 60%;
+    margin: 0 auto;
+    padding: 1%;
+    text-align: center;
+}
+
+.name {
+    text-align: center;
+    color: #d89b00;
+}

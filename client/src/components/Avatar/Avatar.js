@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import Grid from '@material-ui/core/Grid';
 import './Avatar.css';
+import avatarImg from '../../images/user.jpg'
 
 const styles = {
     avatar: {
@@ -11,8 +12,8 @@ const styles = {
     },
     bigAvatar: {
         margin: 10,
-        width: 60,
-        height: 60,
+        width: 80,
+        height: 80,
     },
 };
 
@@ -20,8 +21,8 @@ function ImageAvatars(props) {
     const { classes } = props;
     return (
         <Grid container justify="center" alignItems="center">
-            <Avatar alt="Marco" src="/static/images/avatar/1.jpg" className={classes.avatar} />
-            <Avatar alt="Marco" src="/static/images/avatar/1.jpg" className={classes.bigAvatar} />
+            {/* <Avatar alt="Marco" src={avatarImg} className={classes.avatar} /> */}
+            <Avatar alt="Marco" src={avatarImg} className={classes.bigAvatar} />
         </Grid>
     );
 }
