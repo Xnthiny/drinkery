@@ -36,18 +36,12 @@ export default class ProfilePage extends Component {
 
     crawlSearch() {
         let crawlIDArray = this.state.crawls
-
         for (let i of crawlIDArray) {
             API.searchCrawl(i)
                 .then(crawl => {
                     this.state.crawl_data.push({
                         crawl
                     })
-                // .then(
-                //     Object.keys(this.state.crawl_data).map(function (el) {
-                //         const title = this.data.crawl_data[el].crawl.title.toString();
-                //         console.log(title)
-                //     }))
                 })
                 .finally(console.log('pushed'))
                 .catch(err => console.log(err))
@@ -55,7 +49,7 @@ export default class ProfilePage extends Component {
     }
 
     // displayCrawl() {
-    //     this.state.crawl_data.map((item, i) => <li className={i.crawl.data.title}>{i.crawl.data.title}</li>)
+        // this.state.crawl_data.map((item, i) => <li className={i.crawl.data.title}>{i.crawl.data.title}</li>)
     //     console.log('worked')
     // }
 
@@ -69,16 +63,21 @@ export default class ProfilePage extends Component {
     //     })
     // }
     displayCrawls() {
-        Object.keys(this.state.crawl_data).map(function (key) {
-            let myitem = this.state.crawl_data[key]
+        Object.keys(this.state.crawl_data).map(function (crawl) {
+            var myitem = this.state.crawl_data[crawl];
             console.log(myitem)
         })
-        console.log('worked')
+        // console.log('worked')
+        // const crawlData = this.state.crawl_data
+        // console.log(typeof crawlData)
+        // crawlData.map(crawl => {
+        //     console.log(crawl)
+        // })
     }
 
     render() {
         // console.log(typeof this.state.crawl_data)
-        // console.log(<CrawlCard author={this.state.name.toUpperCase()} />)
+        console.log(<CrawlCard author={this.state.name.toUpperCase()} />)
        
 
         return (
@@ -100,7 +99,6 @@ export default class ProfilePage extends Component {
                                 <p>
                                     <ul className='test' style={{ color: 'white' }}>
                                         <li >
-                                            {console.log(this.state.crawl_data)}
                                         </li>
                                     </ul>
                                 </p>

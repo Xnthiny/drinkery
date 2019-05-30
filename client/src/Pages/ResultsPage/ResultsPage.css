@@ -2,10 +2,10 @@
     margin: 0 auto;
     padding: 5%;
     border-radius: 5px 5px 0px 0px;
-    background-color: #909090;
+    background-color: #101010;
     width: 70.3%;
     padding: 1%;
-    color: rgb(13, 13, 13);
+    color: #d89b00;
     text-align: center; 
     align-content: center;
 }
@@ -19,7 +19,7 @@
 }
 
 .Results { 
-      background: conic-gradient(at center 50%, #fff 0%, #909090  0 50%, #fff 0);
+      background: conic-gradient(at center 50%, #131313 0%, #131313  0 50%, #131313 0);
 }
 
 #map-div {
@@ -29,17 +29,21 @@
     position: relative;
     z-index:200;
     height:auto;
-    width:100%;
+    width: 99%;
 }
 
 
 @media screen and (max-width: 769px) {
     #map-div {
-        background: #909090;
-        padding: 4% 0%;
+        background: #101010;
+        padding: 3% 2%;
     }
     .results-container {
         margin: 0 auto;
         width: 80%
     }
+    .Results { 
+      background: linear-gradient(0deg,  #d89b00 0%, rgb(0, 0, 0) 100%);
+    }
+
 }
