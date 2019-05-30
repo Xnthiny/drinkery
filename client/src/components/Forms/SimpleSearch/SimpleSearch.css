@@ -5,13 +5,18 @@
     display: flexbox;
     box-sizing: content-box;
     padding: 10px 20px;
-    margin: 100px auto;
+    margin: 2% auto;
     z-Index: 203;
     text-align: center;
 }
 
+.video-button {
+    margin-left: 1%;
+}
+
 .simple-form-buttons {
-    margin: 0 2%;
+    width: 20%;
+    margin: 0 10%;
     display: inline-flex;
     text-align: center;
     justify-content: center;

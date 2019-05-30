@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 // import SearchForm from '../../components/Forms/SearchForm/SearchForm'
-// import MapContainer from '../../components/Map/GoogleMapsContainer';
 import './Home.css';
 // import Background from '../../components/Background/Background';
 // import Results from '../../components/Results/Results';
@@ -27,15 +26,10 @@ class Home extends Component {
                 <div className="Home">
                     <Navbar />
                     {/* <ControlledCarousel /> */}
-                    <br/>
-                
-                    
-                    
+                    <br/>                    
                     <br />
                     <SimpleSearch location={this.state.location} updateLocation={this.updateLocation} />
                     <br />
-
-
                 </div>
 
                 <br />

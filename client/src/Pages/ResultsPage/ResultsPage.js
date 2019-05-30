@@ -6,6 +6,8 @@ import "./ResultsPage.css"
 import ResultsIntro from "../../components/Instructional/Results/ResultsIntro/ResultsIntro"
 import Results from "../../components/Results/Results"
 import { Redirect } from 'react-router-dom'
+import GoogleMap from '../../components/SimpleMaps';
+
 export default class ResultsPage extends Component {
     state = {
         results: "",
@@ -52,7 +54,7 @@ export default class ResultsPage extends Component {
             const title = prompt("Name your crawl!")
             const data = {
                 title,
-                crawl_location: this.props.match.params.location,
+                location: this.props.match.params.location,
                 venues: this.state.selectedVenues,
                 authorID: user
             }
@@ -72,24 +74,23 @@ export default class ResultsPage extends Component {
 
         return (
             <div className='Results'>
+
                 {this.renderRedirect()}
                 <Navbar />
                 <br />
                 <div className='row' style={{ background: 'transparent' }}>
                     <div className='col-12' style={{ background: 'transparent' }}>
-                        <div className="location-image-div" >
-                            <img className='location-iamge' src={`../../images/miami.png`} alt='location-image'>
-
-                            </img>
+                        <div id="header">
+                            <h1 id="header-title">Showing results for: {location.toUpperCase()}</h1>
+                        </div>
+                        <div className='col-12' id='map-div'>
+                            <GoogleMap />
                         </div>
 
                     </div>
                 </div>
                 <div className='row' style={{ background: 'transparent' }}>
                     <div className='col-12' style={{ background: 'transparent' }}>
-                        <div id="header">
-                            <h1 id="header-title">Showing results for: {location}</h1>
-                        </div>
                         <Results results={results} />
                         <div className="button-div">
                             <button onClick={this.saveSelected} id="results-btn">SAVE DRINKERY!</button>

@@ -1,9 +1,11 @@
-.container {
+.results-container {
+    margin: 0 auto;
     border: 5px solid #d89b00;
-    border-radius: 1em;
-    width: 100%;
+    border-radius: 0px 0px 5px 5px;
+    min-width: 69%;
+    max-width: 80%;
     min-height: 500px;
-    max-height:70vh;
+    max-height: 70vh;
     overflow: scroll;
     position: relative;
     background: #131313;
@@ -33,3 +35,8 @@
     border-width: 2px;
 }
 
+@media screen and (max-width: 768px) {
+    .results-container {
+        border: 5px solid #909090;
+    }
+}

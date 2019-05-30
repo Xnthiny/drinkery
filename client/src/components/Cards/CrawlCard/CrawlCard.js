@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import classnames from 'classnames';
@@ -18,6 +18,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import './CrawlCard.css';
 import barImg from '../../../images/London.gif';
+import ProfilePage from '../../../Pages/ProfilePage/ProfilePage'
 // import results from '../../Results/Results'
 
 const styles = theme => ({
@@ -73,14 +74,13 @@ const styles = theme => ({
 
 
 
-class CrawlCard extends React.Component {
+class CrawlCard extends Component {
     state = { expanded: false };
     handleExpandClick = () => {
         this.setState(state => ({ expanded: !state.expanded }));
     };
     render() {
         const { classes } = this.props;
-
         return (
             <Card className={classes.card}>
                 <CardHeader
@@ -140,7 +140,7 @@ class CrawlCard extends React.Component {
                             </div>
                         </Typography>
                         <Typography className={classes.type} paragraph>
-                                {classes.venues}
+                            {classes.venues}
                         </Typography>
                     </CardContent>
                 </Collapse>

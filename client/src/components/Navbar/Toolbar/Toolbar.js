@@ -31,7 +31,7 @@ export default class Toolbar extends Component {
         if (this.state.loggedIn) {
             return (
                 <ul className="toolbar-links-list">
-                    <li className="login-btn"><a href="/profile">{this.state.name}</a></li>
+                    <li className="login-btn"><a href="/profile">{this.state.name.toUpperCase()}</a></li>
                     <li className="signup-btn"><a onClick={this.logOut} href="/index"> LOG OUT</a> </li>
                 </ul>
             )

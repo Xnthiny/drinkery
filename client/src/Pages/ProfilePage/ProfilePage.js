@@ -6,16 +6,17 @@ import API from '../../utils/API';
 import './ProfilePage.css'
 import CrawlCard from '../../components/Cards/CrawlCard/CrawlCard'
 import Tabs from '../../components/Tabs/Tabs'
+// import ReactDOM from "react-dom";
+
 // const crawlArray = () => {
 //     Object.keys(this.state.crawls).map(i => {
 //         return <p>this.state.crawls[i] </p>
 //     })
 // }
-
 export default class ProfilePage extends Component {
     state = {
         name: "",
-        crawls: "",
+        crawls: [],
         email: "",
         crawl_data: []
     }
@@ -34,19 +35,31 @@ export default class ProfilePage extends Component {
 
 
     crawlSearch() {
-        let crawlArray = this.state.crawls
-        for (let i of crawlArray) {
-            API.searchCrawl(i).then(crawl => {
-                return (
-                    <CrawlCard
-                        author={this.state.name.toUpperCase()}
-                        subheader={crawl.data.crawl_location}
-                        title={crawl.data.title}
-                    />
-                )
-            })
+        let crawlIDArray = this.state.crawls
+
+        for (let i of crawlIDArray) {
+            API.searchCrawl(i)
+                .then(crawl => {
+                    this.state.crawl_data.push({
+                        crawl
+                    })
+                // .then(
+                //     Object.keys(this.state.crawl_data).map(function (el) {
+                //         const title = this.data.crawl_data[el].crawl.title.toString();
+                //         console.log(title)
+                //     }))
+                })
+                .finally(console.log('pushed'))
+                .catch(err => console.log(err))
         }
     }
+
+    // displayCrawl() {
+    //     this.state.crawl_data.map((item, i) => <li className={i.crawl.data.title}>{i.crawl.data.title}</li>)
+    //     console.log('worked')
+    // }
+
+
     // componentDidMount() {
     //     const stateCrawls = this.state.crawls
     //     stateCrawls.forEach(crawl => {
@@ -55,13 +68,23 @@ export default class ProfilePage extends Component {
     //         })
     //     })
     // }
-
+    displayCrawls() {
+        Object.keys(this.state.crawl_data).map(function (key) {
+            let myitem = this.state.crawl_data[key]
+            console.log(myitem)
+        })
+        console.log('worked')
+    }
 
     render() {
+        // console.log(typeof this.state.crawl_data)
+        // console.log(<CrawlCard author={this.state.name.toUpperCase()} />)
+       
 
         return (
             <div className='Profile-Page'>
                 <Navbar />
+                {this.crawlSearch()}
                 <div className='user-profile-div' >
                     <div className='user-info' >
                         <div className='container'>
@@ -69,12 +92,18 @@ export default class ProfilePage extends Component {
                                 <Avatar />
                             </div>
                             <div className='user-info-div'>
+                                {this.displayCrawls()}
                                 <h1 className='name' >
                                     {this.state.name.toUpperCase()}
-                                </h1>
-                                <h2>
-                                </h2>
 
+                                </h1>
+                                <p>
+                                    <ul className='test' style={{ color: 'white' }}>
+                                        <li >
+                                            {console.log(this.state.crawl_data)}
+                                        </li>
+                                    </ul>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -82,7 +111,7 @@ export default class ProfilePage extends Component {
 
                 <div className='profile-tabs'>
                     <ProfileTabs  >
-                        <Tabs.Tab id='Crawls' /> {this.crawlSearch()} 
+                        <Tabs.Tab id='Crawls' />
                     </ProfileTabs>
                 </div>
 

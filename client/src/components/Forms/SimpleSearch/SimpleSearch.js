@@ -26,7 +26,8 @@ class SimpleSearch extends Component {
                 <input className='simple-search-input' onChange={this.props.updateLocation} placeholder="Where are you?"/>
                 <div className='simple-form-buttons' >
                     <button className='simple-search-button' onClick={this.setRedirect}>SEARCH</button>
-                    <ModVid />
+                    <div className='video-button'><ModVid /></div>
+
                 </div>
             </div>
         )
